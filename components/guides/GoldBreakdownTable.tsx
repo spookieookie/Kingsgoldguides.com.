@@ -1,12 +1,23 @@
 interface GoldRow {
-  activity: string;
-  goldPerHour: number;
-  requirements: string;
+  // Activity-based shape (used by the guide page summary)
+  activity?: string;
+  goldPerHour?: number | string;
+  requirements?: string;
   difficulty: 'Easy' | 'Medium' | 'Hard';
+  // Material-based shape (used inline in some MDX guides)
+  material?: string;
+  avgPrice?: string;
+  unitsPerHour?: string;
 }
 
 interface GoldBreakdownTableProps {
   rows: GoldRow[];
+}
+
+function formatGold(value: number | string | undefined): string {
+  if (value === undefined) return '—';
+  if (typeof value === 'number') return `${value.toLocaleString()} g`;
+  return value;
 }
 
 function getDifficultyColor(difficulty: string): string {
@@ -22,16 +33,22 @@ function getDifficultyColor(difficulty: string): string {
   }
 }
 
-export function GoldBreakdownTable({ rows }: GoldBreakdownTableProps) {
+export function GoldBreakdownTable({ rows = [] }: GoldBreakdownTableProps) {
+  if (rows.length === 0) return null;
+
   return (
     <div className="mb-8 overflow-x-auto">
       <h3 className="text-2xl font-bold text-foreground mb-4">Gold Breakdown</h3>
       <table className="w-full border-collapse">
         <thead>
           <tr className="bg-secondary border-b border-border">
-            <th className="p-3 text-left font-semibold text-primary">Activity</th>
+            <th className="p-3 text-left font-semibold text-primary">
+              {rows.some((r) => r.material) ? 'Material' : 'Activity'}
+            </th>
             <th className="p-3 text-left font-semibold text-primary">Gold/Hour</th>
-            <th className="p-3 text-left font-semibold text-primary">Requirements</th>
+            <th className="p-3 text-left font-semibold text-primary">
+              {rows.some((r) => r.avgPrice) ? 'Avg Price' : 'Requirements'}
+            </th>
             <th className="p-3 text-left font-semibold text-primary">Difficulty</th>
           </tr>
         </thead>
@@ -43,11 +60,13 @@ export function GoldBreakdownTable({ rows }: GoldBreakdownTableProps) {
                 idx % 2 === 0 ? 'bg-background' : 'bg-secondary'
               }`}
             >
-              <td className="p-3 text-foreground">{row.activity}</td>
+              <td className="p-3 text-foreground">{row.material ?? row.activity}</td>
               <td className="p-3 text-foreground font-semibold">
-                {row.goldPerHour.toLocaleString()} g
+                {formatGold(row.goldPerHour)}
               </td>
-              <td className="p-3 text-foreground text-sm">{row.requirements}</td>
+              <td className="p-3 text-foreground text-sm">
+                {row.avgPrice ?? row.requirements ?? '—'}
+              </td>
               <td className={`p-3 font-semibold ${getDifficultyColor(row.difficulty)}`}>
                 {row.difficulty}
               </td>

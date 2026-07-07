@@ -2,8 +2,27 @@ import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 import { compileMDX } from 'next-mdx-remote/rsc';
+import remarkGfm from 'remark-gfm';
 
 const contentDir = path.join(process.cwd(), 'content/guides');
+
+// The guide page shell (app/guides/[slug]/page.tsx) already renders the video,
+// quick answer, FAQ, downloads, and email capture from frontmatter for every
+// guide. Older MDX files also embedded those components inline, which produced
+// duplicated sections (and broke, since next-mdx-remote does not pass MDX
+// expression props like `items={[...]}`). We suppress the inline structured
+// components here so frontmatter stays the single source of truth, and let the
+// prose + GitHub-flavored markdown tables render normally.
+const Noop = () => null;
+const mdxComponents = {
+  YouTubeEmbed: Noop,
+  QuickAnswerBox: Noop,
+  GoldBreakdownTable: Noop,
+  FAQAccordion: Noop,
+  DownloadCard: Noop,
+  EmailCaptureForm: Noop,
+  RouteMapImage: Noop,
+};
 
 export interface GuideFrontmatter {
   title: string;
@@ -53,8 +72,12 @@ export async function getGuideBySlug(slug: string) {
 
   const mdxSource = await compileMDX({
     source: mdxContent,
+    components: mdxComponents,
     options: {
       parseFrontmatter: false,
+      mdxOptions: {
+        remarkPlugins: [remarkGfm],
+      },
     },
   });
 

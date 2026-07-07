@@ -1,200 +1,180 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import { getGuideBySlug, getAllGuideSlugs, getGuides } from '@/lib/mdx';
-import { YouTubeEmbed } from '@/components/guides/YouTubeEmbed';
-import { QuickAnswerBox } from '@/components/guides/QuickAnswerBox';
-import { GoldBreakdownTable } from '@/components/guides/GoldBreakdownTable';
-import { FAQAccordion } from '@/components/guides/FAQAccordion';
-import { DownloadCard } from '@/components/guides/DownloadCard';
-import { EmailCaptureForm } from '@/components/guides/EmailCaptureForm';
+import Link from 'next/link';
+import { getGuide, getAllGuides, getRelatedGuides, getRelatedVideos } from '@/lib/content';
+import { getGuideBySlug } from '@/lib/mdx';
+import { siteConfig } from '@/lib/site';
+import {
+  articleSchema,
+  breadcrumbSchema,
+  faqSchema,
+  videoObjectSchema,
+} from '@/lib/schema';
+import { JsonLd } from '@/components/JsonLd';
 import { Breadcrumbs } from '@/components/guides/Breadcrumbs';
-import { Clock, TrendingUp } from 'lucide-react';
+import { YouTubeEmbed } from '@/components/guides/YouTubeEmbed';
+import { FAQAccordion } from '@/components/guides/FAQAccordion';
+import { EmailCaptureForm } from '@/components/guides/EmailCaptureForm';
+import { GuideStats } from '@/components/guide/GuideStats';
+import { GuideBody } from '@/components/guide/GuideBody';
+import { GuideCard } from '@/components/cards/GuideCard';
+import { VideoCard } from '@/components/cards/VideoCard';
+import { Eyebrow, Tag } from '@/components/ui/kit';
+import { formatDate } from '@/lib/format';
+import { getHub } from '@/lib/site';
 
 interface PageProps {
   params: Promise<{ slug: string }>;
 }
 
-export async function generateMetadata({
-  params,
-}: PageProps): Promise<Metadata> {
+export async function generateStaticParams() {
+  return getAllGuides().map((g) => ({ slug: g.slug }));
+}
+
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { slug } = await params;
-  const guide = await getGuideBySlug(slug);
-
-  if (!guide) {
-    return {
-      title: 'Guide Not Found',
-    };
-  }
-
-  const { frontmatter } = guide;
-  const description = frontmatter.quickAnswer || frontmatter.goldClaimHeadline;
+  const guide = getGuide(slug);
+  if (!guide) return { title: 'Guide Not Found' };
 
   return {
-    title: `${frontmatter.title} | WoW Gold Guides`,
-    description,
+    title: guide.seoTitle,
+    description: guide.metaDescription,
+    alternates: { canonical: guide.canonicalUrl },
     openGraph: {
-      title: frontmatter.title,
-      description,
+      title: guide.seoTitle,
+      description: guide.metaDescription,
       type: 'article',
-      publishedTime: frontmatter.publishDate,
-      authors: ['WoW Gold Guides'],
+      publishedTime: guide.publishedAt,
+      modifiedTime: guide.updatedAt,
+      authors: [siteConfig.name],
+      images: guide.heroImage ? [guide.heroImage] : undefined,
     },
   };
 }
 
-export async function generateStaticParams() {
-  const slugs = await getAllGuideSlugs();
-  return slugs.map((slug) => ({ slug }));
-}
-
-// Sample gold breakdown data (will be extended with real data from frontmatter)
-const SAMPLE_GOLD_BREAKDOWN = [
-  {
-    activity: 'Herbalism - Dense Nodes',
-    goldPerHour: 3200,
-    requirements: 'Flying Required',
-    difficulty: 'Easy' as const,
-  },
-  {
-    activity: 'Herbalism - Ground Routes',
-    goldPerHour: 2500,
-    requirements: 'No Requirements',
-    difficulty: 'Easy' as const,
-  },
-  {
-    activity: 'Multi-gathering Hybrid',
-    goldPerHour: 3800,
-    requirements: 'Flying, Multiple Professions',
-    difficulty: 'Medium' as const,
-  },
-];
-
 export default async function GuidePage({ params }: PageProps) {
   const { slug } = await params;
-  const guide = await getGuideBySlug(slug);
+  const guide = getGuide(slug);
+  if (!guide) notFound();
 
-  if (!guide) {
-    notFound();
-  }
+  // Real guides carry an mdxSlug -> render the full written route from MDX.
+  const mdx = guide.mdxSlug ? await getGuideBySlug(guide.mdxSlug) : null;
 
-  const { frontmatter, content } = guide;
+  const related = getRelatedGuides(slug, 3);
+  const relatedVideos = getRelatedVideos(guide.relatedVideos, 2);
+  const hub = getHub(guide.hub);
 
-  // Get related guides
-  const allGuides = await getGuides();
-  const relatedGuides = allGuides
-    .filter((g) => g.slug !== slug)
-    .slice(0, 3);
+  const crumbs = [
+    { label: 'Home', href: '/' },
+    { label: hub.navLabel, href: hub.href },
+    { label: guide.title, href: `/guides/${guide.slug}` },
+  ];
 
   return (
     <main className="min-h-screen bg-background">
-      <article className="max-w-3xl mx-auto px-4 py-8 sm:py-12">
-        {/* Breadcrumbs */}
-        <Breadcrumbs
-          crumbs={[
-            { label: 'Home', href: '/' },
-            { label: 'Guides', href: '/guides' },
-            { label: frontmatter.title, href: `/guides/${slug}` },
-          ]}
+      <JsonLd
+        data={articleSchema({
+          title: guide.seoTitle,
+          description: guide.metaDescription,
+          slug: `/guides/${guide.slug}`,
+          image: guide.heroImage,
+          publishedAt: guide.publishedAt,
+          updatedAt: guide.updatedAt,
+        })}
+      />
+      <JsonLd data={breadcrumbSchema(crumbs.map((c) => ({ name: c.label, url: c.href })))} />
+      {guide.faq.length > 0 && <JsonLd data={faqSchema(guide.faq)} />}
+      {guide.youtubeVideoId && (
+        <JsonLd
+          data={videoObjectSchema({
+            name: guide.title,
+            description: guide.metaDescription,
+            youtubeVideoId: guide.youtubeVideoId,
+            uploadDate: guide.publishedAt,
+          })}
         />
+      )}
 
-        {/* Header */}
-        <div className="mb-8">
-          <div className="flex items-center gap-2 mb-3">
-            <span className="px-3 py-1 bg-primary/20 text-primary text-sm font-semibold rounded-full">
-              {frontmatter.expansion}
-            </span>
-            <span className="px-3 py-1 bg-secondary text-foreground text-sm rounded">
-              {frontmatter.zone}
-            </span>
+      <article className="mx-auto max-w-3xl px-4 py-10 sm:py-14">
+        <Breadcrumbs crumbs={crumbs} />
+
+        <header className="mt-6">
+          <div className="flex flex-wrap items-center gap-2">
+            <Tag tone="gold">{hub.shortName}</Tag>
+            <Tag tone="muted">{guide.expansion}</Tag>
+            <Tag tone="muted">{guide.methodType}</Tag>
           </div>
-
-          <h1 className="text-4xl sm:text-5xl font-bold text-foreground mb-4">
-            {frontmatter.title}
+          <h1 className="mt-4 text-balance text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
+            {guide.title}
           </h1>
-
-          <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground">
-            <div className="flex items-center gap-2">
-              <Clock size={16} />
-              <span>{frontmatter.duration}</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <TrendingUp size={16} />
-              <span>{frontmatter.goldClaimHeadline}</span>
-            </div>
-            <span>
-              {new Date(frontmatter.publishDate).toLocaleDateString('en-US', {
-                year: 'numeric',
-                month: 'long',
-                day: 'numeric',
-              })}
-            </span>
+          <p className="mt-4 text-pretty text-lg leading-relaxed text-muted-foreground">
+            {guide.excerpt}
+          </p>
+          <div className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-1 font-mono text-xs uppercase tracking-wider text-muted-foreground">
+            <span>By {siteConfig.name}</span>
+            <span aria-hidden="true">/</span>
+            <span>Updated {formatDate(guide.updatedAt)}</span>
           </div>
+        </header>
+
+        {guide.youtubeVideoId && (
+          <div className="mt-8">
+            <YouTubeEmbed videoId={guide.youtubeVideoId} title={guide.title} />
+          </div>
+        )}
+
+        <div className="mt-8">
+          <GuideStats guide={guide} />
         </div>
 
-        {/* YouTube Video */}
-        {frontmatter.youtubeVideoId && (
-          <YouTubeEmbed
-            videoId={frontmatter.youtubeVideoId}
-            title={frontmatter.title}
-          />
+        <div className="mt-8">
+          <GuideBody guide={guide} mdxContent={mdx?.content} />
+        </div>
+
+        {guide.faq.length > 0 && (
+          <section className="mt-12">
+            <Eyebrow className="mb-4">FAQ</Eyebrow>
+            <h2 className="mb-6 text-2xl font-bold text-foreground">Frequently asked questions</h2>
+            <FAQAccordion items={guide.faq} />
+          </section>
         )}
 
-        {/* Quick Answer Box */}
-        <QuickAnswerBox
-          answer={frontmatter.quickAnswer}
-          goldClaim={frontmatter.goldClaimHeadline}
-        />
+        <div className="mt-12">
+          <EmailCaptureForm />
+        </div>
 
-        {/* Main Content */}
-        <div className="prose mb-8">{content}</div>
-
-        {/* Gold Breakdown Table */}
-        <GoldBreakdownTable rows={SAMPLE_GOLD_BREAKDOWN} />
-
-        {/* FAQ Section */}
-        {frontmatter.faq && frontmatter.faq.length > 0 && (
-          <FAQAccordion items={frontmatter.faq} />
-        )}
-
-        {/* Downloads Section */}
-        {frontmatter.downloadableSpreadsheet && (
-          <div className="mb-8">
-            <h3 className="text-2xl font-bold text-foreground mb-4">Downloads</h3>
-            <DownloadCard
-              href={frontmatter.downloadableSpreadsheet}
-              fileName="Guide Data Spreadsheet"
-              description="Complete routing data and profit calculations"
-            />
-          </div>
-        )}
-
-        {/* Email Signup */}
-        <EmailCaptureForm />
-
-        {/* Related Guides */}
-        {relatedGuides.length > 0 && (
-          <div className="mt-12 pt-8 border-t border-border">
-            <h3 className="text-2xl font-bold text-foreground mb-6">
-              Related Guides
-            </h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              {relatedGuides.map((relGuide) => (
-                <a
-                  key={relGuide.slug}
-                  href={`/guides/${relGuide.slug}`}
-                  className="p-4 bg-secondary border border-border rounded hover:border-primary transition-colors"
-                >
-                  <h4 className="font-semibold text-foreground hover:text-primary mb-2 line-clamp-2">
-                    {relGuide.title}
-                  </h4>
-                  <p className="text-sm text-muted-foreground line-clamp-2">
-                    {relGuide.goldClaimHeadline}
-                  </p>
-                </a>
+        {relatedVideos.length > 0 && (
+          <section className="mt-14">
+            <Eyebrow className="mb-4">Watch</Eyebrow>
+            <h2 className="mb-6 text-2xl font-bold text-foreground">Related videos</h2>
+            <div className="grid gap-5 sm:grid-cols-2">
+              {relatedVideos.map((v) => (
+                <VideoCard key={v.slug} video={v} />
               ))}
             </div>
-          </div>
+          </section>
         )}
+
+        {related.length > 0 && (
+          <section className="mt-14 border-t border-border pt-10">
+            <Eyebrow className="mb-4">Keep going</Eyebrow>
+            <h2 className="mb-6 text-2xl font-bold text-foreground">Related guides</h2>
+            <div className="grid gap-5 sm:grid-cols-3">
+              {related.map((g) => (
+                <GuideCard key={g.slug} guide={g} />
+              ))}
+            </div>
+          </section>
+        )}
+
+        <div className="mt-12">
+          <Link
+            href="/guides"
+            className="font-mono text-xs uppercase tracking-[0.15em] text-primary hover:text-primary/80"
+          >
+            ← All gold guides
+          </Link>
+        </div>
       </article>
     </main>
   );

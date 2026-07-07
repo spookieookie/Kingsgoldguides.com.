@@ -1,120 +1,73 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
+import { tools } from '@/lib/content';
+import { siteConfig } from '@/lib/site';
+import { breadcrumbSchema } from '@/lib/schema';
+import { JsonLd } from '@/components/JsonLd';
 import { Breadcrumbs } from '@/components/guides/Breadcrumbs';
-import { Download } from 'lucide-react';
+import { Panel, Eyebrow } from '@/components/ui/kit';
+import { Calculator, Target, BarChart3, Calendar, ArrowRight, type LucideIcon } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Tools & Downloads | WoW Gold Guides',
-  description: 'Download spreadsheets, calculators, and tools to optimize your gold-making.',
+  title: `Gold Tools | ${siteConfig.name}`,
+  description:
+    'Lightweight, content-supporting calculators for WoW gold-making: gold-per-hour, sale-rate & risk, farm comparison, and a Darkmoon Faire event timer.',
+  alternates: { canonical: `${siteConfig.domain}/tools` },
+};
+
+const icons: Record<string, LucideIcon> = {
+  Calculator,
+  Target,
+  BarChart3,
+  Calendar,
 };
 
 export default function ToolsPage() {
-  const downloads = [
-    {
-      id: 1,
-      title: 'Herbalism Routes Spreadsheet',
-      description: 'Complete herbalism farming routes with timing, profitability, and location data.',
-      file: '/downloads/herbalism-routes.xlsx',
-      size: '245 KB',
-    },
-    {
-      id: 2,
-      title: 'Mining Routes Spreadsheet',
-      description: 'Optimized mining routes across all zones with ore density and respawn times.',
-      file: '/downloads/mining-routes.xlsx',
-      size: '198 KB',
-    },
-    {
-      id: 3,
-      title: 'Transmog Flipping List',
-      description: 'Database of profitable transmog items with estimated margins and current prices.',
-      file: '/downloads/transmog-flipping-list.xlsx',
-      size: '512 KB',
-    },
-    {
-      id: 4,
-      title: 'Gold-Making Profit Calculator',
-      description:
-        'Spreadsheet to track your farming sessions and calculate hourly gold rates.',
-      file: '/downloads/profit-calculator.xlsx',
-      size: '156 KB',
-    },
+  const crumbs = [
+    { label: 'Home', href: '/' },
+    { label: 'Tools', href: '/tools' },
   ];
 
   return (
     <main className="min-h-screen bg-background">
-      <div className="max-w-3xl mx-auto px-4 py-12 sm:py-16">
-        <Breadcrumbs
-          crumbs={[
-            { label: 'Home', href: '/' },
-            { label: 'Tools', href: '/tools' },
-          ]}
-        />
-
-        <h1 className="text-4xl sm:text-5xl font-bold text-foreground mb-2">
-          Tools & Downloads
-        </h1>
-        <p className="text-lg text-muted-foreground mb-12">
-          Free spreadsheets and tools to help you track your farming, calculate profits, and
-          identify opportunities.
-        </p>
-
-        <div className="space-y-4">
-          {downloads.map((download) => (
-            <a
-              key={download.id}
-              href={download.file}
-              download
-              className="block p-6 bg-secondary border border-border rounded-lg hover:border-primary hover:bg-secondary/80 transition-all group"
-            >
-              <div className="flex items-start gap-4">
-                <div className="flex-shrink-0 p-3 bg-primary rounded-lg group-hover:scale-110 transition-transform">
-                  <Download size={24} className="text-background" />
-                </div>
-                <div className="flex-1 min-w-0">
-                  <h3 className="text-lg font-bold text-foreground group-hover:text-primary transition-colors mb-1">
-                    {download.title}
-                  </h3>
-                  <p className="text-muted-foreground text-sm mb-3">
-                    {download.description}
-                  </p>
-                  <p className="text-xs text-muted-foreground">
-                    {download.size}
-                  </p>
-                </div>
-                <div className="text-primary font-semibold group-hover:translate-x-1 transition-transform flex-shrink-0">
-                  ↓
-                </div>
-              </div>
-            </a>
-          ))}
-        </div>
-
-        <div className="mt-12 p-6 bg-secondary border border-border rounded-lg">
-          <h3 className="text-lg font-bold text-foreground mb-3">
-            Using These Tools
-          </h3>
-          <ul className="space-y-2 text-foreground">
-            <li>
-              <strong>Route Spreadsheets:</strong> Use these to plan your farming sessions and track
-              which routes are most profitable on your server.
-            </li>
-            <li>
-              <strong>Profit Calculator:</strong> Log your farming hours and let the calculator
-              determine your actual gold per hour.
-            </li>
-            <li>
-              <strong>Flipping Data:</strong> Reference current market prices and flip opportunities
-              directly in your flipping spreadsheet.
-            </li>
-          </ul>
-        </div>
-
-        <div className="mt-8 p-6 bg-accent/10 border border-accent/50 rounded-lg">
-          <p className="text-foreground">
-            <strong>Pro Tip:</strong> These spreadsheets are templates. Feel free to customize them
-            for your server, time zone, and playstyle. The most successful farmers track their data
-            meticulously to identify trends and opportunities.
+      <JsonLd data={breadcrumbSchema(crumbs.map((c) => ({ name: c.label, url: c.href })))} />
+      <div className="mx-auto w-full max-w-5xl px-4 py-10 md:px-6 md:py-14">
+        <Breadcrumbs crumbs={crumbs} />
+        <header className="mt-6 max-w-2xl">
+          <Eyebrow className="mb-3">Free utilities</Eyebrow>
+          <h1 className="text-balance text-4xl font-bold tracking-tight text-foreground md:text-5xl">
+            Gold Tools
+          </h1>
+          <p className="mt-4 text-pretty text-lg leading-relaxed text-muted-foreground">
+            Lightweight calculators that back up the analysis on the site. No sign-up, no fluff —
+            just quick math to help you compare farms and time the market.
           </p>
+        </header>
+
+        <div className="mt-10 grid gap-6 sm:grid-cols-2">
+          {tools.map((tool) => {
+            const Icon = icons[tool.icon] ?? Calculator;
+            return (
+              <Link key={tool.slug} href={`/tools/${tool.slug}`} className="group">
+                <Panel className="h-full hover:border-primary">
+                  <div className="flex items-center gap-3">
+                    <span className="flex h-11 w-11 items-center justify-center rounded-lg border border-primary/30 bg-primary/10 text-primary">
+                      <Icon className="h-5 w-5" aria-hidden="true" />
+                    </span>
+                    <h2 className="text-lg font-bold text-foreground group-hover:text-primary">
+                      {tool.title}
+                    </h2>
+                  </div>
+                  <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
+                    {tool.description}
+                  </p>
+                  <span className="mt-4 inline-flex items-center gap-1.5 font-mono text-xs uppercase tracking-wider text-primary">
+                    Open tool <ArrowRight className="h-3 w-3 transition-transform group-hover:translate-x-0.5" aria-hidden="true" />
+                  </span>
+                </Panel>
+              </Link>
+            );
+          })}
         </div>
       </div>
     </main>

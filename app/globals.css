@@ -5,7 +5,7 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
-  --font-heading: var(--font-sans);
+  --font-heading: var(--font-geist-sans), 'Geist Fallback';
   --font-sans: var(--font-geist-sans), 'Geist Fallback';
   --font-mono: var(--font-geist-mono), 'Geist Mono Fallback';
   --color-sidebar-ring: var(--sidebar-ring);
@@ -25,6 +25,7 @@
   --color-input: var(--input);
   --color-border: var(--border);
   --color-destructive: var(--destructive);
+  --color-positive: var(--positive);
   --color-accent-foreground: var(--accent-foreground);
   --color-accent: var(--accent);
   --color-muted-foreground: var(--muted-foreground);
@@ -50,38 +51,41 @@
 
 :root {
   color-scheme: dark;
-  --background: oklch(0.12 0 0);
-  --foreground: oklch(0.95 0 0);
-  --card: oklch(0.16 0 0);
-  --card-foreground: oklch(0.95 0 0);
-  --popover: oklch(0.16 0 0);
-  --popover-foreground: oklch(0.95 0 0);
-  --primary: oklch(0.68 0.16 40);
-  --primary-foreground: oklch(0.12 0 0);
-  --secondary: oklch(0.22 0 0);
-  --secondary-foreground: oklch(0.95 0 0);
-  --muted: oklch(0.28 0 0);
-  --muted-foreground: oklch(0.65 0 0);
-  --accent: oklch(0.68 0.16 40);
-  --accent-foreground: oklch(0.12 0 0);
-  --destructive: oklch(0.62 0.26 25);
-  --border: oklch(0.25 0 0);
-  --input: oklch(0.20 0 0);
-  --ring: oklch(0.68 0.16 40);
-  --chart-1: oklch(0.68 0.16 40);
-  --chart-2: oklch(0.50 0.14 35);
-  --chart-3: oklch(0.42 0.12 30);
-  --chart-4: oklch(0.35 0.10 25);
-  --chart-5: oklch(0.28 0 0);
-  --radius: 0.625rem;
-  --sidebar: oklch(0.16 0 0);
-  --sidebar-foreground: oklch(0.95 0 0);
-  --sidebar-primary: oklch(0.68 0.16 40);
-  --sidebar-primary-foreground: oklch(0.12 0 0);
-  --sidebar-accent: oklch(0.28 0 0);
-  --sidebar-accent-foreground: oklch(0.95 0 0);
-  --sidebar-border: oklch(0.25 0 0);
-  --sidebar-ring: oklch(0.68 0.16 40);
+  /* Near-black analyst terminal base */
+  --background: oklch(0.145 0.004 106);
+  --foreground: oklch(0.96 0.004 106);
+  --card: oklch(0.185 0.004 106);
+  --card-foreground: oklch(0.96 0.004 106);
+  --popover: oklch(0.185 0.004 106);
+  --popover-foreground: oklch(0.96 0.004 106);
+  /* King Kunta gold */
+  --primary: oklch(0.83 0.16 88);
+  --primary-foreground: oklch(0.16 0.02 90);
+  --secondary: oklch(0.22 0.004 106);
+  --secondary-foreground: oklch(0.96 0.004 106);
+  --muted: oklch(0.26 0.004 106);
+  --muted-foreground: oklch(0.68 0.006 106);
+  --accent: oklch(0.83 0.16 88);
+  --accent-foreground: oklch(0.16 0.02 90);
+  --destructive: oklch(0.62 0.2 25);
+  --positive: oklch(0.72 0.15 155);
+  --border: oklch(0.28 0.004 106);
+  --input: oklch(0.22 0.004 106);
+  --ring: oklch(0.83 0.16 88);
+  --chart-1: oklch(0.83 0.16 88);
+  --chart-2: oklch(0.72 0.15 155);
+  --chart-3: oklch(0.65 0.14 45);
+  --chart-4: oklch(0.55 0.1 250);
+  --chart-5: oklch(0.5 0.02 106);
+  --radius: 0.5rem;
+  --sidebar: oklch(0.185 0.004 106);
+  --sidebar-foreground: oklch(0.96 0.004 106);
+  --sidebar-primary: oklch(0.83 0.16 88);
+  --sidebar-primary-foreground: oklch(0.16 0.02 90);
+  --sidebar-accent: oklch(0.26 0.004 106);
+  --sidebar-accent-foreground: oklch(0.96 0.004 106);
+  --sidebar-border: oklch(0.28 0.004 106);
+  --sidebar-ring: oklch(0.83 0.16 88);
 }
 
 .dark {
@@ -106,33 +110,67 @@
   }
 }
 
+@layer components {
+  /* Technical monospace eyebrow label used across the site */
+  .kicker {
+    @apply font-mono text-xs uppercase tracking-[0.2em] text-muted-foreground;
+  }
+  .kicker-primary {
+    @apply font-mono text-xs uppercase tracking-[0.2em] text-primary;
+  }
+  /* Faint blueprint grid background for hero / feature sections */
+  .grid-bg {
+    background-image:
+      linear-gradient(to right, oklch(0.28 0.004 106 / 0.4) 1px, transparent 1px),
+      linear-gradient(to bottom, oklch(0.28 0.004 106 / 0.4) 1px, transparent 1px);
+    background-size: 56px 56px;
+  }
+  /* Registration crosshair mark */
+  .crosshair::before {
+    content: '+';
+    @apply absolute font-mono text-muted-foreground/60 text-lg leading-none;
+  }
+}
+
 /* Typography for MDX content */
 .prose {
-  @apply text-foreground;
+  @apply text-foreground max-w-none;
 }
 
 .prose h1 {
-  @apply text-4xl font-bold text-foreground mt-8 mb-4;
+  @apply text-4xl font-bold text-foreground mt-8 mb-4 tracking-tight;
 }
 
 .prose h2 {
-  @apply text-2xl font-bold text-foreground mt-6 mb-3;
+  @apply text-2xl font-bold text-foreground mt-10 mb-3 tracking-tight;
 }
 
 .prose h3 {
-  @apply text-xl font-bold text-foreground mt-5 mb-2;
+  @apply text-xl font-bold text-foreground mt-6 mb-2 tracking-tight;
 }
 
 .prose p {
-  @apply text-base leading-relaxed mb-4 text-foreground;
+  @apply text-base leading-relaxed mb-4 text-muted-foreground;
+}
+
+.prose strong {
+  @apply text-foreground font-semibold;
 }
 
 .prose a {
-  @apply text-primary hover:text-accent underline;
+  @apply text-primary hover:text-accent underline underline-offset-2;
 }
 
 .prose ul, .prose ol {
-  @apply mb-4 ml-6;
+  @apply mb-4 ml-6 text-muted-foreground;
+}
+
+.prose ul {
+  @apply list-disc;
+}
+
+.prose ol {
+  @apply list-decimal;
 }
 
 .prose li {
@@ -140,17 +178,29 @@
 }
 
 .prose code {
-  @apply bg-secondary text-foreground px-2 py-1 rounded text-sm;
+  @apply bg-secondary text-primary px-2 py-1 rounded text-sm font-mono;
 }
 
 .prose pre {
   @apply bg-secondary p-4 rounded overflow-auto mb-4;
 }
 
-.prose table {
-  @apply w-full border-collapse mb-4;
+.prose blockquote {
+  @apply border-l-2 border-primary pl-4 italic text-muted-foreground my-4;
 }
 
-.prose th, .prose td {
-  @apply border border-border p-3 text-left;
+.prose table {
+  @apply w-full border-collapse mb-6 text-sm;
+}
+
+.prose thead {
+  @apply bg-secondary;
+}
+
+.prose th {
+  @apply border border-border p-3 text-left font-mono text-xs uppercase tracking-wider text-primary;
+}
+
+.prose td {
+  @apply border border-border p-3 text-left text-muted-foreground;
 }

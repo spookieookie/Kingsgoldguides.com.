@@ -1,91 +1,95 @@
 'use client';
 
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { useState } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, PlayCircle } from 'lucide-react';
+import { Logo } from '@/components/Logo';
+import { mainNav, siteConfig } from '@/lib/site';
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
+
+  const isActive = (href: string) =>
+    href === '/' ? pathname === '/' : pathname.startsWith(href);
 
   return (
-    <header className="sticky top-0 z-50 bg-background border-b border-border">
-      <nav className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
-        <Link href="/" className="text-2xl font-bold text-primary flex-shrink-0">
-          WoW Gold Guides
+    <header className="sticky top-0 z-50 border-b border-border bg-background/90 backdrop-blur">
+      <nav className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3">
+        <Link href="/" aria-label={`${siteConfig.name} home`} className="flex-shrink-0">
+          <Logo />
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center gap-8">
-          <Link
-            href="/guides"
-            className="text-foreground hover:text-primary transition-colors"
-          >
-            Guides
-          </Link>
-          <Link
-            href="/tools"
-            className="text-foreground hover:text-primary transition-colors"
-          >
-            Tools
-          </Link>
-          <Link
-            href="/about"
-            className="text-foreground hover:text-primary transition-colors"
-          >
-            About
-          </Link>
-          <Link
-            href="/contact"
-            className="text-foreground hover:text-primary transition-colors"
-          >
-            Contact
-          </Link>
+        <div className="hidden items-center gap-1 lg:flex">
+          {mainNav.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              className={`rounded-md px-2.5 py-1.5 text-sm transition-colors ${
+                isActive(item.href)
+                  ? 'text-primary'
+                  : 'text-muted-foreground hover:text-foreground'
+              }`}
+            >
+              {item.label}
+            </Link>
+          ))}
         </div>
 
-        {/* Mobile Menu Button */}
-        <button
-          onClick={() => setIsOpen(!isOpen)}
-          className="md:hidden p-2 hover:bg-secondary rounded transition-colors"
-        >
-          {isOpen ? (
-            <X size={24} className="text-foreground" />
-          ) : (
-            <Menu size={24} className="text-foreground" />
-          )}
-        </button>
+        <div className="flex items-center gap-2">
+          <a
+            href={siteConfig.youtube}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hidden items-center gap-2 rounded-md bg-primary px-3 py-2 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90 sm:flex"
+          >
+            <PlayCircle className="h-4 w-4" aria-hidden="true" />
+            Subscribe
+          </a>
+
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            aria-label={isOpen ? 'Close menu' : 'Open menu'}
+            aria-expanded={isOpen}
+            className="rounded-md p-2 transition-colors hover:bg-secondary lg:hidden"
+          >
+            {isOpen ? (
+              <X size={22} className="text-foreground" />
+            ) : (
+              <Menu size={22} className="text-foreground" />
+            )}
+          </button>
+        </div>
       </nav>
 
       {/* Mobile Navigation */}
       {isOpen && (
-        <div className="md:hidden border-t border-border px-4 py-3 space-y-2 bg-secondary">
-          <Link
-            href="/guides"
-            className="block p-2 text-foreground hover:text-primary hover:bg-background rounded transition-colors"
-            onClick={() => setIsOpen(false)}
+        <div className="border-t border-border bg-secondary px-4 py-3 lg:hidden">
+          <div className="grid grid-cols-2 gap-1">
+            {mainNav.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                onClick={() => setIsOpen(false)}
+                className={`rounded-md p-2.5 text-sm transition-colors hover:bg-background ${
+                  isActive(item.href) ? 'text-primary' : 'text-foreground'
+                }`}
+              >
+                {item.label}
+              </Link>
+            ))}
+          </div>
+          <a
+            href={siteConfig.youtube}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-3 flex items-center justify-center gap-2 rounded-md bg-primary px-3 py-2.5 text-sm font-semibold text-primary-foreground"
           >
-            Guides
-          </Link>
-          <Link
-            href="/tools"
-            className="block p-2 text-foreground hover:text-primary hover:bg-background rounded transition-colors"
-            onClick={() => setIsOpen(false)}
-          >
-            Tools
-          </Link>
-          <Link
-            href="/about"
-            className="block p-2 text-foreground hover:text-primary hover:bg-background rounded transition-colors"
-            onClick={() => setIsOpen(false)}
-          >
-            About
-          </Link>
-          <Link
-            href="/contact"
-            className="block p-2 text-foreground hover:text-primary hover:bg-background rounded transition-colors"
-            onClick={() => setIsOpen(false)}
-          >
-            Contact
-          </Link>
+            <PlayCircle className="h-4 w-4" aria-hidden="true" />
+            Subscribe on YouTube
+          </a>
         </div>
       )}
     </header>

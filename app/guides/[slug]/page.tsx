@@ -3,7 +3,6 @@ import { notFound } from 'next/navigation';
 import { getGuideBySlug, getAllGuideSlugs, getGuides } from '@/lib/mdx';
 import { YouTubeEmbed } from '@/components/guides/YouTubeEmbed';
 import { QuickAnswerBox } from '@/components/guides/QuickAnswerBox';
-import { GoldBreakdownTable } from '@/components/guides/GoldBreakdownTable';
 import { FAQAccordion } from '@/components/guides/FAQAccordion';
 import { DownloadCard } from '@/components/guides/DownloadCard';
 import { EmailCaptureForm } from '@/components/guides/EmailCaptureForm';
@@ -46,28 +45,6 @@ export async function generateStaticParams() {
   const slugs = await getAllGuideSlugs();
   return slugs.map((slug) => ({ slug }));
 }
-
-// Sample gold breakdown data (will be extended with real data from frontmatter)
-const SAMPLE_GOLD_BREAKDOWN = [
-  {
-    activity: 'Herbalism - Dense Nodes',
-    goldPerHour: 3200,
-    requirements: 'Flying Required',
-    difficulty: 'Easy' as const,
-  },
-  {
-    activity: 'Herbalism - Ground Routes',
-    goldPerHour: 2500,
-    requirements: 'No Requirements',
-    difficulty: 'Easy' as const,
-  },
-  {
-    activity: 'Multi-gathering Hybrid',
-    goldPerHour: 3800,
-    requirements: 'Flying, Multiple Professions',
-    difficulty: 'Medium' as const,
-  },
-];
 
 export default async function GuidePage({ params }: PageProps) {
   const { slug } = await params;
@@ -147,9 +124,6 @@ export default async function GuidePage({ params }: PageProps) {
 
         {/* Main Content */}
         <div className="prose mb-8">{content}</div>
-
-        {/* Gold Breakdown Table */}
-        <GoldBreakdownTable rows={SAMPLE_GOLD_BREAKDOWN} />
 
         {/* FAQ Section */}
         {frontmatter.faq && frontmatter.faq.length > 0 && (

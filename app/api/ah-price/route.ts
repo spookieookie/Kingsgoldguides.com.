@@ -18,7 +18,8 @@ interface AHResponse {
   commodities: BlizzardPrice[];
 }
 
-export const revalidate = 43200; // 12 hours
+// This route reads query params from the request, so it must be dynamic.
+export const dynamic = 'force-dynamic';
 
 async function getBlizzardAccessToken(): Promise<string | null> {
   if (!process.env.BLIZZARD_CLIENT_ID || !process.env.BLIZZARD_CLIENT_SECRET) {

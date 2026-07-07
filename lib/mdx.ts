@@ -2,8 +2,27 @@ import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 import { compileMDX } from 'next-mdx-remote/rsc';
+import { YouTubeEmbed } from '@/components/guides/YouTubeEmbed';
+import { QuickAnswerBox } from '@/components/guides/QuickAnswerBox';
+import { GoldBreakdownTable } from '@/components/guides/GoldBreakdownTable';
+import { FAQAccordion } from '@/components/guides/FAQAccordion';
+import { DownloadCard } from '@/components/guides/DownloadCard';
+import { EmailCaptureForm } from '@/components/guides/EmailCaptureForm';
+import { RouteMapImage } from '@/components/guides/RouteMapImage';
 
 const contentDir = path.join(process.cwd(), 'content/guides');
+
+// Components made available to MDX content. next-mdx-remote strips `import`
+// statements from MDX, so any component used inside a guide must be provided here.
+const mdxComponents = {
+  YouTubeEmbed,
+  QuickAnswerBox,
+  GoldBreakdownTable,
+  FAQAccordion,
+  DownloadCard,
+  EmailCaptureForm,
+  RouteMapImage,
+};
 
 export interface GuideFrontmatter {
   title: string;
@@ -53,6 +72,7 @@ export async function getGuideBySlug(slug: string) {
 
   const mdxSource = await compileMDX({
     source: mdxContent,
+    components: mdxComponents,
     options: {
       parseFrontmatter: false,
     },

@@ -8,7 +8,7 @@ import { Breadcrumbs } from '@/components/guides/Breadcrumbs';
 import { GuideCard } from '@/components/cards/GuideCard';
 import { VideoCard } from '@/components/cards/VideoCard';
 import { Eyebrow, Panel, Tag } from '@/components/ui/kit';
-import { Youtube, BarChart3, ArrowRight } from 'lucide-react';
+import { PlayCircle, BarChart3, ArrowRight } from 'lucide-react';
 import type { GuidePage, VideoPage } from '@/lib/content/types';
 
 export const metadata: Metadata = {
@@ -64,7 +64,7 @@ export default function AuthorPage() {
               rel="noopener noreferrer"
               className="mt-5 inline-flex items-center gap-2 rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
             >
-              <Youtube className="h-4 w-4" aria-hidden="true" />
+              <PlayCircle className="h-4 w-4" aria-hidden="true" />
               Watch on YouTube
             </a>
           </div>

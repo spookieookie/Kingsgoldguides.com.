@@ -14,6 +14,7 @@ export function GuideCard({
   className?: string;
 }) {
   const hub = getHub(guide.hub);
+  const hasGoldRate = guide.goldPerHourHigh > 0;
   return (
     <article
       className={cn(
@@ -37,12 +38,20 @@ export function GuideCard({
       </p>
 
       <div className="mt-4 flex items-baseline gap-2 border-t border-border/60 pt-4">
-        <span className="font-mono text-xs uppercase tracking-wider text-muted-foreground">
-          Gold/hr
-        </span>
-        <span className="text-xl font-bold text-primary">
-          {formatGoldRange(guide.goldPerHourLow, guide.goldPerHourHigh)}
-        </span>
+        {hasGoldRate ? (
+          <>
+            <span className="font-mono text-xs uppercase tracking-wider text-muted-foreground">
+              Gold/hr
+            </span>
+            <span className="text-xl font-bold text-primary">
+              {formatGoldRange(guide.goldPerHourLow, guide.goldPerHourHigh)}
+            </span>
+          </>
+        ) : (
+          <span className="font-mono text-xs uppercase tracking-wider text-primary">
+            Market analysis
+          </span>
+        )}
       </div>
 
       <div className="mt-3 flex flex-wrap items-center gap-2">

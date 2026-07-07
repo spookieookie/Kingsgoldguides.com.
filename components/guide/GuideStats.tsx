@@ -7,8 +7,18 @@ import { formatGoldRange, riskTone, speedTone } from '@/lib/format';
  * Pulls the structured economic metadata off the typed GuidePage record.
  */
 export function GuideStats({ guide }: { guide: GuidePage }) {
+  const hasGoldRate = guide.goldPerHourHigh > 0;
   const rows: { label: string; value: React.ReactNode }[] = [
-    { label: 'Gold / hour', value: <span className="text-primary">{formatGoldRange(guide.goldPerHourLow, guide.goldPerHourHigh)}</span> },
+    {
+      label: hasGoldRate ? 'Gold / hour' : 'Content type',
+      value: hasGoldRate ? (
+        <span className="text-primary">
+          {formatGoldRange(guide.goldPerHourLow, guide.goldPerHourHigh)}
+        </span>
+      ) : (
+        <span className="text-primary">Analysis</span>
+      ),
+    },
     { label: 'Method', value: guide.methodType },
     { label: 'Expansion', value: guide.expansion },
     { label: 'Setup cost', value: guide.setupCost },

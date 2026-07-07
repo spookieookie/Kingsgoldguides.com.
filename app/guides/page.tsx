@@ -47,7 +47,7 @@ export default async function GuidesPage() {
               <p className="text-muted-foreground mb-4">{guide.quickAnswer}</p>
 
               <div className="flex flex-wrap gap-2 mb-4">
-                {guide.professions.map((prof) => (
+                {guide.professions && guide.professions.map((prof) => (
                   <span
                     key={prof}
                     className="px-2 py-1 bg-background text-foreground text-xs rounded"

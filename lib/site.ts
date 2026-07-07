@@ -21,6 +21,10 @@ export type HubKey =
 export interface HubDef {
   key: HubKey;
   href: string;
+  /** Full hub name, used in headings and hub cards. */
+  name: string;
+  /** Short label for compact tags/badges on guide & video cards. */
+  shortName: string;
   label: string;
   navLabel: string;
   tagline: string;
@@ -32,6 +36,8 @@ export const hubs: HubDef[] = [
   {
     key: 'gold-guides',
     href: '/guides',
+    name: 'Gold Guides',
+    shortName: 'Gold',
     label: 'Gold Guides',
     navLabel: 'Gold Guides',
     tagline: 'The complete money-page library',
@@ -42,6 +48,8 @@ export const hubs: HubDef[] = [
   {
     key: 'farming',
     href: '/farming',
+    name: 'Farming Guides',
+    shortName: 'Farming',
     label: 'Farming Guides',
     navLabel: 'Farming',
     tagline: 'Routes, respawns, and raw gold/hour',
@@ -52,6 +60,8 @@ export const hubs: HubDef[] = [
   {
     key: 'auction-house',
     href: '/auction-house',
+    name: 'Auction House Flipping',
+    shortName: 'AH',
     label: 'Auction House Flipping',
     navLabel: 'Auction House',
     tagline: 'Flip niches, margins, and sale rate',
@@ -62,6 +72,8 @@ export const hubs: HubDef[] = [
   {
     key: 'economy',
     href: '/economy',
+    name: 'Economy Analysis',
+    shortName: 'Economy',
     label: 'WoW Economy Analysis',
     navLabel: 'Economy',
     tagline: 'Market timing and patch impact',
@@ -72,6 +84,8 @@ export const hubs: HubDef[] = [
   {
     key: 'professions',
     href: '/professions',
+    name: 'Professions for Gold',
+    shortName: 'Professions',
     label: 'Professions for Gold',
     navLabel: 'Professions',
     tagline: 'Craft, sell, and specialize for profit',
@@ -82,6 +96,8 @@ export const hubs: HubDef[] = [
   {
     key: 'rare-farms',
     href: '/rare-farms',
+    name: 'Rare & Transmog Farms',
+    shortName: 'Rare',
     label: 'Rare Item & Transmog Farms',
     navLabel: 'Rare Farms',
     tagline: 'High-value drops and collector demand',

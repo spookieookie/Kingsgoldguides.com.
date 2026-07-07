@@ -1,74 +1,54 @@
-import Link from 'next/link';
 import type { Metadata } from 'next';
-import { getGuides } from '@/lib/mdx';
-import { BookOpen } from 'lucide-react';
+import { getAllGuides } from '@/lib/content';
+import { getHub, hubs, siteConfig } from '@/lib/site';
+import { Breadcrumbs } from '@/components/guides/Breadcrumbs';
+import { Eyebrow } from '@/components/ui/kit';
+import { HubView } from '@/components/hub/HubView';
+import { JsonLd } from '@/components/JsonLd';
+import { breadcrumbSchema } from '@/lib/schema';
+
+const hub = getHub('gold-guides');
 
 export const metadata: Metadata = {
-  title: 'All Gold Guides | WoW Gold Guides',
-  description: 'Browse all World of Warcraft gold-making guides and farming strategies.',
+  title: `${hub.label} — Every WoW Gold Method | ${siteConfig.name}`,
+  description: hub.description,
+  alternates: { canonical: `${siteConfig.domain}/guides` },
 };
 
-export default async function GuidesPage() {
-  const guides = await getGuides();
+export default function GuidesIndexPage() {
+  const guides = getAllGuides();
+  // Filter chips = the six silos, so the master index cross-navigates by hub.
+  const hubFilters = hubs.map((h) => h.name);
+
+  const breadcrumbs = [
+    { label: 'Home', href: '/' },
+    { label: hub.label, href: '/guides' },
+  ];
 
   return (
-    <main className="min-h-screen bg-background">
-      <div className="max-w-6xl mx-auto px-4 py-12 sm:py-16 lg:py-20">
-        <div className="mb-12">
-          <div className="flex items-center gap-3 mb-4">
-            <BookOpen size={32} className="text-primary" />
-            <h1 className="text-4xl sm:text-5xl font-bold text-foreground">
-              Gold-Making Guides
-            </h1>
-          </div>
-          <p className="text-xl text-muted-foreground max-w-2xl">
-            Master the art of gold farming with our comprehensive guides covering gathering,
-            flipping, and advanced money-making strategies in World of Warcraft.
+    <>
+      <JsonLd data={breadcrumbSchema(breadcrumbs.map((c) => ({ name: c.label, url: c.href })))} />
+
+      <section className="bg-grid border-b border-border/60">
+        <div className="mx-auto w-full max-w-6xl px-4 py-12 md:px-6 md:py-16">
+          <Breadcrumbs crumbs={breadcrumbs} />
+          <Eyebrow className="mb-4">{hub.tagline}</Eyebrow>
+          <h1 className="max-w-3xl text-balance text-4xl font-bold tracking-tight text-foreground md:text-5xl">
+            Every WoW gold-making method, in one index
+          </h1>
+          <p className="mt-4 max-w-2xl text-pretty text-lg leading-relaxed text-muted-foreground">
+            {hub.description}
+          </p>
+          <p className="mt-6 font-mono text-xs uppercase tracking-wider text-muted-foreground">
+            <span className="text-foreground">{guides.length}</span> guides across{' '}
+            <span className="text-foreground">{hubs.length}</span> silos
           </p>
         </div>
+      </section>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {guides.map((guide) => (
-            <Link
-              key={guide.slug}
-              href={`/guides/${guide.slug}`}
-              className="group p-6 bg-secondary border border-border rounded-lg hover:border-primary hover:bg-secondary/80 transition-all"
-            >
-              <div className="mb-3">
-                <span className="inline-block px-3 py-1 bg-primary/20 text-primary text-sm font-semibold rounded-full">
-                  {guide.expansion}
-                </span>
-              </div>
-
-              <h2 className="text-2xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
-                {guide.title}
-              </h2>
-
-              <p className="text-muted-foreground mb-4">{guide.quickAnswer}</p>
-
-              <div className="flex flex-wrap gap-2 mb-4">
-                {guide.professions && guide.professions.map((prof) => (
-                  <span
-                    key={prof}
-                    className="px-2 py-1 bg-background text-foreground text-xs rounded"
-                  >
-                    {prof}
-                  </span>
-                ))}
-              </div>
-
-              <div className="flex items-center justify-between pt-4 border-t border-border">
-                <p className="text-sm text-muted-foreground">
-                  {guide.goldClaimHeadline}
-                </p>
-                <span className="text-primary font-semibold group-hover:translate-x-1 transition-transform">
-                  →
-                </span>
-              </div>
-            </Link>
-          ))}
-        </div>
+      <div className="mx-auto w-full max-w-6xl px-4 py-12 md:px-6 md:py-16">
+        <HubView guides={guides} subcategories={hubFilters} />
       </div>
-    </main>
+    </>
   );
 }

@@ -17,11 +17,11 @@ import {
   getFeaturedGuides,
   getFeaturedVideos,
   getTopGoldGuides,
-  getGuide,
   dataBriefs,
   tools,
   beginnerPaths,
 } from '@/lib/content';
+import { darkmoonFirewater } from '@/lib/content/flagship';
 import { hubs, siteConfig, type HubKey } from '@/lib/site';
 import { formatGoldRange } from '@/lib/format';
 
@@ -41,7 +41,6 @@ export default function HomePage() {
   const topGold = getTopGoldGuides(6);
   const featuredGuides = getFeaturedGuides(6);
   const featuredVideos = getFeaturedVideos(4);
-  const flagship = getGuide('darkmoon-firewater-farm') ?? topGold[0];
 
   const counts = hubs.reduce(
     (acc, hub) => {
@@ -64,7 +63,17 @@ export default function HomePage() {
         topGoldPerHour={topGoldPerHour}
       />
       <HubGrid counts={counts} />
-      {flagship && <FlagshipBand guide={flagship} />}
+      <FlagshipBand
+        title={darkmoonFirewater.title}
+        summary={darkmoonFirewater.heroSummary}
+        href={`/economy/${darkmoonFirewater.slug}`}
+        youtubeVideoId={darkmoonFirewater.youtubeVideoId}
+        facts={[
+          { label: 'Type', value: 'Event flip' },
+          { label: 'Window', value: 'Monthly Faire' },
+          { label: 'Play', value: 'Buy low / sell gap' },
+        ]}
+      />
       <GoldLeaderboard guides={topGold} />
       <FeaturedGuides guides={featuredGuides} />
       <LatestVideos videos={featuredVideos.length ? featuredVideos : allVideos.slice(0, 4)} />

@@ -8,7 +8,19 @@ import { formatGoldRange, riskTone } from '@/lib/format';
 import { getHub } from '@/lib/site';
 
 /* Flagship deep-dive band */
-export function FlagshipBand({ guide }: { guide: GuidePage }) {
+export function FlagshipBand({
+  title,
+  summary,
+  href,
+  youtubeVideoId,
+  facts,
+}: {
+  title: string;
+  summary: string;
+  href: string;
+  youtubeVideoId: string;
+  facts: { label: string; value: string }[];
+}) {
   return (
     <Section className="bg-grid">
       <div className="grid items-center gap-10 lg:grid-cols-2">
@@ -17,35 +29,21 @@ export function FlagshipBand({ guide }: { guide: GuidePage }) {
             <Flame className="h-3.5 w-3.5" aria-hidden="true" /> Flagship breakdown
           </Eyebrow>
           <h2 className="text-balance text-3xl font-bold tracking-tight text-foreground md:text-4xl">
-            {guide.title}
+            {title}
           </h2>
-          <p className="mt-4 text-pretty leading-relaxed text-muted-foreground">
-            {guide.tldr}
-          </p>
+          <p className="mt-4 text-pretty leading-relaxed text-muted-foreground">{summary}</p>
           <div className="mt-6 flex flex-wrap gap-6">
-            <div>
-              <div className="font-mono text-xs uppercase tracking-wider text-muted-foreground">
-                Gold / hour
+            {facts.map((f) => (
+              <div key={f.label}>
+                <div className="font-mono text-xs uppercase tracking-wider text-muted-foreground">
+                  {f.label}
+                </div>
+                <div className="text-2xl font-bold text-foreground">{f.value}</div>
               </div>
-              <div className="text-2xl font-bold text-primary">
-                {formatGoldRange(guide.goldPerHourLow, guide.goldPerHourHigh)}
-              </div>
-            </div>
-            <div>
-              <div className="font-mono text-xs uppercase tracking-wider text-muted-foreground">
-                Setup cost
-              </div>
-              <div className="text-2xl font-bold text-foreground">{guide.setupCost}</div>
-            </div>
-            <div>
-              <div className="font-mono text-xs uppercase tracking-wider text-muted-foreground">
-                Risk
-              </div>
-              <div className="text-2xl font-bold text-foreground">{guide.riskLevel}</div>
-            </div>
+            ))}
           </div>
           <Link
-            href={`/guides/${guide.slug}`}
+            href={href}
             className="mt-8 inline-flex items-center gap-2 rounded-lg bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
           >
             Read the full breakdown
@@ -56,7 +54,7 @@ export function FlagshipBand({ guide }: { guide: GuidePage }) {
           <div className="relative aspect-video bg-secondary">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src={`https://i.ytimg.com/vi/${guide.youtubeVideoId}/hqdefault.jpg`}
+              src={`https://i.ytimg.com/vi/${youtubeVideoId}/hqdefault.jpg`}
               alt=""
               className="h-full w-full object-cover"
             />

@@ -1,18 +1,19 @@
 import type { Metadata } from 'next';
 import { Breadcrumbs } from '@/components/guides/Breadcrumbs';
 import { ContactForm } from '@/components/ContactForm';
-import { Mail, Send } from 'lucide-react';
+import { Mail, PlayCircle, Send } from 'lucide-react';
+import { siteConfig } from '@/lib/site';
 
 export const metadata: Metadata = {
-  title: 'Contact | WoW Gold Guides',
-  description: 'Get in touch with WoW Gold Guides. Share feedback, suggestions, or questions.',
+  title: `Contact | ${siteConfig.name}`,
+  description:
+    'Get in touch with King Kunta. Suggest a farm to test, share market data, or ask a gold-making question.',
 };
 
 export default function ContactPage() {
-
   return (
     <main className="min-h-screen bg-background">
-      <div className="max-w-3xl mx-auto px-4 py-12 sm:py-16">
+      <div className="mx-auto max-w-3xl px-4 py-12 sm:py-16">
         <Breadcrumbs
           crumbs={[
             { label: 'Home', href: '/' },
@@ -20,35 +21,39 @@ export default function ContactPage() {
           ]}
         />
 
-        <h1 className="text-4xl sm:text-5xl font-bold text-foreground mb-2">
-          Get in Touch
+        <p className="mb-3 font-mono text-xs uppercase tracking-widest text-primary">
+          Open a line
+        </p>
+        <h1 className="mb-2 text-balance text-4xl font-bold text-foreground sm:text-5xl">
+          Contact King Kunta
         </h1>
-        <p className="text-lg text-muted-foreground mb-12">
-          Have questions, suggestions, or feedback? We&apos;d love to hear from you.
+        <p className="mb-12 text-pretty text-lg leading-relaxed text-muted-foreground">
+          Found a farm worth testing? Sitting on market data from your realm? Want a
+          strategy broken down on video? Send it through.
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-          <div className="p-6 bg-secondary border border-border rounded-lg">
-            <Mail size={24} className="text-primary mb-3" />
-            <h3 className="font-bold text-foreground mb-2">Email</h3>
-            <p className="text-muted-foreground text-sm">
-              contact@wowgoldguides.com
+        <div className="mb-12 grid grid-cols-1 gap-6 md:grid-cols-3">
+          <div className="rounded-lg border border-border bg-secondary p-6">
+            <Mail size={24} className="mb-3 text-primary" />
+            <h3 className="mb-2 font-bold text-foreground">Email</h3>
+            <p className="text-sm text-muted-foreground">
+              contact@kingsgoldguides.com
             </p>
           </div>
 
-          <div className="p-6 bg-secondary border border-border rounded-lg">
-            <Send size={24} className="text-primary mb-3" />
-            <h3 className="font-bold text-foreground mb-2">Response Time</h3>
-            <p className="text-muted-foreground text-sm">
-              We typically respond within 24 hours
+          <div className="rounded-lg border border-border bg-secondary p-6">
+            <Send size={24} className="mb-3 text-primary" />
+            <h3 className="mb-2 font-bold text-foreground">Response time</h3>
+            <p className="text-sm text-muted-foreground">
+              Usually within 24 hours
             </p>
           </div>
 
-          <div className="p-6 bg-secondary border border-border rounded-lg">
-            <Mail size={24} className="text-primary mb-3" />
-            <h3 className="font-bold text-foreground mb-2">Newsletter</h3>
-            <p className="text-muted-foreground text-sm">
-              Subscribe for weekly updates
+          <div className="rounded-lg border border-border bg-secondary p-6">
+            <PlayCircle size={24} className="mb-3 text-primary" />
+            <h3 className="mb-2 font-bold text-foreground">YouTube</h3>
+            <p className="text-sm text-muted-foreground">
+              Comment on any video — guide requests get priority
             </p>
           </div>
         </div>

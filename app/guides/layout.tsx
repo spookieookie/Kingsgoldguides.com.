@@ -1,8 +1,10 @@
 import type { Metadata } from 'next';
+import { siteConfig } from '@/lib/site';
 
 export const metadata: Metadata = {
-  title: 'WoW Gold Guides',
-  description: 'Complete guides to making gold in World of Warcraft',
+  title: `Gold Guides | ${siteConfig.name}`,
+  description:
+    'The complete King Kunta gold guide library — farming routes, auction house flips, and market analysis for World of Warcraft.',
 };
 
 export default function GuidesLayout({

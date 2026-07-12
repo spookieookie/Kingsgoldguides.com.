@@ -15,7 +15,7 @@ export const darkmoonFirewater = {
     'When Darkmoon Firewater actually improves your gold per hour, when the market is too saturated to bother, and exactly how to time buys and sells around the Darkmoon Faire.',
   updatedAt: '2024-08-06',
   publishedAt: '2024-07-01',
-  youtubeVideoId: 'dQw4w9WgXcQ',
+  youtubeVideoId: 'KvrQ1LJACWI',
   heroImage: '/placeholder.svg?height=480&width=854',
 
   tagline: 'Event economics / speed consumable / market-timed flip',
@@ -81,6 +81,7 @@ export const darkmoonFirewater = {
   ] as FaqItem[],
 
   relatedGuides: [
+    'data-analyst-darkmoon-firewater-gold-flip-wow-gold-making',
     'wow-gold-farm-1000000-tiragarde-sound-mining-herbalism-route',
     'wow-economy-best-time-to-sell-mats',
     'wow-gold-farm-best-way-200k-iron-docks',

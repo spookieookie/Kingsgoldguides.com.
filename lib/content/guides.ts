@@ -460,6 +460,58 @@ const mdxGuides: GuidePage[] = [
     schemaType: 'Article',
     mdxSlug: '120000-gold-per-hour-skettis-blackwind-lake-primal-water-farm',
   },
+  {
+    title: 'Data Analyst Explains the Darkmoon Firewater Gold Flip | WoW Gold Making',
+    slug: 'data-analyst-darkmoon-firewater-gold-flip-wow-gold-making',
+    excerpt:
+      'A data-backed WoW economy guide to flipping Darkmoon Firewater around the monthly Darkmoon Faire cycle, with buy windows, hold windows, and sell timing.',
+    seoTitle: 'Data Analyst Explains the Darkmoon Firewater Gold Flip | WoW Gold Making',
+    metaDescription:
+      'Learn how to flip Darkmoon Firewater using the monthly Darkmoon Faire cycle. This WoW gold-making guide explains buy windows, hold windows, sell timing, and market snapshot analysis.',
+    heroImage: PLACEHOLDER,
+    youtubeVideoId: 'KvrQ1LJACWI',
+    publishedAt: '2026-07-11',
+    updatedAt: '2026-07-11',
+    hub: 'auction-house',
+    category: 'Auction House Flipping',
+    subcategory: 'Market Timing',
+    expansion: 'Current Retail',
+    methodType: 'Event Economy',
+    goldPerHourLow: 0,
+    goldPerHourHigh: 0,
+    setupCost: 'Medium',
+    saleSpeed: 'Medium',
+    riskLevel: 'Medium',
+    requirements: [
+      'Auction House access and starting capital',
+      'Awareness of the Darkmoon Faire calendar',
+      'A price-check addon or external market data source',
+      'Patience to hold inventory across the monthly cycle',
+    ],
+    whoFor: [
+      'Players who already use the Auction House',
+      'Flippers comfortable holding inventory',
+      'Market-minded players who prefer timing over farming',
+    ],
+    tldr:
+      'Buy Darkmoon Firewater during or right after Darkmoon Faire week when fresh supply enters the market, hold through the middle of the month, and sell before the next Faire when supply may tighten. This is a timing framework, not a guaranteed profit method — always verify prices on your realm.',
+    bestTimeToFarm: 'Buy during or shortly after Darkmoon Faire week, when fresh supply enters the market',
+    bestTimeToSell: 'The final stretch before the next Faire, when supply may tighten',
+    ahNotes:
+      'Post in reasonable stack sizes and track competing listings. Do not chase a spike that is already far above the 7-day median — that may be a sell signal, not a buy signal.',
+    realmCaveats:
+      'Market prices vary by realm, patch, region, profession demand, and competition. Verify current prices before buying — the video snapshot data is historical, not live.',
+    steps: [],
+    analystTakeaway:
+      'This is a cycle-based market flip, not a farm. The edge is buying into the predictable Faire-week supply influx and selling into scarcity — validated against current data every cycle.',
+    faq: [],
+    relatedGuides: ['wow-auction-house-flipping-safe-niches', 'wow-economy-best-time-to-sell-mats'],
+    relatedVideos: ['KvrQ1LJACWI'],
+    featured: true,
+    canonicalUrl: '/guides/data-analyst-darkmoon-firewater-gold-flip-wow-gold-making',
+    schemaType: 'Article',
+    mdxSlug: 'data-analyst-darkmoon-firewater-gold-flip-wow-gold-making',
+  },
 ];
 
 /** New fully-typed sample guides that fill out the AH, economy, and profession silos. */

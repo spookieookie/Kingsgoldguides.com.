@@ -46,6 +46,8 @@ export function startAnalytics(id: string) {
   script.id = 'kgg-google-analytics';
   script.async = true;
   script.src = `https://www.googletagmanager.com/gtag/js?id=${id}`;
+  script.onload = () => { script.dataset.loaded = 'true'; };
+  script.onerror = () => { script.dataset.loaded = 'false'; };
   document.head.appendChild(script);
 }
 

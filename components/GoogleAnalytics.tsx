@@ -16,8 +16,13 @@ export function GoogleAnalytics({ measurementId, enabled }: { measurementId: str
     const current = readConsent();
     setChoice(current); setShowBanner(!current); setLoaded(true);
     const open = () => setShowBanner(true);
+    const syncChoice = () => setChoice(readConsent());
     window.addEventListener(CONSENT_EVENT, open);
-    return () => window.removeEventListener(CONSENT_EVENT, open);
+    window.addEventListener('storage', syncChoice);
+    return () => {
+      window.removeEventListener(CONSENT_EVENT, open);
+      window.removeEventListener('storage', syncChoice);
+    };
   }, []);
 
   useEffect(() => {

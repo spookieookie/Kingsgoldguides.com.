@@ -1,104 +1,30 @@
 import Link from 'next/link';
 import { Logo } from '@/components/Logo';
-import { hubs, siteConfig } from '@/lib/site';
-
-const resources = [
-  { href: '/videos', label: 'Video Library' },
-  { href: '/tools', label: 'Gold Tools' },
-  { href: '/economy/darkmoon-firewater', label: 'Darkmoon Firewater' },
-  { href: '/about', label: 'About' },
-  { href: '/authors/king-kunta', label: 'Author: King Kunta' },
-  { href: '/contact', label: 'Contact' },
-];
+import { mainNav, siteConfig } from '@/lib/site';
 
 export function Footer() {
   return (
     <footer className="border-t border-border bg-secondary">
-      <div className="mx-auto max-w-7xl px-4 py-12">
-        <div className="grid grid-cols-1 gap-10 md:grid-cols-4">
+      <div className="mx-auto max-w-6xl px-4 py-10 md:px-6">
+        <div className="flex flex-col justify-between gap-8 md:flex-row">
           <div>
             <Logo />
-            <p className="mt-4 max-w-xs text-sm leading-relaxed text-muted-foreground">
-              {siteConfig.description}
-            </p>
+            <p className="mt-4 max-w-md text-sm leading-relaxed text-muted-foreground">{siteConfig.description}</p>
           </div>
-
-          <div>
-            <h4 className="kicker mb-4">Silos</h4>
-            <ul className="space-y-2.5 text-sm">
-              {hubs.map((hub) => (
-                <li key={hub.key}>
-                  <Link
-                    href={hub.href}
-                    className="text-muted-foreground transition-colors hover:text-primary"
-                  >
-                    {hub.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="kicker mb-4">Resources</h4>
-            <ul className="space-y-2.5 text-sm">
-              {resources.map((item) => (
-                <li key={item.href}>
-                  <Link
-                    href={item.href}
-                    className="text-muted-foreground transition-colors hover:text-primary"
-                  >
-                    {item.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="kicker mb-4">Follow</h4>
-            <ul className="space-y-2.5 text-sm">
-              <li>
-                <a
-                  href={siteConfig.youtube}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-muted-foreground transition-colors hover:text-primary"
-                >
-                  YouTube
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-muted-foreground transition-colors hover:text-primary">
-                  Twitter / X
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-muted-foreground transition-colors hover:text-primary">
-                  Discord
-                </a>
-              </li>
-            </ul>
-          </div>
+          <nav aria-label="Footer navigation" className="flex flex-wrap items-start gap-x-6 gap-y-3 text-sm">
+            {mainNav.map((item) => (
+              <Link key={item.href} href={item.href} className="text-foreground transition-colors hover:text-primary">{item.label}</Link>
+            ))}
+          </nav>
         </div>
-
-        <div className="mt-10 flex flex-col items-center justify-between gap-4 border-t border-border pt-8 md:flex-row">
-          <p className="text-xs text-muted-foreground">
-            © {new Date().getFullYear()} {siteConfig.fullName}. World of Warcraft is a trademark of
-            Blizzard Entertainment, Inc. This site is not affiliated with Blizzard.
-          </p>
-          <div className="flex gap-5 text-xs">
-            <a href="#" className="text-muted-foreground hover:text-primary">
-              Privacy
-            </a>
-            <a href="#" className="text-muted-foreground hover:text-primary">
-              Terms
-            </a>
-            <a href="#" className="text-muted-foreground hover:text-primary">
-              Disclaimer
-            </a>
-          </div>
+        <div className="mt-8 flex flex-wrap gap-x-5 gap-y-2 border-t border-border pt-6 text-xs text-muted-foreground">
+          <Link href="/about" className="hover:text-primary">About</Link>
+          <Link href="/contact" className="hover:text-primary">Contact</Link>
+          <a href={siteConfig.youtube} target="_blank" rel="noopener noreferrer" className="hover:text-primary">YouTube</a>
         </div>
+        <p className="mt-5 text-xs leading-relaxed text-muted-foreground">
+          © {new Date().getFullYear()} {siteConfig.fullName}. World of Warcraft is a trademark of Blizzard Entertainment, Inc. This site is not affiliated with Blizzard.
+        </p>
       </div>
     </footer>
   );

@@ -9,7 +9,7 @@ import { Panel, Eyebrow } from '@/components/ui/kit';
 import { BarChart3, FlaskConical, Clock, ShieldCheck, ArrowRight } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: `About | ${siteConfig.name}`,
+  title: { absolute: siteConfig.name },
   description:
     'King Kunta WoW Gold applies a data-analyst mindset to the World of Warcraft economy — testing every method in-game and explaining why margins rise or collapse.',
   alternates: { canonical: `${siteConfig.domain}/about` },
@@ -119,3 +119,4 @@ export default function AboutPage() {
     </main>
   );
 }
+

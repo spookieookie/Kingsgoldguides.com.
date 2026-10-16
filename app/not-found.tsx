@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { ArrowRight, Compass } from 'lucide-react';
-import { hubs } from '@/lib/site';
+import { mainNav } from '@/lib/site';
 
 export default function NotFound() {
   return (
@@ -14,7 +14,7 @@ export default function NotFound() {
         </h1>
         <p className="mx-auto mt-4 max-w-md text-pretty leading-relaxed text-muted-foreground">
           The page you&apos;re looking for was moved, renamed, or never dropped. Head back
-          to a hub and keep farming.
+          to Gold Guides and keep farming.
         </p>
 
         <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
@@ -34,15 +34,15 @@ export default function NotFound() {
           </Link>
         </div>
 
-        <nav aria-label="Hubs" className="mt-12">
+        <nav aria-label="Site navigation" className="mt-12">
           <ul className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2">
-            {hubs.map((hub) => (
-              <li key={hub.key}>
+            {mainNav.map((item) => (
+              <li key={item.href}>
                 <Link
-                  href={hub.href}
+                  href={item.href}
                   className="font-mono text-xs uppercase tracking-wider text-muted-foreground transition-colors hover:text-primary"
                 >
-                  {hub.navLabel}
+                  {item.label}
                 </Link>
               </li>
             ))}
@@ -52,3 +52,4 @@ export default function NotFound() {
     </main>
   );
 }
+

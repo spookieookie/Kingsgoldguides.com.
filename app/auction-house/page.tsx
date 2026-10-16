@@ -1,7 +1,5 @@
-import { HubPage, hubMetadata } from '@/components/hub/HubPage';
+import { permanentRedirect } from 'next/navigation';
 
-export const metadata = hubMetadata('auction-house');
-
-export default function AuctionHouseHubPage() {
-  return <HubPage hubKey="auction-house" />;
+export default function LegacyPage() {
+  permanentRedirect('/guides#auction-house');
 }

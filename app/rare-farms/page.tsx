@@ -1,7 +1,5 @@
-import { HubPage, hubMetadata } from '@/components/hub/HubPage';
+import { permanentRedirect } from 'next/navigation';
 
-export const metadata = hubMetadata('rare-farms');
-
-export default function RareFarmsHubPage() {
-  return <HubPage hubKey="rare-farms" />;
+export default function LegacyPage() {
+  permanentRedirect('/guides#rare-drops');
 }

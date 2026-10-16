@@ -2,7 +2,8 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { getVideo, getAllVideos, getGuide, getRelatedVideos } from '@/lib/content';
-import { siteConfig, getHub } from '@/lib/site';
+import { siteConfig } from '@/lib/site';
+import { getGroupForHub } from '@/lib/guide-groups';
 import { breadcrumbSchema, videoObjectSchema } from '@/lib/schema';
 import { JsonLd } from '@/components/JsonLd';
 import { Breadcrumbs } from '@/components/guides/Breadcrumbs';
@@ -24,10 +25,10 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { slug } = await params;
   const video = getVideo(slug);
-  if (!video) return { title: 'Video Not Found' };
+  if (!video) return { title: { absolute: siteConfig.name } };
 
   return {
-    title: `${video.title} | ${siteConfig.name}`,
+    title: { absolute: siteConfig.name },
     description: video.excerpt,
     alternates: { canonical: `${siteConfig.domain}/videos/${video.slug}` },
     openGraph: {
@@ -44,7 +45,7 @@ export default async function VideoPage({ params }: PageProps) {
   const video = getVideo(slug);
   if (!video) notFound();
 
-  const hub = getHub(video.hub);
+  const group = getGroupForHub(video.hub);
   const companion = video.relatedGuideSlug ? getGuide(video.relatedGuideSlug) : undefined;
   const related = getRelatedVideos(video.relatedVideos, 3).filter((v) => v.slug !== slug);
 
@@ -71,7 +72,7 @@ export default async function VideoPage({ params }: PageProps) {
 
         <header className="mt-6">
           <div className="flex flex-wrap items-center gap-2">
-            <Tag tone="gold">{hub.shortName}</Tag>
+            <Tag tone="gold">{group.shortName}</Tag>
             <Tag tone="muted">{video.topic}</Tag>
             <Tag tone="muted">{video.duration}</Tag>
           </div>
@@ -174,3 +175,4 @@ export default async function VideoPage({ params }: PageProps) {
     </main>
   );
 }
+

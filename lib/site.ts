@@ -1,10 +1,10 @@
 export const siteConfig = {
-  name: 'King Kunta',
-  fullName: 'King Kunta WoW Gold',
+  name: 'Kings Gold Guides',
+  fullName: 'Kings Gold Guides',
   domain: 'https://kingsgoldguides.com',
-  tagline: 'Data-backed WoW gold-making guides from King Kunta',
+  tagline: 'World of Warcraft gold guides by King K',
   description:
-    'Farming routes, auction house strategy, market timing, and gold-per-hour analysis for World of Warcraft — powered by real gameplay and YouTube breakdowns.',
+    'World of Warcraft gold guides, farming routes, rare drops, and auction house strategies from King K, with written walkthroughs and gameplay videos.',
   youtube: 'https://www.youtube.com/@KingKunta',
   twitter: '@kingkuntawow',
   authorSlug: 'king-kunta',
@@ -111,13 +111,6 @@ export const mainNav = [
   { href: '/', label: 'Home' },
   { href: '/videos', label: 'Videos' },
   { href: '/guides', label: 'Gold Guides' },
-  { href: '/farming', label: 'Farming' },
-  { href: '/auction-house', label: 'Auction House' },
-  { href: '/economy', label: 'Economy' },
-  { href: '/professions', label: 'Professions' },
-  { href: '/rare-farms', label: 'Rare Farms' },
-  { href: '/tools', label: 'Tools' },
-  { href: '/about', label: 'About' },
 ];
 
 export function getHub(key: HubKey): HubDef {
@@ -125,3 +118,4 @@ export function getHub(key: HubKey): HubDef {
   if (!hub) throw new Error(`Unknown hub: ${key}`);
   return hub;
 }
+

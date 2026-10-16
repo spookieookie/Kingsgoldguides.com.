@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { siteConfig } from '@/lib/site';
 
 export const metadata: Metadata = {
-  title: `Gold Guides | ${siteConfig.name}`,
+  title: { absolute: siteConfig.name },
   description:
     'The complete King Kunta gold guide library — farming routes, auction house flips, and market analysis for World of Warcraft.',
 };
@@ -14,3 +14,4 @@ export default function GuidesLayout({
 }) {
   return children;
 }
+

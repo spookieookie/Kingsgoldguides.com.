@@ -16,12 +16,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.domain),
-  title: {
-    default: `${siteConfig.name} — ${siteConfig.tagline}`,
-    template: `%s | ${siteConfig.name}`,
-  },
+  title: siteConfig.name,
   description: siteConfig.description,
-  generator: 'v0.app',
   applicationName: siteConfig.fullName,
   keywords: [
     'WoW gold guide',
@@ -34,23 +30,23 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     siteName: siteConfig.fullName,
-    title: `${siteConfig.name} — ${siteConfig.tagline}`,
+    title: siteConfig.name,
     description: siteConfig.description,
     url: siteConfig.domain,
   },
   twitter: {
     card: 'summary_large_image',
     site: siteConfig.twitter,
-    title: `${siteConfig.name} — ${siteConfig.tagline}`,
+    title: siteConfig.name,
     description: siteConfig.description,
   },
   icons: {
     icon: [
-      { url: '/icon-light-32x32.png', media: '(prefers-color-scheme: light)' },
-      { url: '/icon-dark-32x32.png', media: '(prefers-color-scheme: dark)' },
-      { url: '/icon.svg', type: 'image/svg+xml' },
+      { url: '/kings-crown.svg', type: 'image/svg+xml', sizes: 'any' },
+      { url: '/kings-crown-32.png', type: 'image/png', sizes: '32x32' },
     ],
-    apple: '/apple-icon.png',
+    shortcut: '/favicon.ico',
+    apple: [{ url: '/kings-crown-180.png', sizes: '180x180', type: 'image/png' }],
   },
 }
 
@@ -76,3 +72,4 @@ export default function RootLayout({
     </html>
   )
 }
+

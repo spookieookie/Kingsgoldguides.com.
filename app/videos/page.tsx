@@ -8,7 +8,7 @@ import { VideoCard } from '@/components/cards/VideoCard';
 import { Eyebrow } from '@/components/ui/kit';
 
 export const metadata: Metadata = {
-  title: `Video Library | ${siteConfig.name}`,
+  title: { absolute: siteConfig.name },
   description:
     'Every King Kunta gold-making breakdown in one place — farming routes, auction house strategy, and economy analysis pulled straight from the channel.',
   alternates: { canonical: `${siteConfig.domain}/videos` },
@@ -49,3 +49,4 @@ export default function VideosPage() {
     </main>
   );
 }
+

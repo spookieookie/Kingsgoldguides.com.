@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { Play } from 'lucide-react';
 import type { VideoPage } from '@/lib/content/types';
-import { getHub } from '@/lib/site';
+import { getGroupForHub } from '@/lib/guide-groups';
 import { Tag } from '@/components/ui/kit';
 import { cn } from '@/lib/utils';
 
@@ -12,7 +12,7 @@ export function VideoCard({
   video: VideoPage;
   className?: string;
 }) {
-  const hub = getHub(video.hub);
+  const group = getGroupForHub(video.hub);
   const thumb = `https://i.ytimg.com/vi/${video.youtubeVideoId}/hqdefault.jpg`;
   return (
     <article
@@ -41,7 +41,7 @@ export function VideoCard({
 
       <div className="flex flex-1 flex-col p-4">
         <div className="mb-2 flex items-center gap-2">
-          <Tag tone="gold">{hub.shortName}</Tag>
+          <Tag tone="gold">{group.shortName}</Tag>
         </div>
         <h3 className="text-pretty text-base font-bold leading-snug text-foreground">
           <Link href={`/videos/${video.slug}`} className="after:absolute after:inset-0">
@@ -55,3 +55,4 @@ export function VideoCard({
     </article>
   );
 }
+

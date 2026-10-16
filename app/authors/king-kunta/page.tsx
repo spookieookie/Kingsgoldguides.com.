@@ -12,7 +12,7 @@ import { PlayCircle, BarChart3, ArrowRight } from 'lucide-react';
 import type { GuidePage, VideoPage } from '@/lib/content/types';
 
 export const metadata: Metadata = {
-  title: `${author.name} — ${author.role} | ${siteConfig.name}`,
+  title: { absolute: siteConfig.name },
   description: author.headline,
   alternates: { canonical: `${siteConfig.domain}/authors/${author.slug}` },
 };
@@ -139,3 +139,4 @@ export default function AuthorPage() {
     </main>
   );
 }
+

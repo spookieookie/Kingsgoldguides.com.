@@ -1,7 +1,5 @@
-import { HubPage, hubMetadata } from '@/components/hub/HubPage';
+import { permanentRedirect } from 'next/navigation';
 
-export const metadata = hubMetadata('farming');
-
-export default function FarmingHubPage() {
-  return <HubPage hubKey="farming" />;
+export default function LegacyPage() {
+  permanentRedirect('/guides#farming');
 }

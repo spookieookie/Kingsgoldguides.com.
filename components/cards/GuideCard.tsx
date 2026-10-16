@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import type { GuidePage } from '@/lib/content/types';
-import { getHub } from '@/lib/site';
+import { getGuideGroup } from '@/lib/guide-groups';
 import { formatGoldRange, riskTone, speedTone } from '@/lib/format';
 import { Tag } from '@/components/ui/kit';
 import { cn } from '@/lib/utils';
@@ -13,7 +13,7 @@ export function GuideCard({
   guide: GuidePage;
   className?: string;
 }) {
-  const hub = getHub(guide.hub);
+  const group = getGuideGroup(guide);
   const hasGoldRate = guide.goldPerHourHigh > 0;
   return (
     <article
@@ -23,7 +23,7 @@ export function GuideCard({
       )}
     >
       <div className="mb-3 flex items-center justify-between gap-2">
-        <Tag tone="gold">{hub.shortName}</Tag>
+        <Tag tone="gold">{group.shortName}</Tag>
         <span className="font-mono text-xs text-muted-foreground">{guide.expansion}</span>
       </div>
 
@@ -64,3 +64,4 @@ export function GuideCard({
     </article>
   );
 }
+

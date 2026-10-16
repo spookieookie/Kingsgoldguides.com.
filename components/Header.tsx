@@ -22,11 +22,12 @@ export function Header() {
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden items-center gap-1 lg:flex">
+        <div className="hidden items-center gap-1 md:flex">
           {mainNav.map((item) => (
             <Link
               key={item.href}
               href={item.href}
+              aria-current={isActive(item.href) ? 'page' : undefined}
               className={`rounded-md px-2.5 py-1.5 text-sm transition-colors ${
                 isActive(item.href)
                   ? 'text-primary'
@@ -50,10 +51,12 @@ export function Header() {
           </a>
 
           <button
-            onClick={() => setIsOpen(!isOpen)}
+            type="button"
+            onClick={() => setIsOpen((open) => !open)}
             aria-label={isOpen ? 'Close menu' : 'Open menu'}
             aria-expanded={isOpen}
-            className="rounded-md p-2 transition-colors hover:bg-secondary lg:hidden"
+            aria-controls="mobile-navigation"
+            className="rounded-md p-2 transition-colors hover:bg-secondary md:hidden"
           >
             {isOpen ? (
               <X size={22} className="text-foreground" />
@@ -66,12 +69,13 @@ export function Header() {
 
       {/* Mobile Navigation */}
       {isOpen && (
-        <div className="border-t border-border bg-secondary px-4 py-3 lg:hidden">
-          <div className="grid grid-cols-2 gap-1">
+        <div id="mobile-navigation" className="border-t border-border bg-secondary px-4 py-3 md:hidden">
+          <div className="grid grid-cols-1 gap-1">
             {mainNav.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
+                aria-current={isActive(item.href) ? 'page' : undefined}
                 onClick={() => setIsOpen(false)}
                 className={`rounded-md p-2.5 text-sm transition-colors hover:bg-background ${
                   isActive(item.href) ? 'text-primary' : 'text-foreground'
@@ -95,3 +99,4 @@ export function Header() {
     </header>
   );
 }
+

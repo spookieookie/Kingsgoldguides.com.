@@ -21,7 +21,7 @@ import { GuideCard } from '@/components/cards/GuideCard';
 import { VideoCard } from '@/components/cards/VideoCard';
 import { Eyebrow, Tag } from '@/components/ui/kit';
 import { formatDate } from '@/lib/format';
-import { getHub } from '@/lib/site';
+import { getGuideGroup } from '@/lib/guide-groups';
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -34,10 +34,10 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { slug } = await params;
   const guide = getGuide(slug);
-  if (!guide) return { title: 'Guide Not Found' };
+  if (!guide) return { title: { absolute: siteConfig.name } };
 
   return {
-    title: guide.seoTitle,
+    title: { absolute: siteConfig.name },
     description: guide.metaDescription,
     alternates: { canonical: guide.canonicalUrl },
     openGraph: {
@@ -62,11 +62,12 @@ export default async function GuidePage({ params }: PageProps) {
 
   const related = getRelatedGuides(slug, 3);
   const relatedVideos = getRelatedVideos(guide.relatedVideos, 2);
-  const hub = getHub(guide.hub);
+  const group = getGuideGroup(guide);
 
   const crumbs = [
     { label: 'Home', href: '/' },
-    { label: hub.navLabel, href: hub.href },
+    { label: 'Gold Guides', href: '/guides' },
+    { label: group.name, href: `/guides#${group.key}` },
     { label: guide.title, href: `/guides/${guide.slug}` },
   ];
 
@@ -100,7 +101,7 @@ export default async function GuidePage({ params }: PageProps) {
 
         <header className="mt-6">
           <div className="flex flex-wrap items-center gap-2">
-            <Tag tone="gold">{hub.shortName}</Tag>
+            <Tag tone="gold">{group.shortName}</Tag>
             <Tag tone="muted">{guide.expansion}</Tag>
             <Tag tone="muted">{guide.methodType}</Tag>
           </div>
@@ -179,3 +180,4 @@ export default async function GuidePage({ params }: PageProps) {
     </main>
   );
 }
+

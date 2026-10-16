@@ -126,9 +126,9 @@ export function FeaturedGuides({ guides }: { guides: GuidePage[] }) {
   return (
     <Section>
       <SectionHeader
-        eyebrow="Editor's picks"
-        title="Featured guides"
-        description="The routes and flips we'd run first this patch."
+        eyebrow="Written walkthroughs"
+        title="Latest Gold Guides"
+        description="Browse the latest farming routes, rare drops, and gold-making strategies."
         action={<ArrowLink href="/guides">Browse all</ArrowLink>}
       />
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -147,7 +147,7 @@ export function LatestVideos({ videos }: { videos: VideoPage[] }) {
       <SectionHeader
         eyebrow="From the channel"
         title="Latest video breakdowns"
-        description="Every guide is paired with a King Kunta video walkthrough."
+        description="Watch the farms and walkthroughs from the King K channel."
         action={<ArrowLink href="/videos">All videos</ArrowLink>}
       />
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
@@ -259,3 +259,4 @@ export function BeginnerPathBand({ paths }: { paths: BeginnerPath[] }) {
     </Section>
   );
 }
+

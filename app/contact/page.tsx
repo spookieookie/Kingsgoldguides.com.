@@ -5,7 +5,7 @@ import { Mail, PlayCircle, Send } from 'lucide-react';
 import { siteConfig } from '@/lib/site';
 
 export const metadata: Metadata = {
-  title: `Contact | ${siteConfig.name}`,
+  title: { absolute: siteConfig.name },
   description:
     'Get in touch with King Kunta. Suggest a farm to test, share market data, or ask a gold-making question.',
 };
@@ -63,3 +63,4 @@ export default function ContactPage() {
     </main>
   );
 }
+

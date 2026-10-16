@@ -90,7 +90,7 @@ export default async function GuidePage({ params }: PageProps) {
             name: guide.title,
             description: guide.metaDescription,
             youtubeVideoId: guide.youtubeVideoId,
-            uploadDate: guide.publishedAt,
+            uploadDate: guide.videoUploadedAt ?? guide.publishedAt,
           })}
         />
       )}

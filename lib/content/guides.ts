@@ -3,6 +3,52 @@ import type { GuidePage } from './types';
 // Only published walkthroughs based on King K's own videos belong here.
 export const guides: GuidePage[] = [
   {
+    "title": "Firelands Volatile Farm",
+    "slug": "firelands-volatile-farm",
+    "excerpt": "Pop a Potion of Treasure Finding, clear the trash, and leave every boss alive. We're farming Volatile Air, Life, and Water.",
+    "seoTitle": "Firelands Volatile Farm: Potion of Treasure Finding & No Boss Kills",
+    "metaDescription": "Farm Firelands trash for Volatile Air, Volatile Life, and Volatile Water with a Potion of Treasure Finding. Leave every boss alive and follow King K's video route.",
+    "heroImage": "https://i.ytimg.com/vi/Cgn6GY6Iy4c/hqdefault.jpg",
+    "youtubeVideoId": "Cgn6GY6Iy4c",
+    "videoUploadedAt": "2018-08-03",
+    "publishedAt": "2026-10-16",
+    "updatedAt": "2026-10-16",
+    "hub": "farming",
+    "category": "Farming Guides",
+    "subcategory": "Elemental Materials",
+    "expansion": "Cataclysm",
+    "methodType": "Mob Farm",
+    "goldPerHourLow": 0,
+    "goldPerHourHigh": 0,
+    "setupCost": "Potion of Treasure Finding",
+    "saleSpeed": "Medium",
+    "riskLevel": "Medium",
+    "requirements": [
+      "Potion of Treasure Finding",
+      "Character that can clear Firelands trash comfortably",
+      "Empty bags",
+      "No bosses killed in the instance"
+    ],
+    "whoFor": ["Material farmers", "Solo players"],
+    "tldr": "Farm the trash with Potion of Treasure Finding active. Keep Volatile Air, Volatile Life, and Volatile Water. Leave every boss alive.",
+    "bestTimeToFarm": "",
+    "bestTimeToSell": "",
+    "ahNotes": "Check all three Volatile prices and subtract the potion cost from your sales.",
+    "realmCaveats": "The original video is from 2018. Check the drops in your version of WoW and use current auction house prices.",
+    "steps": [],
+    "analystTakeaway": "Keep the potion running, loot the trash, and stay away from the bosses.",
+    "faq": [],
+    "relatedGuides": [
+      "120000-gold-per-hour-skettis-blackwind-lake-primal-water-farm",
+      "wow-gold-farm-top-5-instant-respawn-gold-farms"
+    ],
+    "relatedVideos": ["zSERvILhjbQ", "btnbKgxNuK8"],
+    "featured": true,
+    "canonicalUrl": "/guides/firelands-volatile-farm",
+    "schemaType": "Article",
+    "mdxSlug": "firelands-volatile-farm"
+  },
+  {
     "title": "Tiragarde Sound Mining & Herbalism Route",
     "slug": "wow-gold-farm-1000000-tiragarde-sound-mining-herbalism-route",
     "excerpt": "Grab Mining and Herbalism and follow this loop through Tiragarde Sound. Check what the ore and herbs sell for before you head out.",

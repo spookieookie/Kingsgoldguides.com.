@@ -3,6 +3,29 @@ import type { VideoPage } from './types';
 // A video is listed once and always links to its own written guide.
 export const videos: VideoPage[] = [
   {
+    "title": "Firelands Volatile Farm",
+    "slug": "firelands-volatile-farm",
+    "youtubeVideoId": "Cgn6GY6Iy4c",
+    "videoUploadedAt": "2018-08-03",
+    "excerpt": "Pop a Potion of Treasure Finding, clear the trash, and leave every boss alive. We're farming Volatile Air, Life, and Water.",
+    "summary": "I'm farming the trash in Firelands with a Potion of Treasure Finding active. The materials we're after are Volatile Air, Volatile Life, and Volatile Water. Leave every boss alive, loot your pulls, and reset between runs. This video was uploaded in 2018, so check the drops and current prices before buying a stack of potions.",
+    "publishedAt": "2026-10-16",
+    "duration": "11:04",
+    "hub": "farming",
+    "topic": "Mob Farm",
+    "promise": "Potion of Treasure Finding, Firelands trash, and Volatile Air, Life, and Water. No boss kills.",
+    "keyTakeaways": [
+      "Use Potion of Treasure Finding before you start killing trash.",
+      "Keep Volatile Air, Volatile Life, and Volatile Water for the auction house.",
+      "Leave every boss alive. We're here for the trash."
+    ],
+    "timestamps": [],
+    "mentioned": ["Potion of Treasure Finding", "Volatile Air", "Volatile Life", "Volatile Water"],
+    "relatedGuideSlug": "firelands-volatile-farm",
+    "relatedVideos": ["120000-gold-per-hour-skettis-blackwind-lake-primal-water-farm", "top-5-instant-respawn-farms"],
+    "featured": true
+  },
+  {
     "title": "Tiragarde Sound Mining & Herbalism Route",
     "slug": "tiragarde-gathering-route",
     "youtubeVideoId": "OUsoRkoMmgE",

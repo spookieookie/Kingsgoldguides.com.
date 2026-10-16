@@ -62,7 +62,7 @@ export default async function VideoPage({ params }: PageProps) {
           name: video.title,
           description: video.excerpt,
           youtubeVideoId: video.youtubeVideoId,
-          uploadDate: video.publishedAt,
+          uploadDate: video.videoUploadedAt ?? video.publishedAt,
         })}
       />
 

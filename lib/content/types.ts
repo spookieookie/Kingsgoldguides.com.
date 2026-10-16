@@ -40,6 +40,8 @@ export interface GuidePage {
   metaDescription: string;
   heroImage: string;
   youtubeVideoId: string;
+  /** Original YouTube upload date, when different from this site's post date. */
+  videoUploadedAt?: string;
   publishedAt: string;
   updatedAt: string;
   hub: HubKey;
@@ -75,6 +77,8 @@ export interface VideoPage {
   title: string;
   slug: string;
   youtubeVideoId: string;
+  /** Original YouTube upload date, when different from this site's post date. */
+  videoUploadedAt?: string;
   excerpt: string;
   summary: string;
   publishedAt: string;
@@ -128,3 +132,4 @@ export interface BeginnerPath {
   href: string;
   icon: string;
 }
+

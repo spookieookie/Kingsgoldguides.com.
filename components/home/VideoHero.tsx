@@ -18,7 +18,7 @@ export function VideoHero({ videos }: { videos: VideoPage[] }) {
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src={`https://i.ytimg.com/vi/${featured.youtubeVideoId}/hqdefault.jpg`} alt={featured.title} fetchPriority="high" className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-[1.02]" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/5 to-transparent" />
-            <span className="absolute left-4 top-4 rounded bg-black/75 px-3 py-1 text-xs font-bold uppercase tracking-wide text-white">Latest video</span>
+            <span className="absolute left-4 top-4 rounded bg-black/75 px-3 py-1 text-xs font-bold uppercase tracking-wide text-white">Just added</span>
             <span className="absolute left-1/2 top-[40%] flex h-16 w-16 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-white/40 bg-black/60 text-white transition-colors group-hover:bg-primary group-hover:text-primary-foreground"><Play className="ml-1 h-7 w-7" fill="currentColor" aria-hidden="true" /></span>
             <div className="absolute inset-x-0 bottom-0 p-5 md:p-7"><h2 className="max-w-2xl text-xl font-bold leading-tight text-white md:text-3xl">{featured.title}</h2><span className="mt-3 inline-flex items-center gap-2 text-sm font-semibold text-primary"><Play className="h-4 w-4" fill="currentColor" aria-hidden="true" /> Watch the video</span></div>
           </Link>

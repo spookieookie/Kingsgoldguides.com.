@@ -12,6 +12,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/about', priority: 0.5 },
     { path: '/authors/king-kunta', priority: 0.5 },
     { path: '/contact', priority: 0.4 },
+    { path: '/privacy', priority: 0.3 },
+    { path: '/terms', priority: 0.3 },
+    { path: '/editorial', priority: 0.4 },
   ].map((route) => ({
     url: `${base}${route.path}`,
     lastModified: now,

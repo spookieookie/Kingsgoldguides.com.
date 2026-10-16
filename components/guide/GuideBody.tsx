@@ -37,6 +37,7 @@ export function GuideBody({
   guide: GuidePage;
   mdxContent?: ReactNode;
 }) {
+  if (mdxContent) return <div className="prose prose-invert max-w-none">{mdxContent}</div>;
   return (
     <div>
       {/* TL;DR */}
@@ -66,7 +67,7 @@ export function GuideBody({
           {guide.whoFor.length > 0 && (
             <div>
               <h3 className="font-mono text-xs uppercase tracking-[0.15em] text-muted-foreground">
-                Who it&apos;s for
+                Good for
               </h3>
               <ul className="mt-3 space-y-2">
                 {guide.whoFor.map((r) => (
@@ -81,9 +82,9 @@ export function GuideBody({
         </div>
       )}
 
-      {/* Step-by-step method (typed guides) */}
+      {/* How to farm it (typed guides) */}
       {guide.steps.length > 0 && (
-        <Block icon={<CheckCircle2 className="h-5 w-5" />} title="Step-by-step method">
+        <Block icon={<CheckCircle2 className="h-5 w-5" />} title="How to farm it">
           <ol className="space-y-5">
             {guide.steps.map((step, i) => (
               <li key={step.title} className="flex gap-4">
@@ -138,17 +139,17 @@ export function GuideBody({
 
       {/* Realm caveats */}
       {guide.realmCaveats && (
-        <Block icon={<AlertTriangle className="h-5 w-5" />} title="Realm &amp; version caveats">
+        <Block icon={<AlertTriangle className="h-5 w-5" />} title="Check your server">
           <p>{guide.realmCaveats}</p>
         </Block>
       )}
 
-      {/* Analyst takeaway */}
+      {/* What I’d do */}
       {guide.analystTakeaway && (
         <Panel className="mt-10 border-primary/25 bg-primary/5">
           <h2 className="flex items-center gap-2 text-lg font-bold text-foreground">
             <Lightbulb className="h-5 w-5 text-primary" aria-hidden="true" />
-            Analyst takeaway
+            What I’d do
           </h2>
           <p className="mt-3 text-pretty leading-relaxed text-foreground">{guide.analystTakeaway}</p>
         </Panel>
@@ -156,3 +157,4 @@ export function GuideBody({
     </div>
   );
 }
+

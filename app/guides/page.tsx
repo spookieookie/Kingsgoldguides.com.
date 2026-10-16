@@ -29,7 +29,7 @@ export default function GuidesIndexPage() {
           <Breadcrumbs crumbs={crumbs} />
           <h1 className="mt-6 text-4xl font-bold tracking-tight text-foreground md:text-5xl">Gold Guides</h1>
           <p className="mt-4 max-w-2xl text-lg leading-relaxed text-muted-foreground">
-            Choose a farm or gold-making method. Each guide covers where to go, what to do, and how to sell what you earn.
+            Pick a farm. I'll show you where to go, what drops, and what I would keep for the auction house.
           </p>
           <nav aria-label="Jump to a guide group" className="mt-6 flex flex-wrap gap-2">
             {groups.map((group) => (

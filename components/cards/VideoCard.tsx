@@ -1,58 +1,18 @@
 import Link from 'next/link';
 import { Play } from 'lucide-react';
 import type { VideoPage } from '@/lib/content/types';
-import { getGroupForHub } from '@/lib/guide-groups';
-import { Tag } from '@/components/ui/kit';
 import { cn } from '@/lib/utils';
 
-export function VideoCard({
-  video,
-  className,
-}: {
-  video: VideoPage;
-  className?: string;
-}) {
-  const group = getGroupForHub(video.hub);
-  const thumb = `https://i.ytimg.com/vi/${video.youtubeVideoId}/hqdefault.jpg`;
+export function VideoCard({ video, className }: { video: VideoPage; className?: string }) {
   return (
-    <article
-      className={cn(
-        'group relative flex flex-col overflow-hidden rounded-xl border border-border bg-card transition-all hover:border-primary/40',
-        className,
-      )}
-    >
+    <article className={cn('group relative flex flex-col overflow-hidden rounded-xl border border-border bg-card transition-colors hover:border-primary/50', className)}>
       <div className="relative aspect-video overflow-hidden bg-secondary">
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src={thumb || "/placeholder.svg"}
-          alt=""
-          className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
-          loading="lazy"
-        />
-        <div className="absolute inset-0 flex items-center justify-center bg-background/30 opacity-0 transition-opacity group-hover:opacity-100">
-          <span className="flex h-12 w-12 items-center justify-center rounded-full border border-primary/50 bg-background/80 text-primary">
-            <Play className="h-5 w-5 translate-x-0.5" aria-hidden="true" />
-          </span>
-        </div>
-        <span className="absolute bottom-2 right-2 rounded bg-background/85 px-1.5 py-0.5 font-mono text-xs text-foreground">
-          {video.duration}
-        </span>
+        <img src={`https://i.ytimg.com/vi/${video.youtubeVideoId}/hqdefault.jpg`} alt="" loading="lazy" className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-[1.02]" />
+        <span className="absolute bottom-3 left-3 flex h-9 w-9 items-center justify-center rounded-full bg-black/75 text-white"><Play className="ml-0.5 h-4 w-4" fill="currentColor" aria-hidden="true" /></span>
+        {video.duration && <span className="absolute bottom-3 right-3 rounded bg-black/80 px-1.5 py-0.5 text-xs font-semibold text-white">{video.duration}</span>}
       </div>
-
-      <div className="flex flex-1 flex-col p-4">
-        <div className="mb-2 flex items-center gap-2">
-          <Tag tone="gold">{group.shortName}</Tag>
-        </div>
-        <h3 className="text-pretty text-base font-bold leading-snug text-foreground">
-          <Link href={`/videos/${video.slug}`} className="after:absolute after:inset-0">
-            {video.title}
-          </Link>
-        </h3>
-        <p className="mt-2 line-clamp-2 text-sm leading-relaxed text-muted-foreground">
-          {video.excerpt}
-        </p>
-      </div>
+      <div className="flex flex-1 flex-col p-4"><h3 className="text-base font-bold leading-snug text-foreground"><Link href={`/videos/${video.slug}`} className="after:absolute after:inset-0">{video.title}</Link></h3><p className="mt-2 line-clamp-2 text-sm leading-relaxed text-muted-foreground">{video.excerpt}</p></div>
     </article>
   );
 }
-

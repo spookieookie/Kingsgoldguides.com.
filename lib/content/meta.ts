@@ -111,17 +111,16 @@ export const beginnerPaths: BeginnerPath[] = [
 ];
 
 export const author: AuthorProfile = {
-  name: 'King Kunta',
+  name: 'King K',
   slug: 'king-kunta',
-  role: 'Data Analyst / SAP Systems Analyst',
-  headline: 'A data analyst who teaches WoW players how to actually make gold.',
+  role: 'WoW gold farming creator',
+  headline: 'I make WoW gold farming videos and keep the written routes here.',
   bio: [
-    'King Kunta is a data analyst and SAP systems analyst who applies a professional analytics mindset to the World of Warcraft economy.',
-    'Every method on this site is tested in-game and filmed for the King Kunta YouTube channel. The focus is not hype numbers — it is sell-through, timing, and risk: why a margin exists, what market condition keeps it alive, and the signal that tells you to stop.',
-    'The result is gold-making content built for players who want to understand the economy, not just copy a route.',
+    'I make World of Warcraft gold farming videos. This site keeps the farms and written routes in one place.',
+    'I like checking old spots, looking at the drops, and deciding whether a farm is worth the time.',
+    'Some videos are from older expansions. Check your game version and auction house before committing to a farm.',
   ],
-  angle:
-    'Most gold guides explain how to farm. The differentiator here is explaining why margins rise or collapse — the analyst view of the market behind the method.',
+  angle: 'Watch the farm, check the items, and decide whether you want to try it.',
   topics: [
     'Farming routes and gold-per-hour',
     'Auction house flipping and sale rate',
@@ -133,8 +132,9 @@ export const author: AuthorProfile = {
   youtube: 'https://www.youtube.com/@KingKunta',
   featuredGuides: [
     'wow-gold-farm-best-way-200k-iron-docks',
-    'wow-auction-house-flipping-safe-niches',
-    'wow-economy-best-time-to-sell-mats',
+    'data-analyst-darkmoon-firewater-gold-flip-wow-gold-making',
+    '120000-gold-per-hour-skettis-blackwind-lake-primal-water-farm',
   ],
   featuredVideos: ['600k-ghostlands-chest-farm', 'top-5-instant-respawn-farms', 'iron-docks-200k'],
 };
+

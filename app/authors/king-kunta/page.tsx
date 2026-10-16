@@ -84,7 +84,7 @@ export default function AuthorPage() {
         <Panel className="mt-8 border-primary/25 bg-primary/5">
           <h2 className="flex items-center gap-2 text-lg font-bold text-foreground">
             <BarChart3 className="h-5 w-5 text-primary" aria-hidden="true" />
-            The data-analyst angle
+            What I look for
           </h2>
           <p className="mt-3 text-pretty leading-relaxed text-foreground">{author.angle}</p>
         </Panel>

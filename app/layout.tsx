@@ -1,4 +1,3 @@
-import { Analytics } from '@vercel/analytics/next'
 import type { Metadata, Viewport } from 'next'
 import { Geist, Geist_Mono } from 'next/font/google'
 import { Header } from '@/components/Header'
@@ -6,6 +5,7 @@ import { Footer } from '@/components/Footer'
 import { JsonLd } from '@/components/JsonLd'
 import { organizationSchema } from '@/lib/schema'
 import { siteConfig } from '@/lib/site'
+import { GoogleAnalytics } from '@/components/GoogleAnalytics'
 import './globals.css'
 
 const geistSans = Geist({ variable: '--font-geist-sans', subsets: ['latin'] })
@@ -19,6 +19,8 @@ export const metadata: Metadata = {
   title: siteConfig.name,
   description: siteConfig.description,
   applicationName: siteConfig.fullName,
+  verification: { google: process.env.GOOGLE_SITE_VERIFICATION || undefined },
+  other: process.env.NEXT_PUBLIC_ADSENSE_PUBLISHER_ID ? { 'google-adsense-account': `ca-${process.env.NEXT_PUBLIC_ADSENSE_PUBLISHER_ID}` } : {},
   keywords: [
     'WoW gold guide',
     'World of Warcraft gold farming',
@@ -67,7 +69,7 @@ export default function RootLayout({
         <Header />
         {children}
         <Footer />
-        {process.env.NODE_ENV === 'production' && <Analytics />}
+        <GoogleAnalytics measurementId={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || ''} enabled={process.env.VERCEL_ENV === 'production'} />
       </body>
     </html>
   )

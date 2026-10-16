@@ -56,7 +56,7 @@ export function getAllVideos(): VideoPage[] {
 }
 
 export function getVideo(slug: string): VideoPage | undefined {
-  return videos.find((v) => v.slug === slug);
+  return videos.find((v) => v.slug === slug || v.youtubeVideoId === slug);
 }
 
 export function getVideosByHub(hub: HubKey): VideoPage[] {
@@ -84,3 +84,4 @@ export function getTool(slug: string) {
 export function getBrief(slug: string) {
   return dataBriefs.find((b) => b.slug === slug);
 }
+

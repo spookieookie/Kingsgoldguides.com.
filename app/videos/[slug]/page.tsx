@@ -8,7 +8,6 @@ import { breadcrumbSchema, videoObjectSchema } from '@/lib/schema';
 import { JsonLd } from '@/components/JsonLd';
 import { Breadcrumbs } from '@/components/guides/Breadcrumbs';
 import { YouTubeEmbed } from '@/components/guides/YouTubeEmbed';
-import { EmailCaptureForm } from '@/components/guides/EmailCaptureForm';
 import { VideoCard } from '@/components/cards/VideoCard';
 import { Eyebrow, Panel, Tag } from '@/components/ui/kit';
 import { formatDate } from '@/lib/format';
@@ -83,7 +82,7 @@ export default async function VideoPage({ params }: PageProps) {
             {video.promise}
           </p>
           <div className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-1 font-mono text-xs uppercase tracking-wider text-muted-foreground">
-            <span>By {siteConfig.name}</span>
+            <span>By King K</span>
             <span aria-hidden="true">/</span>
             <span>{formatDate(video.publishedAt)}</span>
           </div>
@@ -101,7 +100,7 @@ export default async function VideoPage({ params }: PageProps) {
         {companion && (
           <Panel className="mt-8 border-primary/25 bg-primary/5">
             <span className="font-mono text-xs uppercase tracking-[0.15em] text-primary">
-              Written companion guide
+              The written guide
             </span>
             <h2 className="mt-2 text-lg font-bold text-foreground">{companion.title}</h2>
             <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{companion.excerpt}</p>
@@ -114,10 +113,10 @@ export default async function VideoPage({ params }: PageProps) {
           </Panel>
         )}
 
-        {/* Key takeaways */}
+        {/* What to know */}
         {video.keyTakeaways.length > 0 && (
           <section className="mt-10">
-            <h2 className="text-xl font-bold text-foreground">Key takeaways</h2>
+            <h2 className="text-xl font-bold text-foreground">What to know</h2>
             <ul className="mt-4 space-y-2">
               {video.keyTakeaways.map((t) => (
                 <li key={t} className="flex items-start gap-2 text-foreground">
@@ -147,9 +146,6 @@ export default async function VideoPage({ params }: PageProps) {
           </section>
         )}
 
-        <div className="mt-12">
-          <EmailCaptureForm />
-        </div>
 
         {related.length > 0 && (
           <section className="mt-14 border-t border-border pt-10">

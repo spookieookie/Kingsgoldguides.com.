@@ -7,6 +7,7 @@ const org = {
   '@id': `${siteConfig.domain}/#organization`,
   name: siteConfig.fullName,
   url: siteConfig.domain,
+  logo: `${siteConfig.domain}/kings-crown-180.png`,
   sameAs: [siteConfig.youtube],
 };
 
@@ -44,13 +45,13 @@ export function articleSchema(opts: {
     '@type': 'Article',
     headline: opts.title,
     description: opts.description,
-    image: opts.image ? `${siteConfig.domain}${opts.image}` : undefined,
+    image: opts.image ? new URL(opts.image, siteConfig.domain).href : undefined,
     datePublished: opts.publishedAt,
     dateModified: opts.updatedAt ?? opts.publishedAt,
     mainEntityOfPage: `${siteConfig.domain}${opts.slug}`,
     author: {
       '@type': 'Person',
-      name: siteConfig.name,
+      name: 'King K',
       url: `${siteConfig.domain}/authors/${siteConfig.authorSlug}`,
     },
     publisher: org,
@@ -73,7 +74,7 @@ export function videoObjectSchema(opts: {
       opts.thumbnail ?? `https://i.ytimg.com/vi/${opts.youtubeVideoId}/hqdefault.jpg`,
     uploadDate: opts.uploadDate,
     contentUrl: `https://www.youtube.com/watch?v=${opts.youtubeVideoId}`,
-    embedUrl: `https://www.youtube.com/embed/${opts.youtubeVideoId}`,
+    embedUrl: `https://www.youtube-nocookie.com/embed/${opts.youtubeVideoId}`,
   };
 }
 
@@ -107,3 +108,4 @@ export function profilePageSchema(opts: {
     },
   };
 }
+

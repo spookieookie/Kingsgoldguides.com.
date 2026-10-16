@@ -4,7 +4,7 @@ export const siteConfig = {
   domain: 'https://kingsgoldguides.com',
   tagline: 'World of Warcraft gold guides by King K',
   description:
-    'World of Warcraft gold guides, farming routes, rare drops, and auction house strategies from King K, with written walkthroughs and gameplay videos.',
+    'WoW gold farming videos and written guides by King K. Find the farm, watch the route, and check what is worth selling.',
   youtube: 'https://www.youtube.com/@KingKunta',
   twitter: '@kingkuntawow',
   authorSlug: 'king-kunta',

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { notFound } from 'next/navigation';
+import { notFound, permanentRedirect } from 'next/navigation';
 import Link from 'next/link';
 import { getGuide, getAllGuides, getRelatedGuides, getRelatedVideos } from '@/lib/content';
 import { getGuideBySlug } from '@/lib/mdx';
@@ -14,8 +14,6 @@ import { JsonLd } from '@/components/JsonLd';
 import { Breadcrumbs } from '@/components/guides/Breadcrumbs';
 import { YouTubeEmbed } from '@/components/guides/YouTubeEmbed';
 import { FAQAccordion } from '@/components/guides/FAQAccordion';
-import { EmailCaptureForm } from '@/components/guides/EmailCaptureForm';
-import { GuideStats } from '@/components/guide/GuideStats';
 import { GuideBody } from '@/components/guide/GuideBody';
 import { GuideCard } from '@/components/cards/GuideCard';
 import { VideoCard } from '@/components/cards/VideoCard';
@@ -55,6 +53,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 export default async function GuidePage({ params }: PageProps) {
   const { slug } = await params;
   const guide = getGuide(slug);
+  if (!guide && ['wow-auction-house-flipping-safe-niches', 'wow-crafting-arbitrage-materials', 'wow-economy-best-time-to-sell-mats', 'wow-professions-alchemy-flasks'].includes(slug)) permanentRedirect('/guides#auction-house');
   if (!guide) notFound();
 
   // Real guides carry an mdxSlug -> render the full written route from MDX.
@@ -112,7 +111,7 @@ export default async function GuidePage({ params }: PageProps) {
             {guide.excerpt}
           </p>
           <div className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-1 font-mono text-xs uppercase tracking-wider text-muted-foreground">
-            <span>By {siteConfig.name}</span>
+            <span>By King K</span>
             <span aria-hidden="true">/</span>
             <span>Updated {formatDate(guide.updatedAt)}</span>
           </div>
@@ -124,9 +123,6 @@ export default async function GuidePage({ params }: PageProps) {
           </div>
         )}
 
-        <div className="mt-8">
-          <GuideStats guide={guide} />
-        </div>
 
         <div className="mt-8">
           <GuideBody guide={guide} mdxContent={mdx?.content} />
@@ -140,9 +136,6 @@ export default async function GuidePage({ params }: PageProps) {
           </section>
         )}
 
-        <div className="mt-12">
-          <EmailCaptureForm />
-        </div>
 
         {relatedVideos.length > 0 && (
           <section className="mt-14">

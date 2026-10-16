@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { Logo } from '@/components/Logo';
 import { mainNav, siteConfig } from '@/lib/site';
+import { CookieSettingsButton } from '@/components/CookieSettingsButton';
 
 export function Footer() {
   return (
@@ -20,6 +21,10 @@ export function Footer() {
         <div className="mt-8 flex flex-wrap gap-x-5 gap-y-2 border-t border-border pt-6 text-xs text-muted-foreground">
           <Link href="/about" className="hover:text-primary">About</Link>
           <Link href="/contact" className="hover:text-primary">Contact</Link>
+          <Link href="/editorial" className="hover:text-primary">About these guides</Link>
+          <Link href="/privacy" className="hover:text-primary">Privacy</Link>
+          <Link href="/terms" className="hover:text-primary">Terms &amp; disclosures</Link>
+          <CookieSettingsButton />
           <a href={siteConfig.youtube} target="_blank" rel="noopener noreferrer" className="hover:text-primary">YouTube</a>
         </div>
         <p className="mt-5 text-xs leading-relaxed text-muted-foreground">

@@ -29,11 +29,10 @@ export default function VideosPage() {
         <header className="mt-6 max-w-2xl">
           <Eyebrow className="mb-3">Watch &amp; learn</Eyebrow>
           <h1 className="text-balance text-4xl font-bold tracking-tight text-foreground md:text-5xl">
-            Video Library
+            Videos
           </h1>
           <p className="mt-4 text-pretty text-lg leading-relaxed text-muted-foreground">
-            Every gold-making breakdown from the channel, each paired with a written companion guide
-            so you can farm along at your own pace.
+            All the videos behind these guides. Click one to watch the farm, or open its written guide for the route.
           </p>
           <p className="mt-4 font-mono text-xs uppercase tracking-wider text-muted-foreground">
             {videos.length} videos

@@ -23,7 +23,8 @@ export function VideoHero({ videos }: { videos: VideoPage[] }) {
             <div className="absolute inset-x-0 bottom-0 p-5 md:p-7"><h2 className="max-w-2xl text-xl font-bold leading-tight text-white md:text-3xl">{featured.title}</h2><span className="mt-3 inline-flex items-center gap-2 text-sm font-semibold text-primary"><Play className="h-4 w-4" fill="currentColor" aria-hidden="true" /> Watch the video</span></div>
           </Link>
         </article>
-        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-1">
+        <div className="relative">
+          <div className="grid gap-5 sm:grid-cols-2 lg:absolute lg:inset-0 lg:grid-cols-1 lg:grid-rows-2">
           {next.map((video) => (
             <article key={video.slug} className="group relative overflow-hidden rounded-xl border border-border bg-card">
               <Link href={`/videos/${video.slug}`} className="relative block aspect-video overflow-hidden lg:aspect-auto lg:h-full" aria-label={`Watch ${video.title}`}>
@@ -35,6 +36,7 @@ export function VideoHero({ videos }: { videos: VideoPage[] }) {
               </Link>
             </article>
           ))}
+          </div>
         </div>
       </div>
     </section>

@@ -26,7 +26,7 @@ export function VideoHero({ videos }: { videos: VideoPage[] }) {
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-1">
           {next.map((video) => (
             <article key={video.slug} className="group relative overflow-hidden rounded-xl border border-border bg-card">
-              <Link href={`/videos/${video.slug}`} className="relative block aspect-video overflow-hidden lg:aspect-[2.35/1]" aria-label={`Watch ${video.title}`}>
+              <Link href={`/videos/${video.slug}`} className="relative block aspect-video overflow-hidden lg:aspect-auto lg:h-full" aria-label={`Watch ${video.title}`}>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img src={`https://i.ytimg.com/vi/${video.youtubeVideoId}/hqdefault.jpg`} alt={video.title} className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-[1.02]" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/10 to-transparent" />

@@ -1,7 +1,26 @@
 import type { VideoPage } from './types';
 
-// A video is listed once and always links to its own written guide.
+// A video is listed once and links to its own written guide or post.
 export const videos: VideoPage[] = [
+  {
+    "title": "Burning Steppes Mageweave & Runecloth Farm",
+    "slug": "burning-steppes-mageweave-runecloth-farm",
+    "youtubeVideoId": "oL2w3nYRvvA",
+    "videoUploadedAt": "2017-03-11",
+    "excerpt": "My four-pack cloth route in Burning Steppes for Mageweave and Runecloth. Bring AoE and keep an eye on your bags.",
+    "summary": "I'm running counterclockwise through four groups in Burning Steppes, using Fan of Knives on my rogue to clear the packs. Mageweave and Runecloth are the main drops I'm keeping. I also check the greens and blues, but transmog can take months to sell, so I keep that separate from the cloth. This is the original 2017 video; the written guide explains the route and puts the old loot numbers in context.",
+    "publishedAt": "2026-10-17",
+    "duration": "4:28",
+    "hub": "farming",
+    "topic": "Mob Farm",
+    "promise": "Four groups, a counterclockwise loop, and Mageweave plus Runecloth. Here's how I run this Burning Steppes cloth farm.",
+    "keyTakeaways": ["Bring an AoE ability to clear the packs.", "Work through all four groups, including the one behind the hill.", "Loot before the bodies disappear and keep transmog separate from the cloth earnings."],
+    "timestamps": [],
+    "mentioned": ["Burning Steppes", "Mageweave Cloth", "Runecloth", "Fan of Knives", "TradeSkillMaster"],
+    "relatedGuideSlug": "burning-steppes-mageweave-runecloth-farm",
+    "relatedVideos": ["top-5-instant-respawn-farms", "wow-gold-farm-80000-zulfarrak-robes-of-insight"],
+    "featured": true
+  },
   {
     "title": "WoW Forever Beta: Starting Fresh",
     "slug": "wow-forever-beta-starting-fresh",

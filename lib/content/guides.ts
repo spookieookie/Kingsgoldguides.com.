@@ -3,6 +3,57 @@ import type { GuidePage } from './types';
 // Only published walkthroughs based on King K's own videos belong here.
 export const guides: GuidePage[] = [
   {
+    "title": "The Glazer Farm in Stormsong Valley",
+    "slug": "the-glazer-farm",
+    "excerpt": "I'm farming The Glazer at Mildenhall Meadery in Stormsong Valley. Target Bubbling Mead and Flowing Honey, keep clearing the spot, and check the mace's auction price.",
+    "seoTitle": "The Glazer Farm in WoW: Mildenhall Meadery Route",
+    "metaDescription": "Farm The Glazer in Stormsong Valley with my Mildenhall Meadery route. Find Bubbling Mead and Flowing Honey, watch the video, and check auction prices.",
+    "heroImage": "https://i.ytimg.com/vi/Bqf2dytbJN0/hqdefault.jpg",
+    "youtubeVideoId": "Bqf2dytbJN0",
+    "videoUploadedAt": "2026-10-17",
+    "publishedAt": "2026-10-17",
+    "updatedAt": "2026-10-17",
+    "hub": "rare-farms",
+    "category": "Rare Item & Transmog Farms",
+    "subcategory": "Transmog",
+    "expansion": "Battle for Azeroth",
+    "methodType": "Mob Farm",
+    "goldPerHourLow": 0,
+    "goldPerHourHigh": 0,
+    "setupCost": "None",
+    "saleSpeed": "Slow",
+    "riskLevel": "High",
+    "requirements": [
+      "Access to Stormsong Valley",
+      "A character that can clear the meadery mobs",
+      "Empty bags"
+    ],
+    "whoFor": [
+      "Rare item farmers",
+      "Transmog sellers"
+    ],
+    "tldr": "Head to Mildenhall Meadery in Stormsong Valley, kill Bubbling Mead and Flowing Honey, and keep working through the respawns. The Glazer is the rare BoE mace we're keeping for the auction house.",
+    "bestTimeToFarm": "",
+    "bestTimeToSell": "",
+    "ahNotes": "The 191,000–300,000 gold in the video is the rare item's potential auction value. Check your server's listings, keep the mace unbound, and count the gold when it sells.",
+    "realmCaveats": "Drop luck, competition, and auction prices affect the result. Getting the mace in a few hours is not guaranteed.",
+    "steps": [],
+    "analystTakeaway": "I would look up The Glazer on my server, then head to the meadery and give the honey mobs a try. Keep the kills moving and check the loot.",
+    "faq": [],
+    "relatedGuides": [
+      "wow-gold-farm-goblin-power-shovel-150000",
+      "zulfarrak-transmog-farming-route"
+    ],
+    "relatedVideos": [
+      "goblin-power-shovel",
+      "zulfarrak-transmog-farming-route"
+    ],
+    "featured": true,
+    "canonicalUrl": "/guides/the-glazer-farm",
+    "schemaType": "Article",
+    "mdxSlug": "the-glazer-farm"
+  },
+  {
     "title": "Zul'Farrak Transmog Farming Route",
     "slug": "zulfarrak-transmog-farming-route",
     "excerpt": "Follow my Zul'Farrak route in Tanaris: pull the trash, free prisoners, open the graves, and loop back to reset. Keep the transmog for the auction house.",

@@ -3,6 +3,63 @@ import type { VideoPage } from './types';
 // A video is listed once and links to its own written guide or post.
 export const videos: VideoPage[] = [
   {
+    "title": "The Glazer Farm: Make 191,000–300,000 Gold",
+    "slug": "the-glazer-farm",
+    "youtubeVideoId": "Bqf2dytbJN0",
+    "videoUploadedAt": "2026-10-17",
+    "excerpt": "Watch my WoW gold farming video for The Glazer at Mildenhall Meadery. See the Stormwind portal route, target mobs, and the farming loop.",
+    "summary": "I'm heading to Mildenhall Meadery in Stormsong Valley to farm The Glazer, a rare BoE transmog mace. The video starts with my Stormwind portal route and the flight path to the meadery, then shows the Bubbling Mead and Flowing Honey mobs I'm targeting. I'm using Moonkin Form to keep the pulls moving and working back through the respawns. The 191,000–300,000 gold headline depends on the rare drop and an auction house sale. The written guide covers the trip, target mobs, and what to check before listing the mace.",
+    "publishedAt": "2026-10-17",
+    "duration": "4:12",
+    "hub": "rare-farms",
+    "topic": "Rare Transmog Farm",
+    "promise": "The Glazer, Mildenhall Meadery, and the honey mobs I'm farming. Watch the route, then use the written guide when you're ready to try it.",
+    "keyTakeaways": [
+      "Head to Mildenhall Meadery in Stormsong Valley.",
+      "Target Bubbling Mead and Flowing Honey for The Glazer.",
+      "Keep clearing the area, loot your kills, and work through the respawns.",
+      "Check your server's auction price and keep the mace unbound if you plan to sell it."
+    ],
+    "timestamps": [
+      {
+        "time": "0:37",
+        "label": "Stormwind portal route"
+      },
+      {
+        "time": "1:21",
+        "label": "Flight path to Mildenhall Meadery"
+      },
+      {
+        "time": "1:46",
+        "label": "The Glazer and the target mobs"
+      },
+      {
+        "time": "2:37",
+        "label": "Farming the meadery"
+      },
+      {
+        "time": "3:43",
+        "label": "Respawns and closing notes"
+      }
+    ],
+    "mentioned": [
+      "The Glazer",
+      "Mildenhall Meadery",
+      "Stormsong Valley",
+      "Bubbling Mead",
+      "Flowing Honey",
+      "Stormwind",
+      "Moonkin Form",
+      "Auction House"
+    ],
+    "relatedGuideSlug": "the-glazer-farm",
+    "relatedVideos": [
+      "goblin-power-shovel",
+      "zulfarrak-transmog-farming-route"
+    ],
+    "featured": true
+  },
+  {
     "title": "Zul'Farrak Transmog Farming Route",
     "slug": "zulfarrak-transmog-farming-route",
     "youtubeVideoId": "vmIjvNJY4MI",

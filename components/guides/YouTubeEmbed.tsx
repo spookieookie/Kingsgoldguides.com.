@@ -4,13 +4,13 @@ import { useState } from 'react';
 import { Play, ExternalLink } from 'lucide-react';
 import { trackVideoStart } from '@/lib/analytics';
 
-export function YouTubeEmbed({ videoId, title = 'King K WoW gold farming video' }: { videoId: string; title?: string }) {
+export function YouTubeEmbed({ videoId, title = 'King K WoW gold farming video', loadPlayer = false }: { videoId: string; title?: string; loadPlayer?: boolean }) {
   const [playing, setPlaying] = useState(false);
   return (
     <div className="mb-8 w-full">
       <div className="relative aspect-video overflow-hidden rounded-xl border border-border bg-secondary">
-        {playing ? (
-          <iframe className="absolute inset-0 h-full w-full" src={`https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&rel=0`} title={title} allow="autoplay; encrypted-media; picture-in-picture; fullscreen" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen />
+        {loadPlayer || playing ? (
+          <iframe className="absolute inset-0 h-full w-full" src={`https://www.youtube-nocookie.com/embed/${videoId}?autoplay=${playing ? 1 : 0}&rel=0`} title={title} allow="autoplay; encrypted-media; picture-in-picture; fullscreen" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen />
         ) : (
           <button type="button" aria-label={`Play ${title}`} onClick={() => { trackVideoStart(videoId, title); setPlaying(true); }} className="group absolute inset-0 h-full w-full text-white">
             {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -24,3 +24,4 @@ export function YouTubeEmbed({ videoId, title = 'King K WoW gold farming video' 
     </div>
   );
 }
+

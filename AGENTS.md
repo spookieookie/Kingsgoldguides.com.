@@ -28,6 +28,7 @@ Do not redesign pages, change writing style, add infrastructure, query unrelated
 
 - Every indexed page needs a specific, distinct search title, description, self-canonical URL, and one descriptive H1.
 - All video JSON-LD must use `videoObjectSchema` in `lib/schema.ts`; all article dates use the same formatter. Never use an HTML YouTube watch page as a raw `contentUrl`.
+- Dedicated `/videos/` pages must render the actual iframe in the initial HTML, without autoplay, so crawlers can discover the player. Use `YouTubeEmbed` with `loadPlayer`. Written guides and posts keep the existing click-to-load behavior.
 - `npm run build` runs the regression tests before Next.js builds. Do not remove the checks to make a release pass.
 - `python3 scripts/check_search.py` audits every sitemap URL. In restricted environments, fetch the rendered responses through the Vercel connector and use `--snapshot PATH` instead of repeatedly retrying blocked network requests.
 - A valid Rich Results Test and a submitted sitemap are evidence of technical readiness, not a promise of rankings or immediate indexing.

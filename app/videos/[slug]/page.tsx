@@ -99,7 +99,7 @@ export default async function VideoPage({ params }: PageProps) {
         </header>
 
         <div className="mt-8">
-          <YouTubeEmbed videoId={video.youtubeVideoId} title={video.title} />
+          <YouTubeEmbed videoId={video.youtubeVideoId} title={video.title} loadPlayer />
         </div>
 
         <div className="mt-8 text-pretty leading-relaxed text-muted-foreground">

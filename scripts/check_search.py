@@ -23,6 +23,7 @@ class Page(HTMLParser):
         self.robots = ''
         self.h1 = 0
         self.schemas = []
+        self.players = []
         self.inside_title = False
         self.inside_schema = False
         self.schema_text = ''
@@ -36,6 +37,7 @@ class Page(HTMLParser):
             if attrs.get('name') == 'description': self.description = attrs.get('content', '')
             if attrs.get('name') in ('robots', 'googlebot'): self.robots += attrs.get('content', '') + ' '
         if tag == 'link' and attrs.get('rel') == 'canonical': self.canonical = attrs.get('href', '')
+        if tag == 'iframe': self.players.append(attrs.get('src', ''))
         if tag == 'script' and attrs.get('type') == 'application/ld+json':
             self.inside_schema = True
             self.schema_text = ''
@@ -81,6 +83,8 @@ def audit(pages):
                 assert re.fullmatch(r'\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d+)?(?:Z|[+-]\d{2}:\d{2})', timestamp), 'Invalid VideoObject timestamp'
                 assert datetime.datetime.fromisoformat(timestamp.replace('Z', '+00:00')).tzinfo is not None
                 assert not data.get('contentUrl', '').startswith('https://www.youtube.com/watch'), 'HTML watch page used as raw video file'
+                if url.startswith(DOMAIN + '/videos/'):
+                    assert any(src.split('?')[0] == data['embedUrl'] for src in page.players), 'Watch-page player requires user interaction to appear'
         except (AssertionError, ValueError, KeyError) as error:
             errors.append(f'{url}: {error}')
     return errors, videos

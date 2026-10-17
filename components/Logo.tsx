@@ -1,12 +1,11 @@
-import { Crown } from 'lucide-react';
 import { siteConfig } from '@/lib/site';
 
 export function Logo({ showText = true }: { showText?: boolean }) {
   return (
     <span className="flex items-center gap-2.5">
-      <span className="flex h-9 w-9 items-center justify-center rounded-full border border-primary/60 bg-secondary">
-        <Crown className="h-5 w-5 text-primary" strokeWidth={2.25} aria-hidden="true" />
-      </span>
+      {/* Use the original channel artwork at every site branding position. */}
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img src="/king-k-logo.svg" alt="King K channel logo" width={48} height={48} className="h-12 w-12 shrink-0 rounded-full border border-white/15 object-contain" />
       {showText && (
         <span className="flex flex-col leading-none">
           <span className="text-base font-bold tracking-tight text-foreground">
@@ -20,3 +19,4 @@ export function Logo({ showText = true }: { showText?: boolean }) {
     </span>
   );
 }
+

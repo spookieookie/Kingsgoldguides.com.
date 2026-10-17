@@ -44,11 +44,12 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: '/kings-crown.svg', type: 'image/svg+xml', sizes: 'any' },
-      { url: '/kings-crown-32.png', type: 'image/png', sizes: '32x32' },
+      { url: '/king-k-logo.svg', type: 'image/svg+xml', sizes: 'any' },
+      { url: '/king-k-icon-32.png', type: 'image/png', sizes: '32x32' },
+      { url: '/king-k-icon-192.png', type: 'image/png', sizes: '192x192' },
     ],
-    shortcut: '/favicon.ico',
-    apple: [{ url: '/kings-crown-180.png', sizes: '180x180', type: 'image/png' }],
+    shortcut: '/favicon.ico?v=king-k',
+    apple: [{ url: '/king-k-apple-180.png', sizes: '180x180', type: 'image/png' }],
   },
 }
 

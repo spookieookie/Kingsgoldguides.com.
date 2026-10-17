@@ -7,7 +7,7 @@ const org = {
   '@id': `${siteConfig.domain}/#organization`,
   name: siteConfig.fullName,
   url: siteConfig.domain,
-  logo: `${siteConfig.domain}/kings-crown-180.png`,
+  logo: `${siteConfig.domain}/king-k-logo.png`,
   sameAs: [siteConfig.youtube],
 };
 

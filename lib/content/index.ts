@@ -51,8 +51,11 @@ export function getTopGoldGuides(limit = 6): GuidePage[] {
 /* ---------- Videos ---------- */
 
 export function getAllVideos(): VideoPage[] {
+  // Adding an archive video to the site must not make it a new YouTube upload.
   return [...videos].sort(
-    (a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime(),
+    (a, b) =>
+      new Date(b.videoUploadedAt ?? b.publishedAt).getTime() -
+      new Date(a.videoUploadedAt ?? a.publishedAt).getTime(),
   );
 }
 

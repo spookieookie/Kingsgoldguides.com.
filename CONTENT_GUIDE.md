@@ -21,6 +21,7 @@ Build out King K's existing video archive first. Each source video should have o
 ## Dates and numbers
 
 - Record the site's publication date separately from the original video's verified upload date (`videoUploadedAt`).
+- Keep homepage and video listings in original YouTube upload order, newest first. Adding an older video or updating its written guide must not move it ahead of newer uploads. `getAllVideos()` uses `videoUploadedAt`, falling back to `publishedAt` for entries that already use the upload date.
 - Attribute old loot totals and prices to the original recording. An old "un-nerfed" title is not evidence of current behavior.
 - Separate cloth/material sales from slow transmog listings. Auction house value is not a completed sale.
 - Keep unsupported gold-per-hour fields at zero; do not add made-up estimates. Keep caveats brief and specific to the source.

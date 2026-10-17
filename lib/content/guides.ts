@@ -3,6 +3,59 @@ import type { GuidePage } from './types';
 // Only published walkthroughs based on King K's own videos belong here.
 export const guides: GuidePage[] = [
   {
+    "title": "Loaded Gnomish Dice Farm in Uldum",
+    "slug": "uldum-loaded-gnomish-dice-farm",
+    "excerpt": "Bring a rogue to Uldum and pickpocket the groups for Loaded Gnomish Dice. Sap the leader, work through the mobs, and keep the lockboxes.",
+    "seoTitle": "Loaded Gnomish Dice Farm in Uldum: Rogue Pickpocket Route",
+    "metaDescription": "Farm Loaded Gnomish Dice in Uldum with a rogue. Follow my pickpocket route, use Sap on the leader, open lockboxes, and check the toy before listing it.",
+    "heroImage": "https://i.ytimg.com/vi/piSgHd3N_Gk/hqdefault.jpg",
+    "youtubeVideoId": "piSgHd3N_Gk",
+    "videoUploadedAt": "2017-03-20",
+    "publishedAt": "2026-10-17",
+    "updatedAt": "2026-10-17",
+    "hub": "rare-farms",
+    "category": "Rare Item & Transmog Farms",
+    "subcategory": "Toys",
+    "expansion": "Cataclysm",
+    "methodType": "Mob Farm",
+    "goldPerHourLow": 0,
+    "goldPerHourHigh": 0,
+    "setupCost": "A rogue with Pick Pocket",
+    "saleSpeed": "Medium",
+    "riskLevel": "High",
+    "requirements": [
+      "Rogue",
+      "Stealth",
+      "Sap",
+      "Pick Pocket",
+      "Empty bags"
+    ],
+    "whoFor": [
+      "Rogue players",
+      "Toy sellers"
+    ],
+    "tldr": "Stealth through the Uldum route, Sap the leader, and pickpocket each mob before clearing the group. Keep Loaded Gnomish Dice and open the lockboxes.",
+    "bestTimeToFarm": "When the groups are not crowded",
+    "bestTimeToSell": "",
+    "ahNotes": "Check current Loaded Gnomish Dice listings and competition. The original 21,000-gold TSM value was a historical estimate; a listed price is not a sale.",
+    "realmCaveats": "The original recording is from 2017. Drops are random, and toy prices, macro behavior, and class-trial restrictions can differ in your version of WoW.",
+    "steps": [],
+    "analystTakeaway": "I would check the toy price first and keep track of my own drops. A good run does not make the dice a guaranteed hourly payout.",
+    "faq": [],
+    "relatedGuides": [
+      "wow-gold-farm-goblin-power-shovel-150000",
+      "wow-gold-farm-80000-zulfarrak-robes-of-insight"
+    ],
+    "relatedVideos": [
+      "goblin-power-shovel",
+      "wow-gold-farm-80000-zulfarrak-robes-of-insight"
+    ],
+    "featured": true,
+    "canonicalUrl": "/guides/uldum-loaded-gnomish-dice-farm",
+    "schemaType": "Article",
+    "mdxSlug": "uldum-loaded-gnomish-dice-farm"
+  },
+  {
     "title": "Burning Steppes Mageweave & Runecloth Farm",
     "slug": "burning-steppes-mageweave-runecloth-farm",
     "excerpt": "Run the four groups in Burning Steppes for Mageweave and Runecloth. Bring AoE, keep the loop moving, and check the greens before you vendor them.",
@@ -672,3 +725,4 @@ export const guides: GuidePage[] = [
     "mdxSlug": "data-analyst-darkmoon-firewater-gold-flip-wow-gold-making"
   }
 ];
+

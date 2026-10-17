@@ -3,6 +3,42 @@ import type { VideoPage } from './types';
 // A video is listed once and links to its own written guide or post.
 export const videos: VideoPage[] = [
   {
+    "title": "Loaded Gnomish Dice Farm in Uldum",
+    "slug": "uldum-loaded-gnomish-dice-farm",
+    "youtubeVideoId": "piSgHd3N_Gk",
+    "videoUploadedAt": "2017-03-20",
+    "excerpt": "Bring a rogue to Uldum and pickpocket the groups for Loaded Gnomish Dice. Sap the leader, work through the mobs, and keep the lockboxes.",
+    "summary": "I'm farming Loaded Gnomish Dice with a rogue in Uldum. I Sap the leader of each group, pickpocket the mobs, then clear and loot them before moving on. In one 30-minute test I got a dice and seven greens, and I recommend opening the lockboxes too. The old 60k-per-hour title came from those drops and auction values; this is an RNG farm. The written guide includes the original macro and my selling notes.",
+    "publishedAt": "2026-10-17",
+    "duration": "4:35",
+    "hub": "rare-farms",
+    "topic": "Rogue Pickpocket Farm",
+    "promise": "A rogue-only Uldum route for Loaded Gnomish Dice, with Sap, Pick Pocket, lockboxes, and selling notes.",
+    "keyTakeaways": [
+      "Sap the leader and pickpocket the mobs before killing the group.",
+      "Keep Loaded Gnomish Dice and open the lockboxes with your rogue.",
+      "Treat the old auction values and hourly projection as historical results; drops and sales vary."
+    ],
+    "timestamps": [],
+    "mentioned": [
+      "Uldum",
+      "Kalimdor",
+      "Loaded Gnomish Dice",
+      "Rogue",
+      "Stealth",
+      "Sap",
+      "Pick Pocket",
+      "Lockboxes",
+      "TradeSkillMaster"
+    ],
+    "relatedGuideSlug": "uldum-loaded-gnomish-dice-farm",
+    "relatedVideos": [
+      "goblin-power-shovel",
+      "wow-gold-farm-80000-zulfarrak-robes-of-insight"
+    ],
+    "featured": true
+  },
+  {
     "title": "Burning Steppes Mageweave & Runecloth Farm",
     "slug": "burning-steppes-mageweave-runecloth-farm",
     "youtubeVideoId": "oL2w3nYRvvA",
@@ -324,3 +360,4 @@ export const videos: VideoPage[] = [
     "featured": true
   }
 ];
+

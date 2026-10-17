@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { PolicyPage } from '@/components/PolicyPage';
 import { siteConfig } from '@/lib/site';
-export const metadata: Metadata = { title: { absolute: siteConfig.name }, description: 'Using the guides, videos, and information on Kings Gold Guides.', alternates: { canonical: `${siteConfig.domain}/terms` } };
+export const metadata: Metadata = { title: { absolute: "Terms of Use | Kings Gold Guides" }, description: 'Using the guides, videos, and information on Kings Gold Guides.', alternates: { canonical: `${siteConfig.domain}/terms` } };
 export default function TermsPage() {
   return <PolicyPage title="Terms & Disclosures" path="/terms">
     <h2>Using the guides</h2><p>These guides explain farms and methods shown in King K’s World of Warcraft videos. They are information you can use to decide what to try. They do not guarantee a drop, a sale, or a particular amount of gold.</p>
@@ -12,3 +12,4 @@ export default function TermsPage() {
     <h2>Corrections</h2><p>If a route has changed or something in a guide is wrong, use the <Link href="/contact">Contact page</Link> to point me to the relevant video or guide. Read <Link href="/editorial">About These Guides</Link> for how the content is put together.</p>
   </PolicyPage>;
 }
+

@@ -12,7 +12,7 @@ import { PlayCircle, BarChart3, ArrowRight } from 'lucide-react';
 import type { GuidePage, VideoPage } from '@/lib/content/types';
 
 export const metadata: Metadata = {
-  title: { absolute: siteConfig.name },
+  title: { absolute: "King K — WoW Gold Farming Creator" },
   description: author.headline,
   alternates: { canonical: `${siteConfig.domain}/authors/${author.slug}` },
 };
@@ -139,4 +139,5 @@ export default function AuthorPage() {
     </main>
   );
 }
+
 

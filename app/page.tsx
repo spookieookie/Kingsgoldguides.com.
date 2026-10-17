@@ -9,10 +9,10 @@ import { siteConfig } from '@/lib/site';
 import { formatDate } from '@/lib/format';
 
 export const metadata: Metadata = {
-  title: { absolute: siteConfig.name },
+  title: { absolute: 'WoW Gold Farming Guides & Videos | King K' },
   description: siteConfig.description,
   alternates: { canonical: siteConfig.domain },
-  openGraph: { title: siteConfig.name, description: siteConfig.description, type: 'website', images: [`https://i.ytimg.com/vi/${getAllVideos()[0].youtubeVideoId}/hqdefault.jpg`] },
+  openGraph: { title: 'WoW Gold Farming Guides & Videos | King K', description: siteConfig.description, type: 'website', images: [`https://i.ytimg.com/vi/${getAllVideos()[0].youtubeVideoId}/hqdefault.jpg`] },
 };
 
 export default function HomePage() {
@@ -62,3 +62,4 @@ export default function HomePage() {
     </main>
   );
 }
+

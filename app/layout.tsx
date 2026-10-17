@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from 'next'
+import Script from 'next/script'
 import { Geist, Geist_Mono } from 'next/font/google'
 import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
@@ -13,6 +14,9 @@ const geistMono = Geist_Mono({
   variable: '--font-geist-mono',
   subsets: ['latin'],
 })
+
+const analyticsId = 'G-9D2KRKSGEH'
+const analyticsEnabled = process.env.VERCEL_ENV === 'production'
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.domain),
@@ -65,14 +69,31 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable} dark`}>
+      <head>
+        {analyticsEnabled && (
+          <>
+            <Script id="kgg-google-tag-defaults" strategy="beforeInteractive">{`
+              window.dataLayer = window.dataLayer || [];
+              window.gtag = window.gtag || function(){window.dataLayer.push(arguments);};
+              window['ga-disable-${analyticsId}'] = true;
+              window.gtag('consent', 'default', {
+                analytics_storage: 'denied', ad_storage: 'denied',
+                ad_user_data: 'denied', ad_personalization: 'denied'
+              });
+            `}</Script>
+            <Script id="kgg-google-analytics" src={`https://www.googletagmanager.com/gtag/js?id=${analyticsId}`} strategy="afterInteractive" />
+          </>
+        )}
+      </head>
       <body className="bg-background font-sans text-foreground antialiased">
         <JsonLd data={organizationSchema()} />
         <Header />
         {children}
         <Footer />
-        <GoogleAnalytics measurementId={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || ''} enabled={process.env.VERCEL_ENV === 'production'} />
+        <GoogleAnalytics measurementId={analyticsId} enabled={analyticsEnabled} />
       </body>
     </html>
   )
 }
+
 

@@ -27,13 +27,20 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   if (!video) return { title: { absolute: siteConfig.name } };
 
   return {
-    title: { absolute: siteConfig.name },
+    title: { absolute: `${video.title} | King K` },
     description: video.excerpt,
     alternates: { canonical: `${siteConfig.domain}/videos/${video.slug}` },
     openGraph: {
+      url: `${siteConfig.domain}/videos/${video.slug}`,
       title: video.title,
       description: video.excerpt,
       type: 'video.other',
+      images: [`https://i.ytimg.com/vi/${video.youtubeVideoId}/hqdefault.jpg`],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: video.title,
+      description: video.excerpt,
       images: [`https://i.ytimg.com/vi/${video.youtubeVideoId}/hqdefault.jpg`],
     },
   };
@@ -174,4 +181,5 @@ export default async function VideoPage({ params }: PageProps) {
     </main>
   );
 }
+
 

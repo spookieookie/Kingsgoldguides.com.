@@ -23,16 +23,23 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const post = getPost(slug);
   if (!post) return { title: { absolute: siteConfig.name } };
   return {
-    title: { absolute: siteConfig.name },
+    title: { absolute: `${post.title} | King K` },
     description: post.metaDescription,
     alternates: { canonical: `${siteConfig.domain}/posts/${post.slug}` },
     openGraph: {
+      url: `${siteConfig.domain}/posts/${post.slug}`,
       title: post.title,
       description: post.metaDescription,
       type: 'article',
       publishedTime: post.publishedAt,
       modifiedTime: post.updatedAt,
       authors: ['King K'],
+      images: [`https://i.ytimg.com/vi/${post.youtubeVideoId}/hqdefault.jpg`],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: post.title,
+      description: post.metaDescription,
       images: [`https://i.ytimg.com/vi/${post.youtubeVideoId}/hqdefault.jpg`],
     },
   };
@@ -83,3 +90,4 @@ export default async function PostPage({ params }: PageProps) {
     </main>
   );
 }
+

@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { PolicyPage } from '@/components/PolicyPage';
 import { siteConfig } from '@/lib/site';
-export const metadata: Metadata = { title: { absolute: siteConfig.name }, description: 'Where the guides come from and how King K handles old videos, prices, and corrections.', alternates: { canonical: `${siteConfig.domain}/editorial` } };
+export const metadata: Metadata = { title: { absolute: "How I Write My WoW Guides | King K" }, description: 'Where the guides come from and how King K handles old videos, prices, and corrections.', alternates: { canonical: `${siteConfig.domain}/editorial` } };
 export default function EditorialPage() {
  return <PolicyPage title="About These Guides" path="/editorial">
   <p>These are the written versions of my gold farming videos. Every guide in the library links to its source video so you can see the farm for yourself.</p>
@@ -13,3 +13,4 @@ export default function EditorialPage() {
   <h2>Found something wrong?</h2><p>Tell me which guide, what changed, and which version of WoW you are playing. The <Link href="/contact">Contact page</Link> takes you to the channel.</p>
  </PolicyPage>;
 }
+

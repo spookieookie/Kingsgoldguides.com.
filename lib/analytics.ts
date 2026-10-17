@@ -36,19 +36,12 @@ export function startAnalytics(id: string) {
     return;
   }
   window.dataLayer = window.dataLayer || [];
-  window.gtag = function () { window.dataLayer!.push(arguments); };
+  window.gtag = window.gtag || function () { window.dataLayer!.push(arguments); };
   window.gtag('consent', 'default', { analytics_storage: 'denied', ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied' });
   window.gtag('consent', 'update', { analytics_storage: 'granted', ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied' });
   window.gtag('js', new Date());
   window.gtag('config', id, { send_page_view: false, allow_google_signals: false, allow_ad_personalization_signals: false, cookie_expires: 15552000, page_location: `${location.origin}${location.pathname}`, page_referrer: document.referrer.split(/[?#]/)[0] });
   window.kggAnalyticsStarted = id;
-  const script = document.createElement('script');
-  script.id = 'kgg-google-analytics';
-  script.async = true;
-  script.src = `https://www.googletagmanager.com/gtag/js?id=${id}`;
-  script.onload = () => { script.dataset.loaded = 'true'; };
-  script.onerror = () => { script.dataset.loaded = 'false'; };
-  document.head.appendChild(script);
 }
 
 export function stopAnalytics(id: string) {
@@ -68,3 +61,4 @@ export function trackVideoStart(videoId: string, title: string) {
   if (readConsent() !== 'accepted' || !window.kggAnalyticsStarted) return;
   window.gtag?.('event', 'video_start', { video_provider: 'youtube', video_title: title, video_url: `https://www.youtube.com/watch?v=${videoId}`, page_location: `${location.origin}${location.pathname}` });
 }
+

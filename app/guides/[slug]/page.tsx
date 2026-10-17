@@ -35,16 +35,23 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   if (!guide) return { title: { absolute: siteConfig.name } };
 
   return {
-    title: { absolute: siteConfig.name },
+    title: { absolute: guide.seoTitle },
     description: guide.metaDescription,
     alternates: { canonical: guide.canonicalUrl },
     openGraph: {
+      url: `${siteConfig.domain}/guides/${guide.slug}`,
       title: guide.seoTitle,
       description: guide.metaDescription,
       type: 'article',
       publishedTime: guide.publishedAt,
       modifiedTime: guide.updatedAt,
       authors: [siteConfig.name],
+      images: guide.heroImage ? [guide.heroImage] : undefined,
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: guide.seoTitle,
+      description: guide.metaDescription,
       images: guide.heroImage ? [guide.heroImage] : undefined,
     },
   };
@@ -173,4 +180,5 @@ export default async function GuidePage({ params }: PageProps) {
     </main>
   );
 }
+
 

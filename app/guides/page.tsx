@@ -9,7 +9,7 @@ import { JsonLd } from '@/components/JsonLd';
 import { breadcrumbSchema } from '@/lib/schema';
 
 export const metadata: Metadata = {
-  title: { absolute: siteConfig.name },
+  title: { absolute: 'WoW Gold Farming Guides & Routes | King K' },
   description: 'Browse WoW gold guides by content: farming, transmog and rare drops, or auction house and crafting.',
   alternates: { canonical: `${siteConfig.domain}/guides` },
 };
@@ -54,3 +54,4 @@ export default function GuidesIndexPage() {
     </main>
   );
 }
+

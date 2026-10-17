@@ -11,8 +11,8 @@ export function Logo({ showText = true }: { showText?: boolean }) {
           <span className="text-base font-bold tracking-tight text-foreground">
             {siteConfig.name}
           </span>
-          <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
-            WoW Gold
+          <span className="mt-1 whitespace-nowrap font-mono text-[9px] uppercase tracking-[0.12em] text-muted-foreground sm:text-[10px]">
+            WoW Gold Farming Guides
           </span>
         </span>
       )}

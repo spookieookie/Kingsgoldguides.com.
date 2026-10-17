@@ -8,8 +8,8 @@ export function VideoHero({ videos }: { videos: VideoPage[] }) {
   return (
     <section className="mx-auto max-w-7xl px-4 pb-10 pt-6 md:px-6 md:pt-8" aria-labelledby="home-title">
       <header className="mb-5 flex flex-wrap items-end justify-between gap-3">
-        <div><p className="mb-1 text-xs font-semibold uppercase tracking-[0.18em] text-primary">King K</p><h1 id="home-title" className="text-2xl font-bold tracking-tight text-foreground sm:text-3xl">WoW Gold Farming</h1></div>
-        <p className="text-sm text-muted-foreground">Farms, rare drops, and the occasional auction house flip.</p>
+        <h1 id="home-title" className="text-2xl font-bold tracking-tight text-foreground sm:text-3xl">What’s New</h1>
+        <p className="text-sm text-muted-foreground">Latest videos, gold guides, and updates from the channel.</p>
       </header>
       <div className="grid gap-5 lg:grid-cols-3">
         <article className="group relative overflow-hidden rounded-xl border border-border bg-card lg:col-span-2">

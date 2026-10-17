@@ -129,7 +129,7 @@ export const author: AuthorProfile = {
     'Rare item and transmog farming',
     'Event economics (Darkmoon Faire)',
   ],
-  youtube: 'https://www.youtube.com/@KingKunta',
+  youtube: 'https://www.youtube.com/@KingKonYoutube',
   featuredGuides: [
     'wow-gold-farm-best-way-200k-iron-docks',
     'data-analyst-darkmoon-firewater-gold-flip-wow-gold-making',
@@ -137,4 +137,5 @@ export const author: AuthorProfile = {
   ],
   featuredVideos: ['600k-ghostlands-chest-farm', 'top-5-instant-respawn-farms', 'iron-docks-200k'],
 };
+
 

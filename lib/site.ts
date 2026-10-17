@@ -5,7 +5,7 @@ export const siteConfig = {
   tagline: 'World of Warcraft gold guides by King K',
   description:
     'WoW gold farming videos and written guides by King K. Find the farm, watch the route, and check what is worth selling.',
-  youtube: 'https://www.youtube.com/@KingKunta',
+  youtube: 'https://www.youtube.com/@KingKonYoutube',
   twitter: '@kingkuntawow',
   authorSlug: 'king-kunta',
 } as const;
@@ -118,4 +118,5 @@ export function getHub(key: HubKey): HubDef {
   if (!hub) throw new Error(`Unknown hub: ${key}`);
   return hub;
 }
+
 

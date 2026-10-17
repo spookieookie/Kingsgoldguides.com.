@@ -7,6 +7,7 @@ Use this setup directly. Do not rediscover projects, repositories, accounts, or 
 - Vercel project: `kings-gold`, ID `prj_Hiw9BKvqHjIjvLaZRJgPAt3wwGkY`.
 - Vercel team: `team_6bdQ09L8CPYnBLa88p9UyBoz`.
 - Live site: `https://kingsgoldguides.com`.
+- YouTube channel: `https://www.youtube.com/@KingKonYoutube`. Use `siteConfig.youtube` for channel links; the old `@KingKunta` handle is incorrect.
 - Search Console property: `https://kingsgoldguides.com/` (URL-prefix property).
 - Google tag: `G-9D2KRKSGEH`; one loader in `app/layout.tsx`, existing consent controls in `lib/analytics.ts`.
 

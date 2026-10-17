@@ -3,6 +3,57 @@ import type { GuidePage } from './types';
 // Only published walkthroughs based on King K's own videos belong here.
 export const guides: GuidePage[] = [
   {
+    "title": "Zul'Farrak Transmog Farming Route",
+    "slug": "zulfarrak-transmog-farming-route",
+    "excerpt": "Follow my Zul'Farrak route in Tanaris: pull the trash, free prisoners, open the graves, and loop back to reset. Keep the transmog for the auction house.",
+    "seoTitle": "Zul'Farrak Transmog Farming Route: Graves & Prisoners",
+    "metaDescription": "Follow my Zul'Farrak transmog route in Tanaris: pull the trash, free prisoners, open graves, and loop back to reset. Includes the original loot results.",
+    "heroImage": "https://i.ytimg.com/vi/vmIjvNJY4MI/hqdefault.jpg",
+    "youtubeVideoId": "vmIjvNJY4MI",
+    "videoUploadedAt": "2017-03-16",
+    "publishedAt": "2026-10-17",
+    "updatedAt": "2026-10-17",
+    "hub": "rare-farms",
+    "category": "Rare Item & Transmog Farms",
+    "subcategory": "Transmog",
+    "expansion": "Old World",
+    "methodType": "Dungeon Farm",
+    "goldPerHourLow": 0,
+    "goldPerHourHigh": 0,
+    "setupCost": "None",
+    "saleSpeed": "Slow",
+    "riskLevel": "High",
+    "requirements": [
+      "A character that can clear Zul'Farrak",
+      "Empty bags",
+      "Patience for auction house sales"
+    ],
+    "whoFor": [
+      "Transmog sellers",
+      "Solo dungeon farmers"
+    ],
+    "tldr": "Pull the trash along my Zul'Farrak route, clear your following mobs before killing the witch doctor, free the prisoners, and open the graves. Loop back to reset and check the gear before listing it.",
+    "bestTimeToFarm": "When you have bag space for repeated dungeon runs",
+    "bestTimeToSell": "",
+    "ahNotes": "Transmog can take months to sell. The original TSM estimate described unsold items; keep actual auction sales separate from inventory value.",
+    "realmCaveats": "The original recording is from 2017. Check the loot and dungeon behavior in your version of WoW, and use current auction prices.",
+    "steps": [],
+    "analystTakeaway": "I would do a few runs and check the drops before committing to a long session. This route suits patient transmog sellers; the old hourly headline depends on finding buyers.",
+    "faq": [],
+    "relatedGuides": [
+      "wow-gold-farm-80000-zulfarrak-robes-of-insight",
+      "burning-steppes-mageweave-runecloth-farm"
+    ],
+    "relatedVideos": [
+      "wow-gold-farm-80000-zulfarrak-robes-of-insight",
+      "burning-steppes-mageweave-runecloth-farm"
+    ],
+    "featured": true,
+    "canonicalUrl": "/guides/zulfarrak-transmog-farming-route",
+    "schemaType": "Article",
+    "mdxSlug": "zulfarrak-transmog-farming-route"
+  },
+  {
     "title": "Loaded Gnomish Dice Farm in Uldum",
     "slug": "uldum-loaded-gnomish-dice-farm",
     "excerpt": "Bring a rogue to Uldum and pickpocket the groups for Loaded Gnomish Dice. Sap the leader, work through the mobs, and keep the lockboxes.",

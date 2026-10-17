@@ -3,6 +3,61 @@ import type { VideoPage } from './types';
 // A video is listed once and links to its own written guide or post.
 export const videos: VideoPage[] = [
   {
+    "title": "Zul'Farrak Transmog Farming Route",
+    "slug": "zulfarrak-transmog-farming-route",
+    "youtubeVideoId": "vmIjvNJY4MI",
+    "videoUploadedAt": "2017-03-16",
+    "excerpt": "Follow my Zul'Farrak route in Tanaris: pull the trash, free prisoners, open the graves, and loop back to reset. Keep the transmog for the auction house.",
+    "summary": "I'm running Zul'Farrak in Tanaris for transmog. Follow the counterclockwise route, clear the trash before killing the witch doctor, free the prisoners for extra mobs, and right-click the graves. My reported 30-minute test showed 15,132 gold in TSM item value, while a vendor comparison returned about 40 gold. The original 30k-per-hour title depended on auction prices and finding buyers. The written guide covers the route and the difference between bag value and sold items.",
+    "publishedAt": "2026-10-17",
+    "duration": "3:32",
+    "hub": "rare-farms",
+    "topic": "Dungeon Farm",
+    "promise": "A Zul'Farrak transmog loop with prisoner spawns, graveyard pulls, and the original loot results.",
+    "keyTakeaways": [
+      "Kill the trash following you before killing the witch doctor.",
+      "Free the prisoners and right-click the graves for extra mobs.",
+      "Loop counterclockwise back to the entrance and reset when allowed.",
+      "Transmog can take months to sell; TSM value is not gold already earned."
+    ],
+    "timestamps": [
+      {
+        "time": "1:09",
+        "label": "Zul'Farrak route walkthrough"
+      },
+      {
+        "time": "1:32",
+        "label": "Witch doctor and prisoner pulls"
+      },
+      {
+        "time": "2:02",
+        "label": "Open the graves"
+      },
+      {
+        "time": "2:18",
+        "label": "Return to the entrance and reset"
+      },
+      {
+        "time": "2:23",
+        "label": "Loot value and selling time"
+      }
+    ],
+    "mentioned": [
+      "Zul'Farrak",
+      "Tanaris",
+      "Kalimdor",
+      "Transmog",
+      "TradeSkillMaster",
+      "Auction House"
+    ],
+    "relatedGuideSlug": "zulfarrak-transmog-farming-route",
+    "relatedVideos": [
+      "wow-gold-farm-80000-zulfarrak-robes-of-insight",
+      "burning-steppes-mageweave-runecloth-farm"
+    ],
+    "featured": true
+  },
+  {
     "title": "Loaded Gnomish Dice Farm in Uldum",
     "slug": "uldum-loaded-gnomish-dice-farm",
     "youtubeVideoId": "piSgHd3N_Gk",

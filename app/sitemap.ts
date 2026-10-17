@@ -1,6 +1,6 @@
 import type { MetadataRoute } from 'next';
 import { siteConfig } from '@/lib/site';
-import { getAllGuides, getAllVideos } from '@/lib/content';
+import { getAllGuides, getAllVideos, getAllPosts } from '@/lib/content';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = siteConfig.domain.replace(/\/$/, '');
@@ -33,5 +33,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency: 'monthly' as const,
     priority: 0.6,
   }));
-  return [...staticRoutes, ...guideRoutes, ...videoRoutes];
+  const postRoutes = getAllPosts().map((post) => ({
+    url: `${base}/posts/${post.slug}`,
+    lastModified: new Date(post.updatedAt),
+    changeFrequency: 'monthly' as const,
+    priority: 0.7,
+  }));
+  return [...staticRoutes, ...guideRoutes, ...videoRoutes, ...postRoutes];
 }

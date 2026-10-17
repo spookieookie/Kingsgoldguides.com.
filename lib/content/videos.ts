@@ -3,6 +3,25 @@ import type { VideoPage } from './types';
 // A video is listed once and always links to its own written guide.
 export const videos: VideoPage[] = [
   {
+    "title": "WoW Forever Beta: Starting Fresh",
+    "slug": "wow-forever-beta-starting-fresh",
+    "youtubeVideoId": "p9V-rA_rDLc",
+    "videoUploadedAt": "2026-10-10",
+    "excerpt": "The replay from my WoW Forever beta stream. Starting fresh, checking out the game, and thinking about gathering, crafting, and gold farming.",
+    "summary": "I had a good time playing the WoW Forever beta on stream. Here's the replay from October 10. I've also written up what has me interested: gathering that takes some knowledge, crafting, the RuneScape comparison, and where I think free access could go.",
+    "publishedAt": "2026-10-16",
+    "duration": "1:56:57",
+    "hub": "farming",
+    "topic": "Beta Stream",
+    "promise": "Starting fresh in the WoW Forever beta. Watch the replay, then read my thoughts on gathering, crafting, and what could come next.",
+    "keyTakeaways": [],
+    "timestamps": [],
+    "mentioned": ["WoW Forever", "Herbalism", "Skinning", "Crafting"],
+    "relatedPostSlug": "wow-forever-first-impressions",
+    "relatedVideos": ["firelands-volatile-farm", "tiragarde-gathering-route"],
+    "featured": true
+  },
+  {
     "title": "Firelands Volatile Farm",
     "slug": "firelands-volatile-farm",
     "youtubeVideoId": "Cgn6GY6Iy4c",

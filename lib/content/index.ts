@@ -1,10 +1,11 @@
 import { guides } from './guides';
 import { videos } from './videos';
+import { posts } from './posts';
 import { dataBriefs, tools, beginnerPaths, author } from './meta';
-import type { GuidePage, VideoPage } from './types';
+import type { GuidePage, VideoPage, PostPage } from './types';
 import type { HubKey } from '@/lib/site';
 
-export { guides, videos, dataBriefs, tools, beginnerPaths, author };
+export { guides, videos, posts, dataBriefs, tools, beginnerPaths, author };
 export * from './types';
 
 /* ---------- Guides ---------- */
@@ -73,6 +74,18 @@ export function getRelatedVideos(slugs: string[], limit = 3): VideoPage[] {
     .map((s) => getVideo(s))
     .filter((v): v is VideoPage => Boolean(v))
     .slice(0, limit);
+}
+
+/* ---------- Posts ---------- */
+
+export function getAllPosts(): PostPage[] {
+  return [...posts].sort(
+    (a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime(),
+  );
+}
+
+export function getPost(slug: string): PostPage | undefined {
+  return posts.find((post) => post.slug === slug);
 }
 
 /* ---------- Tools & briefs ---------- */

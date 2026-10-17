@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
-import { getVideo, getAllVideos, getGuide, getRelatedVideos } from '@/lib/content';
+import { getVideo, getAllVideos, getGuide, getPost, getRelatedVideos } from '@/lib/content';
 import { siteConfig } from '@/lib/site';
 import { getGroupForHub } from '@/lib/guide-groups';
 import { breadcrumbSchema, videoObjectSchema } from '@/lib/schema';
@@ -45,7 +45,10 @@ export default async function VideoPage({ params }: PageProps) {
   if (!video) notFound();
 
   const group = getGroupForHub(video.hub);
-  const companion = video.relatedGuideSlug ? getGuide(video.relatedGuideSlug) : undefined;
+  const companionGuide = video.relatedGuideSlug ? getGuide(video.relatedGuideSlug) : undefined;
+  const companionPost = video.relatedPostSlug ? getPost(video.relatedPostSlug) : undefined;
+  const companion = companionGuide ?? companionPost;
+  const companionHref = companionGuide ? `/guides/${companionGuide.slug}` : companionPost ? `/posts/${companionPost.slug}` : undefined;
   const related = getRelatedVideos(video.relatedVideos, 3).filter((v) => v.slug !== slug);
 
   const crumbs = [
@@ -96,19 +99,19 @@ export default async function VideoPage({ params }: PageProps) {
           <p>{video.summary}</p>
         </div>
 
-        {/* Companion guide CTA */}
-        {companion && (
+        {/* Written companion to this video or stream. */}
+        {companion && companionHref && (
           <Panel className="mt-8 border-primary/25 bg-primary/5">
             <span className="font-mono text-xs uppercase tracking-[0.15em] text-primary">
-              The written guide
+              {companionGuide ? 'The written guide' : 'After the stream'}
             </span>
             <h2 className="mt-2 text-lg font-bold text-foreground">{companion.title}</h2>
             <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{companion.excerpt}</p>
             <Link
-              href={`/guides/${companion.slug}`}
+              href={companionHref}
               className="mt-4 inline-flex items-center gap-1.5 font-mono text-xs uppercase tracking-wider text-primary hover:text-primary/80"
             >
-              Read the full guide <ArrowRight className="h-3 w-3" aria-hidden="true" />
+              {companionGuide ? 'Read the full guide' : 'Read the post'} <ArrowRight className="h-3 w-3" aria-hidden="true" />
             </Link>
           </Panel>
         )}

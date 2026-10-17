@@ -90,8 +90,28 @@ export interface VideoPage {
   timestamps: { time: string; label: string }[];
   mentioned: string[];
   relatedGuideSlug?: string;
+  relatedPostSlug?: string;
   relatedVideos: string[];
   featured: boolean;
+}
+
+export interface PostPage {
+  title: string;
+  slug: string;
+  excerpt: string;
+  metaDescription: string;
+  publishedAt: string;
+  updatedAt: string;
+  youtubeVideoId: string;
+  videoUploadedAt: string;
+  intro: string[];
+  sections: {
+    heading: string;
+    paragraphs: {
+      text: string;
+      source?: { label: string; href: string };
+    }[];
+  }[];
 }
 
 export interface DataBrief {

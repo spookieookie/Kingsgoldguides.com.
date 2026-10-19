@@ -10,7 +10,7 @@ export function GuideCard({ guide, className }: { guide: GuidePage; className?: 
     <article className={cn('group relative flex flex-col overflow-hidden rounded-xl border border-border bg-card transition-colors hover:border-primary/50', className)}>
       <div className="aspect-video overflow-hidden bg-secondary">
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src={`https://i.ytimg.com/vi/${guide.youtubeVideoId}/hqdefault.jpg`} alt="" loading="lazy" className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-[1.02]" />
+        <img src={guide.heroImage || `https://i.ytimg.com/vi/${guide.youtubeVideoId}/hqdefault.jpg`} alt="" loading="lazy" className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-[1.02]" />
       </div>
       <div className="flex flex-1 flex-col p-5">
         <p className="text-xs font-semibold text-primary">{group.shortName}</p>

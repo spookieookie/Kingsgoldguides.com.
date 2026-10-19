@@ -2,6 +2,57 @@ import type { GuidePage } from './types';
 
 // Only published walkthroughs based on King K's own videos belong here.
 export const guides: GuidePage[] = [
+  // Video pending: add the real YouTube ID and upload date here, then add its videos.ts entry.
+  {
+    "title": "Fiery War Axe Farm in WoW Forever",
+    "slug": "fiery-war-axe-wow-forever",
+    "excerpt": "Blizzard buffed Fiery War Axe, and I'm watching it for WoW Forever. Here's what changed and where to look for Green Scalebane and Grimtotem Naturalist.",
+    "seoTitle": "Fiery War Axe Farm in WoW Forever: Buffs & Drop Locations",
+    "metaDescription": "Fiery War Axe farming in WoW Forever: see the buffs, Swamp of Sorrows and Feralas spots, and why I'm watching this rare weapon's gold value.",
+    "heroImage": "/images/guides/fiery-war-axe-wow-forever.webp",
+    "youtubeVideoId": "",
+    "publishedAt": "2026-10-19",
+    "updatedAt": "2026-10-19",
+    "hub": "rare-farms",
+    "category": "Rare Item & Transmog Farms",
+    "subcategory": "Rare Weapons",
+    "expansion": "WoW Forever",
+    "methodType": "Mob Farm",
+    "goldPerHourLow": 0,
+    "goldPerHourHigh": 0,
+    "setupCost": "None",
+    "saleSpeed": "Slow",
+    "riskLevel": "High",
+    "requirements": [
+      "A character that can handle the mobs at the chosen spot",
+      "Access to the Swamp of Sorrows or Feralas",
+      "Empty bags"
+    ],
+    "whoFor": [
+      "Rare item farmers",
+      "Players preparing gold farms for WoW Forever"
+    ],
+    "tldr": "Compare Fiery War Axe's added Strength and stronger fire proc, then check Green Scalebane in the Swamp of Sorrows or Grimtotem Naturalist in Feralas. Keep the axe unbound if you want to sell it.",
+    "bestTimeToFarm": "",
+    "bestTimeToSell": "",
+    "ahNotes": "The million-gold figure is my prediction for Forever. Watch the supply and what buyers actually pay after launch; the Retail listing is context from the recording.",
+    "realmCaveats": "Rare drops take luck, and the beta item values can change before launch. Auction prices will depend on the Forever market.",
+    "steps": [],
+    "analystTakeaway": "I want to see how many of these reach the auction house and whether the extra Strength and stronger fire proc give leveling players a reason to buy one.",
+    "faq": [],
+    "relatedGuides": [
+      "the-glazer-farm",
+      "wow-gold-farm-goblin-power-shovel-150000"
+    ],
+    "relatedVideos": [
+      "the-glazer-farm",
+      "goblin-power-shovel"
+    ],
+    "featured": true,
+    "canonicalUrl": "/guides/fiery-war-axe-wow-forever",
+    "schemaType": "Article",
+    "mdxSlug": "fiery-war-axe-wow-forever"
+  },
   {
     "title": "The Glazer Farm in Stormsong Valley",
     "slug": "the-glazer-farm",

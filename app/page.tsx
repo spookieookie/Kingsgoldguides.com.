@@ -4,7 +4,7 @@ import { ArrowRight, Play } from 'lucide-react';
 import { VideoHero } from '@/components/home/VideoHero';
 import { GuideCard } from '@/components/cards/GuideCard';
 import { VideoCard } from '@/components/cards/VideoCard';
-import { getAllGuides, getAllVideos, getAllPosts, getVideo } from '@/lib/content';
+import { getAllGuides, getAllVideos, getVideo } from '@/lib/content';
 import { siteConfig } from '@/lib/site';
 import { formatDate } from '@/lib/format';
 
@@ -18,25 +18,25 @@ export const metadata: Metadata = {
 export default function HomePage() {
   const guides = getAllGuides();
   const videos = getAllVideos();
-  const [latestPost] = getAllPosts();
-  const postVideo = latestPost ? getVideo(latestPost.youtubeVideoId) : undefined;
+  const [latestGuide] = guides;
+  const guideVideo = latestGuide ? getVideo(latestGuide.youtubeVideoId) : undefined;
   return (
     <main>
       <VideoHero videos={videos.slice(0, 3)} />
-      {latestPost && (
-        <section className="mx-auto max-w-7xl px-4 pb-10 md:px-6" aria-labelledby="latest-post-title">
+      {latestGuide && (
+        <section className="mx-auto max-w-7xl px-4 pb-10 md:px-6" aria-labelledby="latest-guide-title">
           <article className="rounded-xl border border-primary/25 bg-primary/5 p-5 sm:p-7">
             <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs font-semibold text-primary">
-              <span>From the stream</span>
-              <time dateTime={latestPost.publishedAt} className="font-normal text-muted-foreground">{formatDate(latestPost.publishedAt)}</time>
+              <span>Latest guide</span>
+              <time dateTime={latestGuide.publishedAt} className="font-normal text-muted-foreground">{formatDate(latestGuide.publishedAt)}</time>
             </div>
-            <h2 id="latest-post-title" className="mt-3 text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
-              <Link href={`/posts/${latestPost.slug}`} className="transition-colors hover:text-primary">{latestPost.title}</Link>
+            <h2 id="latest-guide-title" className="mt-3 text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
+              <Link href={`/guides/${latestGuide.slug}`} className="transition-colors hover:text-primary">{latestGuide.title}</Link>
             </h2>
-            <p className="mt-3 max-w-3xl leading-relaxed text-muted-foreground">{latestPost.excerpt}</p>
+            <p className="mt-3 max-w-3xl leading-relaxed text-muted-foreground">{latestGuide.excerpt}</p>
             <div className="mt-5 flex flex-wrap items-center gap-x-6 gap-y-3 text-sm font-semibold">
-              <Link href={`/posts/${latestPost.slug}`} className="inline-flex items-center gap-2 text-primary hover:text-primary/80">Read the post <ArrowRight className="h-4 w-4" aria-hidden="true" /></Link>
-              {postVideo && <Link href={`/videos/${postVideo.slug}`} className="inline-flex items-center gap-2 text-foreground hover:text-primary"><Play className="h-4 w-4" aria-hidden="true" />Watch the stream replay</Link>}
+              <Link href={`/guides/${latestGuide.slug}`} className="inline-flex items-center gap-2 text-primary hover:text-primary/80">Read the guide <ArrowRight className="h-4 w-4" aria-hidden="true" /></Link>
+              {guideVideo && <Link href={`/videos/${guideVideo.slug}`} className="inline-flex items-center gap-2 text-foreground hover:text-primary"><Play className="h-4 w-4" aria-hidden="true" />Watch the video</Link>}
             </div>
           </article>
         </section>

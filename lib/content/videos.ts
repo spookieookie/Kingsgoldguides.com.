@@ -3,6 +3,57 @@ import type { VideoPage } from './types';
 // A video is listed once and links to its own written guide or post.
 export const videos: VideoPage[] = [
   {
+    "title": "Destiny Sword Farming Video: Blasted Lands",
+    "slug": "destiny-sword-farm",
+    "youtubeVideoId": "HU7mPLBRAAo",
+    "videoUploadedAt": "2019-01-12",
+    "excerpt": "Watch my Destiny sword farm at Dreadmaul Hold in Blasted Lands. See the location, Dreadmaul Ambusher pulls, and the original item-value discussion.",
+    "summary": "I'm farming Dreadmaul Ambushers near Dreadmaul Hold in Blasted Lands for Destiny, a rare epic two-handed sword. The video shows the location and repeated mob clears, looks at the weapon's model and value, and finishes with farm recommendations before a channel discussion. The 100,000-gold figure is from the original recording. Use the written guide for the zone setup, target mobs, loot, and selling notes.",
+    "publishedAt": "2026-10-20",
+    "duration": "11:17",
+    "hub": "rare-farms",
+    "topic": "Rare Weapon Farm",
+    "promise": "See the Blasted Lands farming spot, target mobs, and repeated pulls for the rare Destiny sword.",
+    "keyTakeaways": [
+      "Head to Dreadmaul Hold in the pre-invasion version of Blasted Lands.",
+      "Target Dreadmaul Ambushers and loot the kills as you repeat the pulls.",
+      "Keep Destiny unbound if you want to sell it.",
+      "Check current auction prices; the original 100,000-gold value is historical."
+    ],
+    "timestamps": [
+      {
+        "time": "0:35",
+        "label": "Location setup"
+      },
+      {
+        "time": "1:32",
+        "label": "Destiny and its original value"
+      },
+      {
+        "time": "2:57",
+        "label": "Farming the Ambushers"
+      },
+      {
+        "time": "5:48",
+        "label": "Final farm recommendations"
+      }
+    ],
+    "mentioned": [
+      "Destiny",
+      "Dreadmaul Ambusher",
+      "Dreadmaul Hold",
+      "Blasted Lands",
+      "Runecloth",
+      "Auction House"
+    ],
+    "relatedGuideSlug": "destiny-sword-farm",
+    "relatedVideos": [
+      "the-glazer-farm",
+      "goblin-power-shovel"
+    ],
+    "featured": true
+  },
+  {
     "title": "The Glazer Farm: Make 191,000–300,000 Gold",
     "slug": "the-glazer-farm",
     "youtubeVideoId": "Bqf2dytbJN0",

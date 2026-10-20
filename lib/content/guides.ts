@@ -2,6 +2,58 @@ import type { GuidePage } from './types';
 
 // Only published walkthroughs based on King K's own videos belong here.
 export const guides: GuidePage[] = [
+  {
+    "title": "Destiny Sword Farm in Blasted Lands",
+    "slug": "destiny-sword-farm",
+    "excerpt": "I'm farming Dreadmaul Ambushers near Dreadmaul Hold for Destiny. Here's the Blasted Lands setup, farming method, loot, and what to check before selling.",
+    "seoTitle": "Destiny Sword Farm in WoW: Blasted Lands Guide",
+    "metaDescription": "Farm Destiny in WoW at Dreadmaul Hold in Blasted Lands. Follow the Dreadmaul Ambusher method, check your zone phase, and price the rare sword.",
+    "heroImage": "https://i.ytimg.com/vi/HU7mPLBRAAo/hqdefault.jpg",
+    "youtubeVideoId": "HU7mPLBRAAo",
+    "videoUploadedAt": "2019-01-12",
+    "publishedAt": "2026-10-20",
+    "updatedAt": "2026-10-20",
+    "hub": "rare-farms",
+    "category": "Rare Item & Transmog Farms",
+    "subcategory": "Rare Weapons",
+    "expansion": "Old World",
+    "methodType": "Mob Farm",
+    "goldPerHourLow": 0,
+    "goldPerHourHigh": 0,
+    "setupCost": "None",
+    "saleSpeed": "Slow",
+    "riskLevel": "High",
+    "requirements": [
+      "A character that can clear the target mobs",
+      "Access to the pre-invasion Blasted Lands phase",
+      "Empty bags and auto-loot"
+    ],
+    "whoFor": [
+      "Rare weapon collectors",
+      "Transmog farmers"
+    ],
+    "tldr": "Head to Dreadmaul Hold in the pre-invasion Blasted Lands, farm Dreadmaul Ambushers, and keep checking the loot for Destiny. Keep the sword unbound if you plan to sell it.",
+    "bestTimeToFarm": "",
+    "bestTimeToSell": "",
+    "ahNotes": "The original 100,000-gold headline is from the recording. Check current listings before farming and allow time to find a buyer.",
+    "realmCaveats": "Zone phasing and spawn behavior can differ from the original footage. Destiny is a rare drop, and the auction value depends on your market.",
+    "steps": [],
+    "analystTakeaway": "Check the Ambushers and the current auction listings first, then decide how long you want to spend hunting the sword.",
+    "faq": [],
+    "relatedGuides": [
+      "the-glazer-farm",
+      "burning-steppes-mageweave-runecloth-farm",
+      "wow-gold-farm-goblin-power-shovel-150000"
+    ],
+    "relatedVideos": [
+      "the-glazer-farm",
+      "goblin-power-shovel"
+    ],
+    "featured": true,
+    "canonicalUrl": "/guides/destiny-sword-farm",
+    "schemaType": "Article",
+    "mdxSlug": "destiny-sword-farm"
+  },
   // Video pending: add the real YouTube ID and upload date here, then add its videos.ts entry.
   {
     "title": "Fiery War Axe Farm in WoW Forever",

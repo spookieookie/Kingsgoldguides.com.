@@ -3,6 +3,42 @@ import type { VideoPage } from './types';
 // A video is listed once and links to its own written guide or post.
 export const videos: VideoPage[] = [
   {
+    "title": "Fiery War Axe in WoW Forever: Buffs & Farming Video",
+    "slug": "fiery-war-axe-wow-forever",
+    "youtubeVideoId": "PwM1NPxWGyw",
+    "videoUploadedAt": "2026-10-20",
+    "publishedAt": "2026-10-20",
+    "duration": "3:28",
+    "hub": "rare-farms",
+    "topic": "Rare Weapon Farm",
+    "excerpt": "Watch my Fiery War Axe comparison and farming routes for WoW Forever: added Strength, a stronger fire proc, and where to hunt the rare epic.",
+    "summary": "Dude, look at this thing. I'm comparing Fiery War Axe in Classic and WoW Forever, including the added 15 Strength and the 61% increase to its complete fire proc. I look at a Retail auction listing and old Wowhead comments, then show Green Scalebane in the Swamp of Sorrows for Alliance and Grimtotem Naturalist in Feralas for Horde. Millions is my prediction for the Forever market, not a confirmed sale or guaranteed farming return.",
+    "promise": "See what changed on Fiery War Axe and the farming locations I'm watching for WoW Forever.",
+    "keyTakeaways": [
+      "+15 Strength on the Forever version; listed weapon DPS barely changes.",
+      "The complete fire effect averages 322 damage instead of 200, a 61% increase per full proc.",
+      "Alliance route: Green Scalebane in the Swamp of Sorrows.",
+      "Horde route: Grimtotem Naturalist in Feralas.",
+      "The Retail listing and my Forever price prediction are not confirmed future sales."
+    ],
+    "timestamps": [],
+    "mentioned": [
+      "Fiery War Axe",
+      "WoW Forever",
+      "Green Scalebane",
+      "Swamp of Sorrows",
+      "Grimtotem Naturalist",
+      "Feralas",
+      "Auction House"
+    ],
+    "relatedGuideSlug": "fiery-war-axe-wow-forever",
+    "relatedVideos": [
+      "the-glazer-farm",
+      "destiny-sword-farm"
+    ],
+    "featured": true
+  },
+  {
     "title": "Destiny Sword Farming Video: Blasted Lands",
     "slug": "destiny-sword-farm",
     "youtubeVideoId": "HU7mPLBRAAo",

@@ -12,7 +12,9 @@ export * from './types';
 
 export function getAllGuides(): GuidePage[] {
   return [...guides].sort(
-    (a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime(),
+    (a, b) =>
+      new Date(b.videoUploadedAt ?? b.publishedAt).getTime() -
+      new Date(a.videoUploadedAt ?? a.publishedAt).getTime(),
   );
 }
 

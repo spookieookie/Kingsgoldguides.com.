@@ -54,7 +54,6 @@ export const guides: GuidePage[] = [
     "schemaType": "Article",
     "mdxSlug": "destiny-sword-farm"
   },
-  // Video pending: add the real YouTube ID and upload date here, then add its videos.ts entry.
   {
     "title": "Fiery War Axe Farm in WoW Forever",
     "slug": "fiery-war-axe-wow-forever",
@@ -62,9 +61,10 @@ export const guides: GuidePage[] = [
     "seoTitle": "Fiery War Axe Farm in WoW Forever: Buffs & Drop Locations",
     "metaDescription": "Fiery War Axe farming in WoW Forever: see the buffs, Swamp of Sorrows and Feralas spots, and why I'm watching this rare weapon's gold value.",
     "heroImage": "/images/guides/fiery-war-axe-wow-forever.webp",
-    "youtubeVideoId": "",
+    "youtubeVideoId": "PwM1NPxWGyw",
+    "videoUploadedAt": "2026-10-20",
     "publishedAt": "2026-10-19",
-    "updatedAt": "2026-10-19",
+    "updatedAt": "2026-10-20",
     "hub": "rare-farms",
     "category": "Rare Item & Transmog Farms",
     "subcategory": "Rare Weapons",

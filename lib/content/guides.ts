@@ -2,6 +2,58 @@ import type { GuidePage } from './types';
 
 // Only published walkthroughs based on King K's own videos belong here.
 export const guides: GuidePage[] = [
+{
+  "title": "Vortex Pinnacle Volatile Air Farm",
+  "slug": "vortex-pinnacle-volatile-air-farm",
+  "excerpt": "I'm running The Vortex Pinnacle in Uldum for Volatile Air. Follow the dungeon route, choose a mount run or longer clear, and check the resets before repeating.",
+  "seoTitle": "Vortex Pinnacle Volatile Air Farm in WoW: Route & Resets",
+  "metaDescription": "Farm Volatile Air in The Vortex Pinnacle with King K's dungeon route. Find the Uldum entrance, compare route options, and check resets and auction prices.",
+  "heroImage": "https://i.ytimg.com/vi/zTRNWmTc11U/hqdefault.jpg",
+  "youtubeVideoId": "zTRNWmTc11U",
+  "videoUploadedAt": "2017-08-05",
+  "publishedAt": "2026-10-21",
+  "updatedAt": "2026-10-21",
+  "hub": "farming",
+  "category": "Farming Guides",
+  "subcategory": "Elemental Materials",
+  "expansion": "Cataclysm",
+  "methodType": "Dungeon Farm",
+  "goldPerHourLow": 0,
+  "goldPerHourHigh": 0,
+  "setupCost": "None",
+  "saleSpeed": "Medium",
+  "riskLevel": "Medium",
+  "requirements": [
+    "A character that can solo the dungeon comfortably",
+    "Flying access to The Vortex Pinnacle in Uldum",
+    "Empty bags and auto-loot",
+    "Check target trash respawns after resetting"
+  ],
+  "whoFor": [
+    "Material farmers",
+    "Solo dungeon farmers"
+  ],
+  "tldr": "Fly to The Vortex Pinnacle in Uldum, clear and loot the dungeon mobs for Volatile Air, and use slipstreams between platforms. Test the reset before committing to repeated runs.",
+  "bestTimeToFarm": "",
+  "bestTimeToSell": "",
+  "ahNotes": "The 20k-per-hour title and roughly 4,000 gold worth of Volatile Air in 20–25 minutes are historical recording claims. Use current prices and count completed sales.",
+  "realmCaveats": "This route was recorded in 2017. Test drops and trash repopulation in your game version; boss kills and instance limits can affect repeat runs.",
+  "steps": [],
+  "analystTakeaway": "Check Volatile Air prices, do a short clear and reset test, then decide whether the materials justify more runs.",
+  "faq": [],
+  "relatedGuides": [
+    "firelands-volatile-farm",
+    "burning-steppes-mageweave-runecloth-farm"
+  ],
+  "relatedVideos": [
+    "firelands-volatile-farm",
+    "burning-steppes-mageweave-runecloth-farm"
+  ],
+  "featured": false,
+  "canonicalUrl": "/guides/vortex-pinnacle-volatile-air-farm",
+  "schemaType": "Article",
+  "mdxSlug": "vortex-pinnacle-volatile-air-farm"
+},
   {
     "title": "Destiny Sword Farm in Blasted Lands",
     "slug": "destiny-sword-farm",

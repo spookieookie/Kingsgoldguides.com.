@@ -2,6 +2,57 @@ import type { VideoPage } from './types';
 
 // A video is listed once and links to its own written guide or post.
 export const videos: VideoPage[] = [
+{
+  "title": "Vortex Pinnacle Volatile Air Farming Video",
+  "slug": "vortex-pinnacle-volatile-air-farm",
+  "youtubeVideoId": "zTRNWmTc11U",
+  "videoUploadedAt": "2017-08-05",
+  "publishedAt": "2026-10-21",
+  "duration": "5:00",
+  "hub": "farming",
+  "topic": "Volatile Air Farm",
+  "excerpt": "Watch my original Vortex Pinnacle route for Volatile Air, including the Uldum entrance, slipstreams, optional mount run, and reset demonstration.",
+  "summary": "I'm farming Volatile Air in The Vortex Pinnacle in Uldum. The recording shows the floating entrance, dungeon pulls, travel between platforms and an exit-and-reset demonstration. I explain the shorter run to the second boss for mount attempts and the option to keep clearing for materials. The original video, World Of Warcraft Gold Farm (HIDDEN) 20k Per Hour, was uploaded August 5, 2017. Its gold figures are historical item valuations, not current earnings or verified sales.",
+  "promise": "Follow the original dungeon route and understand what to check before repeating it today.",
+  "keyTakeaways": [
+    "Fly to The Vortex Pinnacle's floating entrance in Uldum.",
+    "Clear and loot dungeon mobs for Volatile Air, using slipstreams between platforms.",
+    "The original route offers a shorter mount run or longer material clear.",
+    "Test trash repopulation and respect instance limits before repeating.",
+    "Price actual drops at current auction values; the original 20k headline is historical."
+  ],
+  "timestamps": [
+    {
+      "time": "0:39",
+      "label": "The Vortex Pinnacle entrance"
+    },
+    {
+      "time": "0:56",
+      "label": "Volatile Air and historical item values"
+    },
+    {
+      "time": "2:38",
+      "label": "Mount route versus longer clear"
+    },
+    {
+      "time": "3:30",
+      "label": "Route, slipstreams and reset demonstration"
+    }
+  ],
+  "mentioned": [
+    "Volatile Air",
+    "The Vortex Pinnacle",
+    "Uldum",
+    "Altairus",
+    "Reins of the Drake of the North Wind"
+  ],
+  "relatedGuideSlug": "vortex-pinnacle-volatile-air-farm",
+  "relatedVideos": [
+    "firelands-volatile-farm",
+    "burning-steppes-mageweave-runecloth-farm"
+  ],
+  "featured": false
+},
   {
     "title": "Fiery War Axe in WoW Forever: Buffs & Farming Video",
     "slug": "fiery-war-axe-wow-forever",

@@ -4,7 +4,7 @@ import { Geist, Geist_Mono } from 'next/font/google'
 import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
 import { JsonLd } from '@/components/JsonLd'
-import { organizationSchema } from '@/lib/schema'
+import { organizationSchema, websiteSchema } from '@/lib/schema'
 import { siteConfig } from '@/lib/site'
 import { GoogleAnalytics } from '@/components/GoogleAnalytics'
 import './globals.css'
@@ -23,6 +23,7 @@ export const metadata: Metadata = {
   title: siteConfig.name,
   description: siteConfig.description,
   applicationName: siteConfig.fullName,
+  robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1, 'max-video-preview': -1 } },
   verification: { google: process.env.GOOGLE_SITE_VERIFICATION || undefined },
   other: process.env.NEXT_PUBLIC_ADSENSE_PUBLISHER_ID ? { 'google-adsense-account': `ca-${process.env.NEXT_PUBLIC_ADSENSE_PUBLISHER_ID}` } : {},
   keywords: [
@@ -87,6 +88,7 @@ export default function RootLayout({
       </head>
       <body className="bg-background font-sans text-foreground antialiased">
         <JsonLd data={organizationSchema()} />
+        <JsonLd data={websiteSchema()} />
         <Header />
         {children}
         <Footer />

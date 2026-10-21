@@ -6,12 +6,12 @@ import test from 'node:test';
 
 function load(path, names, globals = {}) {
   const source = stripTypeScriptTypes(readFileSync(new URL(`../${path}`, import.meta.url), 'utf8'))
-    .replace(/^import .*;\r?\n/gm, '').replace(/^export /gm, '');
+    .replace(/^import .*;\r?\n/gm, '').replace(/^export default /gm, '').replace(/^export /gm, '');
   return runInNewContext(`${source}\n;({${names.join(',')}})`, globals);
 }
 
 const { siteConfig } = load('lib/site.ts', ['siteConfig']);
-const schema = load('lib/schema.ts', ['schemaDateTime', 'videoObjectSchema', 'articleSchema'], { siteConfig });
+const schema = load('lib/schema.ts', ['schemaDateTime', 'videoObjectSchema', 'articleSchema', 'profilePageSchema', 'websiteSchema', 'guideCollectionSchema'], { siteConfig, URL });
 
 test('structured data accepts archive records and preserves timezone-aware instants', () => {
   assert.equal(schema.schemaDateTime('2017-03-11'), '2017-03-11T00:00:00.000Z');
@@ -41,6 +41,57 @@ test('article dates use the shared structured-data formatter', () => {
   const data = schema.articleSchema({ title: 'Farm', description: 'Route', slug: '/guides/farm', publishedAt: '2026-10-17' });
   assert.equal(data.datePublished, '2026-10-17T00:00:00.000Z');
   assert.equal(data.dateModified, data.datePublished);
+});
+
+test('every published guide has sourced farm facts and an extractable short answer', () => {
+  const { guides } = load('lib/content/guides.ts', ['guides']);
+  const { farmFacts } = load('lib/content/farm-facts.ts', ['farmFacts']);
+  for (const guide of guides) {
+    const facts = farmFacts[guide.slug];
+    assert.ok(facts, `${guide.slug}: missing farm facts`);
+    for (const key of ['location', 'valueType', 'beforeYouGo']) assert.ok(facts[key]?.trim(), `${guide.slug}: ${key}`);
+    assert.ok(facts.targets.length > 0, `${guide.slug}: target items`);
+    const source = readFileSync(new URL(`../content/guides/${guide.mdxSlug}.mdx`, import.meta.url), 'utf8');
+    assert.ok(guide.tldr || /^quickAnswer: /m.test(source), `${guide.slug}: missing short answer`);
+    assert.ok(guide.realmCaveats, `${guide.slug}: version and market context`);
+  }
+  assert.equal(Object.keys(farmFacts).length, guides.length, 'Remove facts for unpublished guides');
+});
+
+test('articles, source videos, author profiles, and the website share stable identities', () => {
+  const article = schema.articleSchema({
+    title: 'Volatile Air', description: 'Dungeon route', slug: '/guides/vortex-pinnacle-volatile-air-farm',
+    publishedAt: '2026-10-21', youtubeVideoId: 'zTRNWmTc11U', topics: ['Volatile Air'], location: 'Uldum',
+  });
+  const video = schema.videoObjectSchema({ name: 'Route', description: 'Farm', youtubeVideoId: 'zTRNWmTc11U', uploadDate: '2017-08-05' });
+  const profile = schema.profilePageSchema({ name: 'King K', description: 'Creator', slug: '/authors/king-kunta' });
+  assert.equal(article.video['@id'], video['@id']);
+  assert.equal(article.author['@id'], video.creator['@id']);
+  assert.equal(article.author['@id'], profile.mainEntity['@id']);
+  assert.equal(article.isPartOf['@id'], schema.websiteSchema()['@id']);
+  assert.equal(article.citation, 'https://www.youtube.com/watch?v=zTRNWmTc11U');
+  assert.equal(article.about[0].name, 'Volatile Air');
+  assert.equal(article.contentLocation.name, 'Uldum');
+});
+
+test('guide collection describes exactly the published guide links', () => {
+  const { guides } = load('lib/content/guides.ts', ['guides']);
+  const collection = schema.guideCollectionSchema(guides);
+  assert.equal(collection.mainEntity.numberOfItems, guides.length);
+  collection.mainEntity.itemListElement.forEach((entry, i) => {
+    assert.equal(entry.position, i + 1);
+    assert.equal(entry.name, guides[i].title);
+    assert.equal(entry.url, `${siteConfig.domain}/guides/${guides[i].slug}`);
+  });
+});
+
+test('search crawlers can read public pages while administrative routes stay excluded', () => {
+  const { robots } = load('app/robots.ts', ['robots'], { siteConfig });
+  const rules = robots().rules;
+  assert.equal(rules.userAgent, '*');
+  assert.equal(rules.allow, '/');
+  assert.deepEqual(Array.from(rules.disallow), ['/api/', '/admin/']);
+  assert.equal(robots().sitemap, `${siteConfig.domain}/sitemap.xml`);
 });
 
 test('analytics configures once, honors rejection, and excludes query strings', () => {

@@ -53,7 +53,7 @@ export default function HomePage() {
       <section className="border-t border-border bg-card/40" aria-labelledby="written-guides">
         <div className="mx-auto max-w-7xl px-4 py-10 md:px-6 md:py-14">
           <div className="mb-6 flex flex-wrap items-end justify-between gap-4">
-            <div><h2 id="written-guides" className="text-2xl font-bold text-foreground">Need the route?</h2><p className="mt-2 text-sm text-muted-foreground">The written guides are here when you need them.</p></div>
+            <div><h2 id="written-guides" className="text-2xl font-bold text-foreground">Find your next WoW gold farm</h2><p className="mt-2 text-sm text-muted-foreground">Compare locations, loot, and setup in the <Link href="/guides#compare-farms" className="text-primary underline underline-offset-4">gold farming guide library</Link>, or open a written route below.</p></div>
             <Link href="/guides" className="inline-flex items-center gap-2 text-sm font-semibold text-primary">All gold guides <ArrowRight className="h-4 w-4" aria-hidden="true" /></Link>
           </div>
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">{guides.slice(0, 6).map((guide) => <GuideCard key={guide.slug} guide={guide} />)}</div>

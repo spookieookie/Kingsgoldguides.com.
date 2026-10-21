@@ -20,6 +20,8 @@ import { VideoCard } from '@/components/cards/VideoCard';
 import { Eyebrow, Tag } from '@/components/ui/kit';
 import { formatDate } from '@/lib/format';
 import { getGuideGroup } from '@/lib/guide-groups';
+import { FarmSummary } from '@/components/guide/FarmSummary';
+import { farmFacts } from '@/lib/content/farm-facts';
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -87,6 +89,9 @@ export default async function GuidePage({ params }: PageProps) {
           image: guide.heroImage,
           publishedAt: guide.publishedAt,
           updatedAt: guide.updatedAt,
+          youtubeVideoId: guide.youtubeVideoId,
+          topics: farmFacts[guide.slug]?.targets,
+          location: farmFacts[guide.slug]?.location,
         })}
       />
       <JsonLd data={breadcrumbSchema(crumbs.map((c) => ({ name: c.label, url: c.href })))} />
@@ -118,11 +123,13 @@ export default async function GuidePage({ params }: PageProps) {
             {guide.excerpt}
           </p>
           <div className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-1 font-mono text-xs uppercase tracking-wider text-muted-foreground">
-            <span>By King K</span>
+            <span>By <Link href={`/authors/${siteConfig.authorSlug}`} rel="author" className="underline underline-offset-4 hover:text-primary">King K</Link></span>
             <span aria-hidden="true">/</span>
             <span>Updated {formatDate(guide.updatedAt)}</span>
           </div>
         </header>
+
+        <FarmSummary guide={guide} quickAnswer={mdx?.frontmatter.quickAnswer} />
 
         {guide.youtubeVideoId && (
           <div className="mt-8">

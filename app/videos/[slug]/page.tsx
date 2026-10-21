@@ -92,7 +92,7 @@ export default async function VideoPage({ params }: PageProps) {
             {video.promise}
           </p>
           <div className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-1 font-mono text-xs uppercase tracking-wider text-muted-foreground">
-            <span>By King K</span>
+            <span>By <Link href={`/authors/${siteConfig.authorSlug}`} rel="author" className="underline underline-offset-4 hover:text-primary">King K</Link></span>
             <span aria-hidden="true">/</span>
             <span>{formatDate(video.publishedAt)}</span>
           </div>

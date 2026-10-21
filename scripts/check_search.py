@@ -74,6 +74,18 @@ def audit(pages):
             assert page.h1 == 1, f'Expected one H1, found {page.h1}'
             assert page.title not in titles, f'Duplicate title with {titles.get(page.title)}'
             titles[page.title] = url
+            if url.startswith(DOMAIN + '/guides/'):
+                assert 'id="farm-summary-title"' in response['text'], 'Missing server-rendered farm summary'
+                article = next((data for data in page.schemas if data.get('@type') == 'Article'), None)
+                assert article, 'Missing Article schema'
+                assert article.get('author', {}).get('@id'), 'Missing author identity'
+                assert article.get('citation', '').startswith('https://www.youtube.com/watch?v='), 'Missing source citation'
+                assert article.get('about') and article.get('contentLocation'), 'Missing farm topics or location'
+                assert any(data.get('@type') == 'VideoObject' and data.get('@id') == article.get('video', {}).get('@id') for data in page.schemas), 'Article source video does not resolve'
+            if url.rstrip('/') == DOMAIN + '/guides':
+                assert 'id="compare-farms"' in response['text'], 'Missing farm comparison'
+                collection = next((data for data in page.schemas if data.get('@type') == 'CollectionPage'), None)
+                assert collection and collection.get('mainEntity', {}).get('itemListElement'), 'Missing published-guide collection'
             for data in page.schemas:
                 if data.get('@type') != 'VideoObject': continue
                 videos += 1

@@ -4,7 +4,6 @@ import { getAllGuides, getAllVideos, getAllPosts } from '@/lib/content';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = siteConfig.domain.replace(/\/$/, '');
-  const now = new Date();
   const staticRoutes = [
     { path: '', priority: 1 },
     { path: '/guides', priority: 0.9 },
@@ -17,7 +16,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/editorial', priority: 0.4 },
   ].map((route) => ({
     url: `${base}${route.path}`,
-    lastModified: now,
     changeFrequency: 'weekly' as const,
     priority: route.priority,
   }));

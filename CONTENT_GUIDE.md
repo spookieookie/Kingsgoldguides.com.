@@ -16,6 +16,8 @@ Build out King K's existing video archive first. Each source video should have o
 - Start with the farm and the main drops, then explain preparation, the route, loot, and selling when the source supports them. Use only the sections the video needs.
 - Reuse the current guide/video pages, metadata, schema, sitemap, and companion links. Add the content to an existing broad group.
 - Use the original YouTube thumbnail and exact video ID. Do not generate replacement artwork.
+- Add source-supported location, target items, value type, and setup notes to `lib/content/farm-facts.ts`. These facts power the guide summary and comparison table. Keep a concise `tldr` or MDX `quickAnswer` so readers can assess the farm before watching.
+- Keep the guide's source video, author link, and version/market context visible. Never label a route tested on a current patch unless an actual test supports it.
 - Do not invent coordinates, mob names, chapters, drops, durations, current patch testing, or profit rates to fill gaps in the source.
 
 ## Dates and numbers

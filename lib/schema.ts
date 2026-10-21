@@ -27,6 +27,50 @@ const org = {
   sameAs: [siteConfig.youtube],
 };
 
+const creator = {
+  '@type': 'Person',
+  '@id': `${siteConfig.domain}/authors/${siteConfig.authorSlug}#person`,
+  name: 'King K',
+  alternateName: 'King Kunta',
+  url: `${siteConfig.domain}/authors/${siteConfig.authorSlug}`,
+  sameAs: [siteConfig.youtube],
+};
+
+export function websiteSchema(): Json {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    '@id': `${siteConfig.domain}/#website`,
+    name: siteConfig.name,
+    url: siteConfig.domain,
+    description: siteConfig.description,
+    inLanguage: 'en',
+    publisher: org,
+  };
+}
+
+export function guideCollectionSchema(entries: { slug: string; title: string }[]): Json {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    '@id': `${siteConfig.domain}/guides#collection`,
+    url: `${siteConfig.domain}/guides`,
+    name: 'World of Warcraft Gold Farming Guides',
+    isPartOf: { '@id': `${siteConfig.domain}/#website` },
+    author: creator,
+    mainEntity: {
+      '@type': 'ItemList',
+      numberOfItems: entries.length,
+      itemListElement: entries.map((entry, i) => ({
+        '@type': 'ListItem',
+        position: i + 1,
+        name: entry.title,
+        url: `${siteConfig.domain}/guides/${entry.slug}`,
+      })),
+    },
+  };
+}
+
 export function organizationSchema(): Json {
   return {
     '@context': 'https://schema.org',
@@ -55,22 +99,28 @@ export function articleSchema(opts: {
   image?: string;
   publishedAt?: string;
   updatedAt?: string;
+  youtubeVideoId?: string;
+  topics?: string[];
+  location?: string;
 }): Json {
   return {
     '@context': 'https://schema.org',
     '@type': 'Article',
+    '@id': `${siteConfig.domain}${opts.slug}#article`,
     headline: opts.title,
     description: opts.description,
     image: opts.image ? new URL(opts.image, siteConfig.domain).href : undefined,
     datePublished: schemaDateTime(opts.publishedAt),
     dateModified: schemaDateTime(opts.updatedAt ?? opts.publishedAt),
     mainEntityOfPage: `${siteConfig.domain}${opts.slug}`,
-    author: {
-      '@type': 'Person',
-      name: 'King K',
-      url: `${siteConfig.domain}/authors/${siteConfig.authorSlug}`,
-    },
+    isPartOf: { '@id': `${siteConfig.domain}/#website` },
+    inLanguage: 'en',
+    author: creator,
     publisher: org,
+    about: opts.topics?.map((name) => ({ '@type': 'Thing', name })),
+    contentLocation: opts.location ? { '@type': 'Place', name: opts.location } : undefined,
+    citation: opts.youtubeVideoId ? `https://www.youtube.com/watch?v=${opts.youtubeVideoId}` : undefined,
+    video: opts.youtubeVideoId ? { '@id': `${siteConfig.domain}/#video-${opts.youtubeVideoId}` } : undefined,
   };
 }
 
@@ -84,12 +134,16 @@ export function videoObjectSchema(opts: {
   return {
     '@context': 'https://schema.org',
     '@type': 'VideoObject',
+    '@id': `${siteConfig.domain}/#video-${opts.youtubeVideoId}`,
     name: opts.name,
     description: opts.description,
     thumbnailUrl:
       opts.thumbnail ?? `https://i.ytimg.com/vi/${opts.youtubeVideoId}/hqdefault.jpg`,
     uploadDate: schemaDateTime(opts.uploadDate),
     embedUrl: `https://www.youtube-nocookie.com/embed/${opts.youtubeVideoId}`,
+    url: `https://www.youtube.com/watch?v=${opts.youtubeVideoId}`,
+    creator,
+    publisher: org,
   };
 }
 
@@ -113,8 +167,9 @@ export function profilePageSchema(opts: {
   return {
     '@context': 'https://schema.org',
     '@type': 'ProfilePage',
+    '@id': `${siteConfig.domain}${opts.slug}#profile`,
     mainEntity: {
-      '@type': 'Person',
+      ...creator,
       name: opts.name,
       description: opts.description,
       url: `${siteConfig.domain}${opts.slug}`,

@@ -7,6 +7,12 @@ export interface FarmFacts {
 }
 
 export const farmFacts: Record<string, FarmFacts> = {
+  'stockades-alt-leveling-self-boost': {
+    location: 'The Stockades; move to a suitable dungeon as the alt levels',
+    targets: ['Dungeon experience for the alt'],
+    valueType: 'Character experience, not auction-house gold',
+    beforeYouGo: 'Use a higher-level character and two WoW windows; check that grouping and experience credit work in your version.',
+  },
   'vortex-pinnacle-volatile-air-farm': {
     location: 'The Vortex Pinnacle, Uldum',
     targets: ['Volatile Air'],

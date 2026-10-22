@@ -2,6 +2,29 @@ import type { VideoPage } from './types';
 
 export const videos: VideoPage[] = [
   {
+    title: 'WoW Leveling Tutorial: My Original Method',
+    slug: 'wow-leveling-tutorial',
+    youtubeVideoId: 'k9pVMn1ItxA',
+    videoUploadedAt: '2017-07-31',
+    publishedAt: '2026-10-22',
+    duration: '14:13',
+    hub: 'farming',
+    topic: 'Character Leveling',
+    excerpt: "Watch King K's original World of Warcraft leveling tutorial, with chapters for the tutorial, leveling demonstration, and extra tricks.",
+    summary: "I'm showing my personal favorite way of leveling a character in this original World of Warcraft video. Jump to the tutorial at 1:45, the leveling section at 4:00, or the extra tricks at 10:00. This is the original 2017 recording, so check the method in your version of WoW before planning a run.",
+    promise: 'Watch my original World of Warcraft leveling tutorial and jump to the part you need.',
+    keyTakeaways: [],
+    timestamps: [
+      { time: '0:00', label: 'Intro' },
+      { time: '1:45', label: 'Tutorial' },
+      { time: '4:00', label: 'Leveling' },
+      { time: '10:00', label: 'Tricks' },
+    ],
+    mentioned: ['World of Warcraft', 'Character leveling'],
+    relatedVideos: [],
+    featured: false,
+  },
+  {
     "title": "Vortex Pinnacle Volatile Air Farming Video",
     "slug": "vortex-pinnacle-volatile-air-farm",
     "youtubeVideoId": "zTRNWmTc11U",

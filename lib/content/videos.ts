@@ -2,7 +2,7 @@ import type { VideoPage } from './types';
 
 export const videos: VideoPage[] = [
   {
-    title: 'WoW Leveling Tutorial: My Original Method',
+    title: 'Stockades Alt Leveling: My Dungeon Self-Boost Video',
     slug: 'wow-leveling-tutorial',
     youtubeVideoId: 'k9pVMn1ItxA',
     videoUploadedAt: '2017-07-31',
@@ -10,18 +10,25 @@ export const videos: VideoPage[] = [
     duration: '14:13',
     hub: 'farming',
     topic: 'Character Leveling',
-    excerpt: "Watch King K's original World of Warcraft leveling tutorial, with chapters for the tutorial, leveling demonstration, and extra tricks.",
-    summary: "I'm showing my personal favorite way of leveling a character in this original World of Warcraft video. Jump to the tutorial at 1:45, the leveling section at 4:00, or the extra tricks at 10:00. This is the original 2017 recording, so check the method in your version of WoW before planning a run.",
-    promise: 'Watch my original World of Warcraft leveling tutorial and jump to the part you need.',
-    keyTakeaways: [],
+    excerpt: "Watch my original Stockades dungeon self-boost setup: two WoW windows, a higher-level character, Premade Groups, boss pulls, and login switching.",
+    summary: "I'm using a higher-level character to level an alt through the Stockades. I open two WoW windows, put both characters in a Premade Group, and pull the bosses back near the alt. I reconnect the alt before switching to the higher-level character to finish the kills. The recording shows the alt going from level 22 to 23. This is the original 2017 method, so check login timing and experience credit in your game version before repeating it.",
+    promise: 'See the group setup, Stockades boss pull, and character-switching timing from my original alt-leveling walkthrough.',
+    keyTakeaways: [
+      'Use a higher-level clearing character and a lower-level alt in the same group.',
+      'The recording switches between two WoW windows through the login process.',
+      'Gather the bosses and bring them back near the alt before the final kills.',
+      'Reconnect the alt and check that it receives experience before repeating.',
+      'Boosting skips practice with the class; plan time to learn its rotation.',
+    ],
     timestamps: [
       { time: '0:00', label: 'Intro' },
       { time: '1:45', label: 'Tutorial' },
       { time: '4:00', label: 'Leveling' },
       { time: '10:00', label: 'Tricks' },
     ],
-    mentioned: ['World of Warcraft', 'Character leveling'],
-    relatedVideos: [],
+    mentioned: ['The Stockades', 'Deadmines', 'Premade Groups', 'Bear Tartare', 'Alt leveling'],
+    relatedGuideSlug: 'stockades-alt-leveling-self-boost',
+    relatedVideos: ['zulfarrak-transmog-farming-route', 'vortex-pinnacle-volatile-air-farm'],
     featured: false,
   },
   {

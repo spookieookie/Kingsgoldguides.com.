@@ -21,7 +21,7 @@ Every farm video gets a written guide, matching video record, and farm-facts rec
 
 ## Routine video publishing
 
-1. Read the supplied captions and extract the actual farm, materials, instructions, and supported results.
+1. Read the supplied captions and extract the actual farm, materials, instructions, and supported results. If the public transcript will not load, use the owner's authorized YouTube Studio access for that video's Languages → Edit subtitles view. Read the transcript and close it without saving or publishing; routine website posting does not include changing the YouTube video or its captions.
 2. Match the current guide format and first-person voice. Use the original YouTube thumbnail. Do not invent profit claims, locations, chapters, or personal experiences.
 3. Add one MDX guide in `content/guides/` and its matching entries in `lib/content/guides.ts`, `lib/content/videos.ts`, and `lib/content/farm-facts.ts`. Include the concise answer, farm-specific FAQ records, source-supported facts, and relevant related routes. Set the video's `relatedGuideSlug` to the written guide and use the same YouTube ID in all three source records. Reuse the existing broad group and companion links.
 4. Preserve the original upload metadata separately from the site's publication metadata. The shared schema formatter handles Google formatting; do not reopen already supplied facts as a separate investigation. Homepage video order stays newest on YouTube first.

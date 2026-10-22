@@ -24,6 +24,12 @@ class Page(HTMLParser):
         self.h1 = 0
         self.schemas = []
         self.players = []
+        self.ids = set()
+        self.fragment_links = []
+        self.body_text = []
+        self.inside_script = False
+        self.inside_style = False
+        self.has_contents = False
         self.inside_title = False
         self.inside_schema = False
         self.schema_text = ''
@@ -31,6 +37,11 @@ class Page(HTMLParser):
 
     def handle_starttag(self, tag, attrs):
         attrs = dict(attrs)
+        if attrs.get('id'): self.ids.add(attrs['id'])
+        if tag == 'nav' and attrs.get('aria-label') == 'On this page': self.has_contents = True
+        if tag == 'a' and attrs.get('href', '').startswith('#'): self.fragment_links.append(attrs['href'][1:])
+        if tag == 'script': self.inside_script = True
+        if tag == 'style': self.inside_style = True
         if tag == 'title': self.inside_title = True
         if tag == 'h1': self.h1 += 1
         if tag == 'meta':
@@ -45,12 +56,15 @@ class Page(HTMLParser):
     def handle_data(self, data):
         if self.inside_title: self.title += data
         if self.inside_schema: self.schema_text += data
+        if not self.inside_script and not self.inside_style: self.body_text.append(data)
 
     def handle_endtag(self, tag):
         if tag == 'title': self.inside_title = False
+        if tag == 'style': self.inside_style = False
         if tag == 'script' and self.inside_schema:
             self.schemas.append(json.loads(self.schema_text))
             self.inside_schema = False
+        if tag == 'script': self.inside_script = False
 
 
 def fetch(url):
@@ -82,6 +96,14 @@ def audit(pages):
                 assert article.get('citation', '').startswith('https://www.youtube.com/watch?v='), 'Missing source citation'
                 assert article.get('about') and article.get('contentLocation'), 'Missing farm topics or location'
                 assert any(data.get('@type') == 'VideoObject' and data.get('@id') == article.get('video', {}).get('@id') for data in page.schemas), 'Article source video does not resolve'
+                assert page.has_contents, 'Missing section navigation'
+                assert all(fragment in page.ids for fragment in page.fragment_links), 'Section navigation has a missing anchor'
+                questions = next((data for data in page.schemas if data.get('@type') == 'FAQPage'), None)
+                assert questions and questions.get('mainEntity'), 'Missing reader questions'
+                body_text = ' '.join(''.join(page.body_text).split())
+                for question in questions['mainEntity']:
+                    for text in (question['name'], question['acceptedAnswer']['text']):
+                        assert ' '.join(text.split()) in body_text, 'Question or answer absent from initial HTML'
             if url.rstrip('/') == DOMAIN + '/guides':
                 assert 'id="compare-farms"' in response['text'], 'Missing farm comparison'
                 collection = next((data for data in page.schemas if data.get('@type') == 'CollectionPage'), None)

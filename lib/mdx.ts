@@ -3,6 +3,7 @@ import path from 'path';
 import matter from 'gray-matter';
 import { compileMDX } from 'next-mdx-remote/rsc';
 import remarkGfm from 'remark-gfm';
+import { guideHeadingPlugin, type GuideHeading } from '@/lib/guide-headings';
 
 const contentDir = path.join(process.cwd(), 'content/guides');
 
@@ -70,13 +71,15 @@ export async function getGuideBySlug(slug: string) {
   const content = fs.readFileSync(filePath, 'utf-8');
   const { data, content: mdxContent } = matter(content);
 
+  const headings: GuideHeading[] = [];
+
   const mdxSource = await compileMDX({
     source: mdxContent,
     components: mdxComponents,
     options: {
       parseFrontmatter: false,
       mdxOptions: {
-        remarkPlugins: [remarkGfm],
+        remarkPlugins: [remarkGfm, guideHeadingPlugin(headings)],
       },
     },
   });
@@ -84,6 +87,7 @@ export async function getGuideBySlug(slug: string) {
   return {
     frontmatter: data as GuideFrontmatter,
     content: mdxSource.content,
+    headings,
   };
 }
 

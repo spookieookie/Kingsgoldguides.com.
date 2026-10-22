@@ -1,58 +1,57 @@
 import type { VideoPage } from './types';
 
-// A video is listed once and links to its own written guide or post.
 export const videos: VideoPage[] = [
-{
-  "title": "Vortex Pinnacle Volatile Air Farming Video",
-  "slug": "vortex-pinnacle-volatile-air-farm",
-  "youtubeVideoId": "zTRNWmTc11U",
-  "videoUploadedAt": "2017-08-05",
-  "publishedAt": "2026-10-21",
-  "duration": "5:00",
-  "hub": "farming",
-  "topic": "Volatile Air Farm",
-  "excerpt": "Watch my original Vortex Pinnacle route for Volatile Air, including the Uldum entrance, slipstreams, optional mount run, and reset demonstration.",
-  "summary": "I'm farming Volatile Air in The Vortex Pinnacle in Uldum. The recording shows the floating entrance, dungeon pulls, travel between platforms and an exit-and-reset demonstration. I explain the shorter run to the second boss for mount attempts and the option to keep clearing for materials. The original video, World Of Warcraft Gold Farm (HIDDEN) 20k Per Hour, was uploaded August 5, 2017. Its gold figures are historical item valuations, not current earnings or verified sales.",
-  "promise": "Follow the original dungeon route and understand what to check before repeating it today.",
-  "keyTakeaways": [
-    "Fly to The Vortex Pinnacle's floating entrance in Uldum.",
-    "Clear and loot dungeon mobs for Volatile Air, using slipstreams between platforms.",
-    "The original route offers a shorter mount run or longer material clear.",
-    "Test trash repopulation and respect instance limits before repeating.",
-    "Price actual drops at current auction values; the original 20k headline is historical."
-  ],
-  "timestamps": [
-    {
-      "time": "0:39",
-      "label": "The Vortex Pinnacle entrance"
-    },
-    {
-      "time": "0:56",
-      "label": "Volatile Air and historical item values"
-    },
-    {
-      "time": "2:38",
-      "label": "Mount route versus longer clear"
-    },
-    {
-      "time": "3:30",
-      "label": "Route, slipstreams and reset demonstration"
-    }
-  ],
-  "mentioned": [
-    "Volatile Air",
-    "The Vortex Pinnacle",
-    "Uldum",
-    "Altairus",
-    "Reins of the Drake of the North Wind"
-  ],
-  "relatedGuideSlug": "vortex-pinnacle-volatile-air-farm",
-  "relatedVideos": [
-    "firelands-volatile-farm",
-    "burning-steppes-mageweave-runecloth-farm"
-  ],
-  "featured": false
-},
+  {
+    "title": "Vortex Pinnacle Volatile Air Farming Video",
+    "slug": "vortex-pinnacle-volatile-air-farm",
+    "youtubeVideoId": "zTRNWmTc11U",
+    "videoUploadedAt": "2017-08-05",
+    "publishedAt": "2026-10-21",
+    "duration": "5:00",
+    "hub": "farming",
+    "topic": "Volatile Air Farm",
+    "excerpt": "Watch my original Vortex Pinnacle route for Volatile Air, including the Uldum entrance, slipstreams, optional mount run, and reset demonstration.",
+    "summary": "I'm farming Volatile Air in The Vortex Pinnacle in Uldum. The recording shows the floating entrance, dungeon pulls, travel between platforms and an exit-and-reset demonstration. I explain the shorter run to the second boss for mount attempts and the option to keep clearing for materials. The original video, World Of Warcraft Gold Farm (HIDDEN) 20k Per Hour, was uploaded August 5, 2017. Its gold figures are historical item valuations, not current earnings or verified sales.",
+    "promise": "Follow the original dungeon route and understand what to check before repeating it today.",
+    "keyTakeaways": [
+      "Fly to The Vortex Pinnacle's floating entrance in Uldum.",
+      "Clear and loot dungeon mobs for Volatile Air, using slipstreams between platforms.",
+      "The original route offers a shorter mount run or longer material clear.",
+      "Test trash repopulation and respect instance limits before repeating.",
+      "Price actual drops at current auction values; the original 20k headline is historical."
+    ],
+    "timestamps": [
+      {
+        "time": "0:39",
+        "label": "The Vortex Pinnacle entrance"
+      },
+      {
+        "time": "0:56",
+        "label": "Volatile Air and historical item values"
+      },
+      {
+        "time": "2:38",
+        "label": "Mount route versus longer clear"
+      },
+      {
+        "time": "3:30",
+        "label": "Route, slipstreams and reset demonstration"
+      }
+    ],
+    "mentioned": [
+      "Volatile Air",
+      "The Vortex Pinnacle",
+      "Uldum",
+      "Altairus",
+      "Reins of the Drake of the North Wind"
+    ],
+    "relatedGuideSlug": "vortex-pinnacle-volatile-air-farm",
+    "relatedVideos": [
+      "firelands-volatile-farm",
+      "burning-steppes-mageweave-runecloth-farm"
+    ],
+    "featured": false
+  },
   {
     "title": "Fiery War Axe in WoW Forever: Buffs & Farming Video",
     "slug": "fiery-war-axe-wow-forever",
@@ -300,11 +299,24 @@ export const videos: VideoPage[] = [
     "hub": "farming",
     "topic": "Mob Farm",
     "promise": "Four groups, a counterclockwise loop, and Mageweave plus Runecloth. Here's how I run this Burning Steppes cloth farm.",
-    "keyTakeaways": ["Bring an AoE ability to clear the packs.", "Work through all four groups, including the one behind the hill.", "Loot before the bodies disappear and keep transmog separate from the cloth earnings."],
+    "keyTakeaways": [
+      "Bring an AoE ability to clear the packs.",
+      "Work through all four groups, including the one behind the hill.",
+      "Loot before the bodies disappear and keep transmog separate from the cloth earnings."
+    ],
     "timestamps": [],
-    "mentioned": ["Burning Steppes", "Mageweave Cloth", "Runecloth", "Fan of Knives", "TradeSkillMaster"],
+    "mentioned": [
+      "Burning Steppes",
+      "Mageweave Cloth",
+      "Runecloth",
+      "Fan of Knives",
+      "TradeSkillMaster"
+    ],
     "relatedGuideSlug": "burning-steppes-mageweave-runecloth-farm",
-    "relatedVideos": ["top-5-instant-respawn-farms", "wow-gold-farm-80000-zulfarrak-robes-of-insight"],
+    "relatedVideos": [
+      "top-5-instant-respawn-farms",
+      "wow-gold-farm-80000-zulfarrak-robes-of-insight"
+    ],
     "featured": true
   },
   {
@@ -321,9 +333,17 @@ export const videos: VideoPage[] = [
     "promise": "Starting fresh in the WoW Forever beta. Watch the replay, then read my thoughts on gathering, crafting, and what could come next.",
     "keyTakeaways": [],
     "timestamps": [],
-    "mentioned": ["WoW Forever", "Herbalism", "Skinning", "Crafting"],
+    "mentioned": [
+      "WoW Forever",
+      "Herbalism",
+      "Skinning",
+      "Crafting"
+    ],
     "relatedPostSlug": "wow-forever-first-impressions",
-    "relatedVideos": ["firelands-volatile-farm", "tiragarde-gathering-route"],
+    "relatedVideos": [
+      "firelands-volatile-farm",
+      "tiragarde-gathering-route"
+    ],
     "featured": true
   },
   {
@@ -344,9 +364,17 @@ export const videos: VideoPage[] = [
       "Leave every boss alive. We're here for the trash."
     ],
     "timestamps": [],
-    "mentioned": ["Potion of Treasure Finding", "Volatile Air", "Volatile Life", "Volatile Water"],
+    "mentioned": [
+      "Potion of Treasure Finding",
+      "Volatile Air",
+      "Volatile Life",
+      "Volatile Water"
+    ],
     "relatedGuideSlug": "firelands-volatile-farm",
-    "relatedVideos": ["120000-gold-per-hour-skettis-blackwind-lake-primal-water-farm", "top-5-instant-respawn-farms"],
+    "relatedVideos": [
+      "120000-gold-per-hour-skettis-blackwind-lake-primal-water-farm",
+      "top-5-instant-respawn-farms"
+    ],
     "featured": true
   },
   {
@@ -548,19 +576,29 @@ export const videos: VideoPage[] = [
     "featured": true
   },
   {
-    "title": "Timeless Isle Condensed Jademist Farm",
+    "title": "Timeless Isle Jademist Dancer Farm",
     "slug": "10000-gold-in-10-minutes-timeless-isle-condensed-jademist-farm",
     "youtubeVideoId": "NBBtTfUi-Ng",
-    "excerpt": "A short farm at the Misty Strand for Condensed Jademist and Timeless Coins. Check the item price on your server first.",
-    "summary": "A short farm at the Misty Strand for Condensed Jademist and Timeless Coins. Check the item price on your server first.",
+    "excerpt": "Find Jademist Dancers at The Misty Strand on Timeless Isle. Check the battle pet market and keep bound Condensed Jademist out of your auction total.",
+    "summary": "The Timeless Isle route from my original video, with loot and selling notes in the companion guide. Price-check the Jademist Dancer pet separately from bound Condensed Jademist and character currencies.",
     "publishedAt": "2024-08-15",
     "duration": "",
     "hub": "farming",
-    "topic": "Mob Farm",
-    "promise": "A short farm at the Misty Strand for Condensed Jademist and Timeless Coins. Check the item price on your server first.",
-    "keyTakeaways": [],
+    "topic": "Battle Pets",
+    "promise": "Find the Timeless Isle spot and check which loot can actually turn into a sale.",
+    "keyTakeaways": [
+      "The route is on Timeless Isle in Pandaria",
+      "Check the Jademist Dancer battle pet market",
+      "Condensed Jademist is a bound consumable",
+      "The old ten-minute headline is not a current verified rate"
+    ],
     "timestamps": [],
-    "mentioned": [],
+    "mentioned": [
+      "Timeless Isle",
+      "The Misty Strand",
+      "Jademist Dancer",
+      "Condensed Jademist"
+    ],
     "relatedGuideSlug": "10000-gold-in-10-minutes-timeless-isle-condensed-jademist-farm",
     "relatedVideos": [
       "tiragarde-gathering-route",
@@ -610,4 +648,3 @@ export const videos: VideoPage[] = [
     "featured": true
   }
 ];
-

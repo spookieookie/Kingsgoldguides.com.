@@ -2,58 +2,72 @@ import type { GuidePage } from './types';
 
 // Only published walkthroughs based on King K's own videos belong here.
 export const guides: GuidePage[] = [
-{
-  "title": "Vortex Pinnacle Volatile Air Farm",
-  "slug": "vortex-pinnacle-volatile-air-farm",
-  "excerpt": "I'm running The Vortex Pinnacle in Uldum for Volatile Air. Follow the dungeon route, choose a mount run or longer clear, and check the resets before repeating.",
-  "seoTitle": "Vortex Pinnacle Volatile Air Farm in WoW: Route & Resets",
-  "metaDescription": "Farm Volatile Air in The Vortex Pinnacle with King K's dungeon route. Find the Uldum entrance, compare route options, and check resets and auction prices.",
-  "heroImage": "https://i.ytimg.com/vi/zTRNWmTc11U/hqdefault.jpg",
-  "youtubeVideoId": "zTRNWmTc11U",
-  "videoUploadedAt": "2017-08-05",
-  "publishedAt": "2026-10-21",
-  "updatedAt": "2026-10-21",
-  "hub": "farming",
-  "category": "Farming Guides",
-  "subcategory": "Elemental Materials",
-  "expansion": "Cataclysm",
-  "methodType": "Dungeon Farm",
-  "goldPerHourLow": 0,
-  "goldPerHourHigh": 0,
-  "setupCost": "None",
-  "saleSpeed": "Medium",
-  "riskLevel": "Medium",
-  "requirements": [
-    "A character that can solo the dungeon comfortably",
-    "Flying access to The Vortex Pinnacle in Uldum",
-    "Empty bags and auto-loot",
-    "Check target trash respawns after resetting"
-  ],
-  "whoFor": [
-    "Material farmers",
-    "Solo dungeon farmers"
-  ],
-  "tldr": "Fly to The Vortex Pinnacle in Uldum, clear and loot the dungeon mobs for Volatile Air, and use slipstreams between platforms. Test the reset before committing to repeated runs.",
-  "bestTimeToFarm": "",
-  "bestTimeToSell": "",
-  "ahNotes": "The 20k-per-hour title and roughly 4,000 gold worth of Volatile Air in 20–25 minutes are historical recording claims. Use current prices and count completed sales.",
-  "realmCaveats": "This route was recorded in 2017. Test drops and trash repopulation in your game version; boss kills and instance limits can affect repeat runs.",
-  "steps": [],
-  "analystTakeaway": "Check Volatile Air prices, do a short clear and reset test, then decide whether the materials justify more runs.",
-  "faq": [],
-  "relatedGuides": [
-    "firelands-volatile-farm",
-    "burning-steppes-mageweave-runecloth-farm"
-  ],
-  "relatedVideos": [
-    "firelands-volatile-farm",
-    "burning-steppes-mageweave-runecloth-farm"
-  ],
-  "featured": false,
-  "canonicalUrl": "/guides/vortex-pinnacle-volatile-air-farm",
-  "schemaType": "Article",
-  "mdxSlug": "vortex-pinnacle-volatile-air-farm"
-},
+  {
+    "title": "Vortex Pinnacle Volatile Air Farm",
+    "slug": "vortex-pinnacle-volatile-air-farm",
+    "excerpt": "I'm running The Vortex Pinnacle in Uldum for Volatile Air. Follow the dungeon route, choose a mount run or longer clear, and check the resets before repeating.",
+    "seoTitle": "Vortex Pinnacle Volatile Air Farm in WoW: Route & Resets",
+    "metaDescription": "Farm Volatile Air in The Vortex Pinnacle with King K's dungeon route. Find the Uldum entrance, compare route options, and check resets and auction prices.",
+    "heroImage": "https://i.ytimg.com/vi/zTRNWmTc11U/hqdefault.jpg",
+    "youtubeVideoId": "zTRNWmTc11U",
+    "videoUploadedAt": "2017-08-05",
+    "publishedAt": "2026-10-21",
+    "updatedAt": "2026-10-21",
+    "hub": "farming",
+    "category": "Farming Guides",
+    "subcategory": "Elemental Materials",
+    "expansion": "Cataclysm",
+    "methodType": "Dungeon Farm",
+    "goldPerHourLow": 0,
+    "goldPerHourHigh": 0,
+    "setupCost": "None",
+    "saleSpeed": "Medium",
+    "riskLevel": "Medium",
+    "requirements": [
+      "A character that can solo the dungeon comfortably",
+      "Flying access to The Vortex Pinnacle in Uldum",
+      "Empty bags and auto-loot",
+      "Check target trash respawns after resetting"
+    ],
+    "whoFor": [
+      "Material farmers",
+      "Solo dungeon farmers"
+    ],
+    "tldr": "Fly to The Vortex Pinnacle in Uldum, clear and loot the dungeon mobs for Volatile Air, and use slipstreams between platforms. Test the reset before committing to repeated runs.",
+    "bestTimeToFarm": "",
+    "bestTimeToSell": "",
+    "ahNotes": "The 20k-per-hour title and roughly 4,000 gold worth of Volatile Air in 20–25 minutes are historical recording claims. Use current prices and count completed sales.",
+    "realmCaveats": "This route was recorded in 2017. Test drops and trash repopulation in your game version; boss kills and instance limits can affect repeat runs.",
+    "steps": [],
+    "analystTakeaway": "Check Volatile Air prices, do a short clear and reset test, then decide whether the materials justify more runs.",
+    "faq": [
+      {
+        "question": "Where is the Vortex Pinnacle Volatile Air farm?",
+        "answer": "The Vortex Pinnacle is the floating dungeon in Uldum, Kalimdor. Fly to the entrance, clear the dungeon mobs, loot Volatile Air, and use the slipstreams to move between platforms."
+      },
+      {
+        "question": "Can I keep resetting after killing Altairus?",
+        "answer": "Test that your target trash actually returns after a reset. The recording includes a short mount run to Altairus, but that is not proof that every trash pack will repopulate after a boss kill in your current version."
+      },
+      {
+        "question": "Should I stop at the second boss or finish the dungeon?",
+        "answer": "The shorter run in the video stops for the mount attempt. For materials, the video suggests continuing for more kills. Compare the drops and reset behavior in your version before choosing a repeat route."
+      }
+    ],
+    "relatedGuides": [
+      "firelands-volatile-farm",
+      "120000-gold-per-hour-skettis-blackwind-lake-primal-water-farm",
+      "wow-gold-farm-forgotten-farm-blackwing-descent"
+    ],
+    "relatedVideos": [
+      "firelands-volatile-farm",
+      "burning-steppes-mageweave-runecloth-farm"
+    ],
+    "featured": false,
+    "canonicalUrl": "/guides/vortex-pinnacle-volatile-air-farm",
+    "schemaType": "Article",
+    "mdxSlug": "vortex-pinnacle-volatile-air-farm"
+  },
   {
     "title": "Destiny Sword Farm in Blasted Lands",
     "slug": "destiny-sword-farm",
@@ -64,7 +78,7 @@ export const guides: GuidePage[] = [
     "youtubeVideoId": "HU7mPLBRAAo",
     "videoUploadedAt": "2019-01-12",
     "publishedAt": "2026-10-20",
-    "updatedAt": "2026-10-20",
+    "updatedAt": "2026-10-21",
     "hub": "rare-farms",
     "category": "Rare Item & Transmog Farms",
     "subcategory": "Rare Weapons",
@@ -91,11 +105,24 @@ export const guides: GuidePage[] = [
     "realmCaveats": "Zone phasing and spawn behavior can differ from the original footage. Destiny is a rare drop, and the auction value depends on your market.",
     "steps": [],
     "analystTakeaway": "Check the Ambushers and the current auction listings first, then decide how long you want to spend hunting the sword.",
-    "faq": [],
+    "faq": [
+      {
+        "question": "Where do I farm Destiny in Blasted Lands?",
+        "answer": "The route uses Dreadmaul Ambushers near Dreadmaul Hold in the pre-invasion Blasted Lands. Check that you are in the right zone phase before looking for the mobs."
+      },
+      {
+        "question": "Why are the Dreadmaul Ambushers missing?",
+        "answer": "Check the Blasted Lands phase first. The guide uses the pre-invasion version of the zone, and the mobs or spawn behavior may differ from the original footage."
+      },
+      {
+        "question": "Can I equip Destiny and then sell it?",
+        "answer": "Keep the sword unbound if you want to sell it. A rare drop and a high auction listing are separate from a completed sale, so check the current market before deciding to keep farming."
+      }
+    ],
     "relatedGuides": [
+      "wow-gold-farm-goblin-power-shovel-150000",
       "the-glazer-farm",
-      "burning-steppes-mageweave-runecloth-farm",
-      "wow-gold-farm-goblin-power-shovel-150000"
+      "fiery-war-axe-wow-forever"
     ],
     "relatedVideos": [
       "the-glazer-farm",
@@ -116,7 +143,7 @@ export const guides: GuidePage[] = [
     "youtubeVideoId": "PwM1NPxWGyw",
     "videoUploadedAt": "2026-10-20",
     "publishedAt": "2026-10-19",
-    "updatedAt": "2026-10-20",
+    "updatedAt": "2026-10-21",
     "hub": "rare-farms",
     "category": "Rare Item & Transmog Farms",
     "subcategory": "Rare Weapons",
@@ -143,10 +170,24 @@ export const guides: GuidePage[] = [
     "realmCaveats": "Rare drops take luck, and the beta item values can change before launch. Auction prices will depend on the Forever market.",
     "steps": [],
     "analystTakeaway": "I want to see how many of these reach the auction house and whether the extra Strength and stronger fire proc give leveling players a reason to buy one.",
-    "faq": [],
+    "faq": [
+      {
+        "question": "Where are the Fiery War Axe spots in this guide?",
+        "answer": "The video looks at Green Scalebane in the Swamp of Sorrows and Grimtotem Naturalist in Feralas. Check the mobs and item in the game version you are playing before committing to the farm."
+      },
+      {
+        "question": "Is the million-gold value a completed sale?",
+        "answer": "No. It is my prediction for the Forever market. The Retail listing is context from the recording, and beta item changes and future demand can still change."
+      },
+      {
+        "question": "What should I check before selling Fiery War Axe?",
+        "answer": "Check the exact version of the item, competing listings, and what buyers are actually paying. Keep the axe unbound if you plan to sell it rather than use it."
+      }
+    ],
     "relatedGuides": [
-      "the-glazer-farm",
-      "wow-gold-farm-goblin-power-shovel-150000"
+      "destiny-sword-farm",
+      "wow-gold-farm-goblin-power-shovel-150000",
+      "the-glazer-farm"
     ],
     "relatedVideos": [
       "the-glazer-farm",
@@ -167,7 +208,7 @@ export const guides: GuidePage[] = [
     "youtubeVideoId": "Bqf2dytbJN0",
     "videoUploadedAt": "2026-10-17",
     "publishedAt": "2026-10-17",
-    "updatedAt": "2026-10-17",
+    "updatedAt": "2026-10-21",
     "hub": "rare-farms",
     "category": "Rare Item & Transmog Farms",
     "subcategory": "Transmog",
@@ -194,8 +235,22 @@ export const guides: GuidePage[] = [
     "realmCaveats": "Drop luck, competition, and auction prices affect the result. Getting the mace in a few hours is not guaranteed.",
     "steps": [],
     "analystTakeaway": "I would look up The Glazer on my server, then head to the meadery and give the honey mobs a try. Keep the kills moving and check the loot.",
-    "faq": [],
+    "faq": [
+      {
+        "question": "Which mobs am I farming for The Glazer?",
+        "answer": "The route targets Bubbling Mead and Flowing Honey at Mildenhall Meadery in Stormsong Valley. Clear the honey mobs, loot them, and move through the area as they respawn."
+      },
+      {
+        "question": "Do I need a druid for The Glazer farm?",
+        "answer": "I use Moonkin Form in the video because tagging is easy. You can use the ranged or area attacks available to your own class; the guide does not require a druid."
+      },
+      {
+        "question": "Is 191,000–300,000 gold guaranteed from this farm?",
+        "answer": "No. That range is the rare mace's potential auction value discussed in the video. You need both the drop and a buyer. Keep The Glazer unbound and count the gold after it sells."
+      }
+    ],
     "relatedGuides": [
+      "destiny-sword-farm",
       "wow-gold-farm-goblin-power-shovel-150000",
       "zulfarrak-transmog-farming-route"
     ],
@@ -218,7 +273,7 @@ export const guides: GuidePage[] = [
     "youtubeVideoId": "vmIjvNJY4MI",
     "videoUploadedAt": "2017-03-16",
     "publishedAt": "2026-10-17",
-    "updatedAt": "2026-10-17",
+    "updatedAt": "2026-10-21",
     "hub": "rare-farms",
     "category": "Rare Item & Transmog Farms",
     "subcategory": "Transmog",
@@ -245,10 +300,24 @@ export const guides: GuidePage[] = [
     "realmCaveats": "The original recording is from 2017. Check the loot and dungeon behavior in your version of WoW, and use current auction prices.",
     "steps": [],
     "analystTakeaway": "I would do a few runs and check the drops before committing to a long session. This route suits patient transmog sellers; the old hourly headline depends on finding buyers.",
-    "faq": [],
+    "faq": [
+      {
+        "question": "What does the Zul'Farrak transmog route cover?",
+        "answer": "The video covers the dungeon trash, prisoner section, and graves before looping back to reset. Clear the mobs following you before killing the witch doctor at that part of the route."
+      },
+      {
+        "question": "Should I count every green item's TSM value as gold earned?",
+        "answer": "No. Those items still need buyers. In the original recording, I discuss transmog taking months to sell, so keep inventory estimates separate from gold already earned."
+      },
+      {
+        "question": "Is this the same guide as the Robes of Insight farm?",
+        "answer": "Both use Zul'Farrak, but this walkthrough focuses on the full trash, prisoner, and grave route. The companion Robes of Insight guide focuses on that rare item and the cloth and other gear from its run."
+      }
+    ],
     "relatedGuides": [
       "wow-gold-farm-80000-zulfarrak-robes-of-insight",
-      "burning-steppes-mageweave-runecloth-farm"
+      "burning-steppes-mageweave-runecloth-farm",
+      "wow-gold-farm-3-expensive-items-transmog"
     ],
     "relatedVideos": [
       "wow-gold-farm-80000-zulfarrak-robes-of-insight",
@@ -269,7 +338,7 @@ export const guides: GuidePage[] = [
     "youtubeVideoId": "piSgHd3N_Gk",
     "videoUploadedAt": "2017-03-20",
     "publishedAt": "2026-10-17",
-    "updatedAt": "2026-10-17",
+    "updatedAt": "2026-10-21",
     "hub": "rare-farms",
     "category": "Rare Item & Transmog Farms",
     "subcategory": "Toys",
@@ -298,10 +367,24 @@ export const guides: GuidePage[] = [
     "realmCaveats": "The original recording is from 2017. Drops are random, and toy prices, macro behavior, and class-trial restrictions can differ in your version of WoW.",
     "steps": [],
     "analystTakeaway": "I would check the toy price first and keep track of my own drops. A good run does not make the dice a guaranteed hourly payout.",
-    "faq": [],
+    "faq": [
+      {
+        "question": "Do I need a rogue for Loaded Gnomish Dice?",
+        "answer": "Yes, this route uses a rogue's Stealth, Sap, and Pick Pocket. Pickpocket the mobs before killing the group, then keep the dice and open the lockboxes."
+      },
+      {
+        "question": "Can I use a class-trial rogue?",
+        "answer": "The original Legion-era video mentions a class trial. Check the restrictions in your current game version and make sure you can move the loot to a character you will keep before relying on that setup."
+      },
+      {
+        "question": "Does one dice in a 30-minute test establish an hourly rate?",
+        "answer": "No. That was a small sample from the original recording. The roughly 21,000-gold TSM value and the earlier ten-hour sale are historical examples, not a predictable drop rate or selling time."
+      }
+    ],
     "relatedGuides": [
-      "wow-gold-farm-goblin-power-shovel-150000",
-      "wow-gold-farm-80000-zulfarrak-robes-of-insight"
+      "wow-gold-farm-600k-ghostlands-amani-catacombs",
+      "destiny-sword-farm",
+      "wow-gold-farm-goblin-power-shovel-150000"
     ],
     "relatedVideos": [
       "goblin-power-shovel",
@@ -322,7 +405,7 @@ export const guides: GuidePage[] = [
     "youtubeVideoId": "oL2w3nYRvvA",
     "videoUploadedAt": "2017-03-11",
     "publishedAt": "2026-10-17",
-    "updatedAt": "2026-10-17",
+    "updatedAt": "2026-10-21",
     "hub": "farming",
     "category": "Farming Guides",
     "subcategory": "Cloth Farming",
@@ -333,8 +416,16 @@ export const guides: GuidePage[] = [
     "setupCost": "None",
     "saleSpeed": "Medium",
     "riskLevel": "Medium",
-    "requirements": ["An AoE ability", "Empty bags", "Vendor mount optional", "TradeSkillMaster optional"],
-    "whoFor": ["Cloth farmers", "Solo players"],
+    "requirements": [
+      "An AoE ability",
+      "Empty bags",
+      "Vendor mount optional",
+      "TradeSkillMaster optional"
+    ],
+    "whoFor": [
+      "Cloth farmers",
+      "Solo players"
+    ],
     "tldr": "Work counterclockwise through four groups in Burning Steppes for Mageweave Cloth and Runecloth. Loot before the bodies disappear and keep the transmog separate from your cloth earnings.",
     "bestTimeToFarm": "When the four groups are not crowded",
     "bestTimeToSell": "",
@@ -342,9 +433,29 @@ export const guides: GuidePage[] = [
     "realmCaveats": "The video was uploaded in 2017. Its cloth totals and auction prices describe that recording, not a fresh test on the current patch.",
     "steps": [],
     "analystTakeaway": "I would check the cloth prices, run the loop for a bit, and see what actually comes back before farming for an hour.",
-    "faq": [],
-    "relatedGuides": ["wow-gold-farm-top-5-instant-respawn-gold-farms", "wow-gold-farm-80000-zulfarrak-robes-of-insight"],
-    "relatedVideos": ["btnbKgxNuK8", "bf6pAyLJqfk"],
+    "faq": [
+      {
+        "question": "How do I run the Burning Steppes cloth loop?",
+        "answer": "Work counterclockwise through the four groups shown in the video, including the group behind the hill. Use AoE, loot the packs, and keep moving between the groups as they return."
+      },
+      {
+        "question": "Do I need a rogue or a vendor mount?",
+        "answer": "I use Fan of Knives on a rogue in the recording, but the route just needs suitable AoE. A vendor mount is optional and helps with clearing gray items without leaving the spot."
+      },
+      {
+        "question": "Should I include rare transmog in the cloth hourly total?",
+        "answer": "Keep it separate. The video discusses Mageweave and Runecloth quantities from that recording, while transmog may take months to sell. Check current cloth prices and count your own drops."
+      }
+    ],
+    "relatedGuides": [
+      "wow-gold-farm-80000-zulfarrak-robes-of-insight",
+      "wow-gold-farm-top-5-instant-respawn-gold-farms",
+      "wow-gold-farm-forgotten-farm-blackwing-descent"
+    ],
+    "relatedVideos": [
+      "btnbKgxNuK8",
+      "bf6pAyLJqfk"
+    ],
     "featured": true,
     "canonicalUrl": "/guides/burning-steppes-mageweave-runecloth-farm",
     "schemaType": "Article",
@@ -360,7 +471,7 @@ export const guides: GuidePage[] = [
     "youtubeVideoId": "Cgn6GY6Iy4c",
     "videoUploadedAt": "2018-08-03",
     "publishedAt": "2026-10-16",
-    "updatedAt": "2026-10-16",
+    "updatedAt": "2026-10-21",
     "hub": "farming",
     "category": "Farming Guides",
     "subcategory": "Elemental Materials",
@@ -377,7 +488,10 @@ export const guides: GuidePage[] = [
       "Empty bags",
       "No bosses killed in the instance"
     ],
-    "whoFor": ["Material farmers", "Solo players"],
+    "whoFor": [
+      "Material farmers",
+      "Solo players"
+    ],
     "tldr": "Farm the trash with Potion of Treasure Finding active. Keep Volatile Air, Volatile Life, and Volatile Water. Leave every boss alive.",
     "bestTimeToFarm": "",
     "bestTimeToSell": "",
@@ -385,12 +499,29 @@ export const guides: GuidePage[] = [
     "realmCaveats": "The original video is from 2018. Check the drops in your version of WoW and use current auction house prices.",
     "steps": [],
     "analystTakeaway": "Keep the potion running, loot the trash, and stay away from the bosses.",
-    "faq": [],
-    "relatedGuides": [
-      "120000-gold-per-hour-skettis-blackwind-lake-primal-water-farm",
-      "wow-gold-farm-top-5-instant-respawn-gold-farms"
+    "faq": [
+      {
+        "question": "What should I bring for the Firelands Volatile farm?",
+        "answer": "Bring Potion of Treasure Finding, a character that can clear the trash comfortably, and empty bags. Check the potion cost against Volatile Air, Volatile Life, and Volatile Water prices before starting."
+      },
+      {
+        "question": "Should I kill bosses on the Firelands farming route?",
+        "answer": "No. The route in this guide leaves every boss alive and farms the trash. Keep your pulls and AoE away from the bosses, then leave and reset when the game allows it."
+      },
+      {
+        "question": "How do I judge the profit after using a potion?",
+        "answer": "Count the materials you actually collect and sell, then subtract the potion cost. Open the Tiny Treasure Chests and keep unsold auction value separate from gold already received."
+      }
     ],
-    "relatedVideos": ["zSERvILhjbQ", "btnbKgxNuK8"],
+    "relatedGuides": [
+      "vortex-pinnacle-volatile-air-farm",
+      "120000-gold-per-hour-skettis-blackwind-lake-primal-water-farm",
+      "wow-gold-farm-forgotten-farm-blackwing-descent"
+    ],
+    "relatedVideos": [
+      "zSERvILhjbQ",
+      "btnbKgxNuK8"
+    ],
     "featured": true,
     "canonicalUrl": "/guides/firelands-volatile-farm",
     "schemaType": "Article",
@@ -405,14 +536,14 @@ export const guides: GuidePage[] = [
     "heroImage": "https://i.ytimg.com/vi/OUsoRkoMmgE/hqdefault.jpg",
     "youtubeVideoId": "OUsoRkoMmgE",
     "publishedAt": "2020-04-21",
-    "updatedAt": "2024-08-01",
+    "updatedAt": "2026-10-21",
     "hub": "farming",
     "category": "Farming Guides",
     "subcategory": "Herbalism",
     "expansion": "Battle for Azeroth",
     "methodType": "Gathering Route",
-    "goldPerHourLow": 2500,
-    "goldPerHourHigh": 4000,
+    "goldPerHourLow": 0,
+    "goldPerHourHigh": 0,
     "setupCost": "Low",
     "saleSpeed": "Medium",
     "riskLevel": "Low",
@@ -427,17 +558,31 @@ export const guides: GuidePage[] = [
       "Solo players",
       "Alts"
     ],
-    "tldr": "",
-    "bestTimeToFarm": "Off-peak hours when node competition is lowest",
-    "bestTimeToSell": "Early week, when profession levelers refill mats",
+    "tldr": "A Battle for Azeroth gathering route in Tiragarde Sound focused on the Kennings Lodge and Bridgeport area. Farm Monelite Ore, Storm Silver Ore, and BFA herbs like Winter's Kiss, Siren's Pollen, Riverbud, and Sea Stalk. This is a repeatable material farm, not a single-run jackpot. The million-gold goal is achieved through consistent runs, Auction House listing, and market management.",
+    "bestTimeToFarm": "",
+    "bestTimeToSell": "",
     "ahNotes": "Post ore and herbs in buyer-friendly stack sizes; avoid dumping into a thin market.",
     "realmCaveats": "BFA mat demand varies heavily by realm population.",
     "steps": [],
     "analystTakeaway": "I would check the material prices first. A quick route only helps if the stuff you bring back is worth selling.",
-    "faq": [],
+    "faq": [
+      {
+        "question": "Where does the Tiragarde Sound gathering loop go?",
+        "answer": "The route links the Kennings Lodge and Bridgeport area with Winterdeep Basin and Old Drust Road. Keep moving through the loop and check rocky slopes for ore as you go."
+      },
+      {
+        "question": "Which professions and materials are involved?",
+        "answer": "Bring Mining for Monelite Ore and Storm Silver Ore. Herbalism lets you pick up BFA herbs along the same route, including Winter's Kiss, Siren's Pollen, Riverbud, and Sea Stalk."
+      },
+      {
+        "question": "Does the route pay one million gold in a single run?",
+        "answer": "No. The original title describes a cumulative material-selling goal. Your result depends on what you gather, today's prices, costs, and completed auction sales."
+      }
+    ],
     "relatedGuides": [
-      "wow-gold-farm-best-way-200k-iron-docks",
-      "wow-gold-farm-top-5-instant-respawn-gold-farms"
+      "120000-gold-per-hour-skettis-blackwind-lake-primal-water-farm",
+      "burning-steppes-mageweave-runecloth-farm",
+      "data-analyst-darkmoon-firewater-gold-flip-wow-gold-making"
     ],
     "relatedVideos": [
       "OUsoRkoMmgE"
@@ -456,14 +601,14 @@ export const guides: GuidePage[] = [
     "heroImage": "https://i.ytimg.com/vi/O7kRzC3CMoM/hqdefault.jpg",
     "youtubeVideoId": "O7kRzC3CMoM",
     "publishedAt": "2020-04-07",
-    "updatedAt": "2024-08-01",
+    "updatedAt": "2026-10-21",
     "hub": "rare-farms",
     "category": "Rare Item & Transmog Farms",
     "subcategory": "Transmog",
-    "expansion": "Classic+",
+    "expansion": "Multiple expansions",
     "methodType": "Transmog Farm",
-    "goldPerHourLow": 1000,
-    "goldPerHourHigh": 8000,
+    "goldPerHourLow": 0,
+    "goldPerHourHigh": 0,
     "setupCost": "Low",
     "saleSpeed": "Slow",
     "riskLevel": "High",
@@ -477,17 +622,31 @@ export const guides: GuidePage[] = [
       "Collectors",
       "Patient flippers"
     ],
-    "tldr": "",
-    "bestTimeToFarm": "Any time; drops are RNG-gated",
-    "bestTimeToSell": "List long and repost; wait for the right buyer",
+    "tldr": "Farm Advanced Flatbow (Gundrak), Crested Scepter (Blackfathom Deeps), and Blade of Wizardry (Karazhan) as rare-drop transmog items. This is a long-tail Auction House play, not guaranteed raw gold. Build inventory, avoid panic-undercutting, and wait for the right buyer. Best for players who enjoy old-content farming and patient transmog sales.",
+    "bestTimeToFarm": "",
+    "bestTimeToSell": "",
     "ahNotes": "Do not panic-undercut rare appearances — one buyer sets the price.",
     "realmCaveats": "Transmog demand is far higher on high-population realms.",
     "steps": [],
     "analystTakeaway": "These are rare drops. I would run them alongside other farms instead of counting on one item to pay for everything.",
-    "faq": [],
+    "faq": [
+      {
+        "question": "Which three items and locations does this guide cover?",
+        "answer": "The video uses Gundrak for Advanced Flatbow, Blackfathom Deeps for Crested Scepter, and Karazhan for Blade of Wizardry. Check the item and current drop source before choosing one route."
+      },
+      {
+        "question": "Can I reset Karazhan like a normal dungeon?",
+        "answer": "Do not assume that you can. Karazhan is a raid, so check the current difficulty and lockout rules before planning repeated trash clears."
+      },
+      {
+        "question": "How do I decide which of the three items to farm?",
+        "answer": "Check the exact item and appearance, competing listings, and any sale information you have. Choose a route you are willing to repeat and allow time for a rare drop and an auction buyer."
+      }
+    ],
     "relatedGuides": [
+      "zulfarrak-transmog-farming-route",
       "wow-gold-farm-goblin-power-shovel-150000",
-      "wow-gold-farm-southern-barrens-infinite-respawn-200k"
+      "destiny-sword-farm"
     ],
     "relatedVideos": [
       "O7kRzC3CMoM"
@@ -506,14 +665,14 @@ export const guides: GuidePage[] = [
     "heroImage": "https://i.ytimg.com/vi/SrlI7UbKE1g/hqdefault.jpg",
     "youtubeVideoId": "SrlI7UbKE1g",
     "publishedAt": "2024-07-07",
-    "updatedAt": "2024-08-01",
+    "updatedAt": "2026-10-21",
     "hub": "rare-farms",
     "category": "Rare Item & Transmog Farms",
     "subcategory": "BoE Farming",
-    "expansion": "Eastern Kingdoms",
+    "expansion": "The Burning Crusade",
     "methodType": "Transmog Farm",
-    "goldPerHourLow": 1500,
-    "goldPerHourHigh": 10000,
+    "goldPerHourLow": 0,
+    "goldPerHourHigh": 0,
     "setupCost": "Low",
     "saleSpeed": "Medium",
     "riskLevel": "High",
@@ -526,16 +685,31 @@ export const guides: GuidePage[] = [
       "Transmog hunters",
       "RNG-tolerant farmers"
     ],
-    "tldr": "",
-    "bestTimeToFarm": "Any time; a quick 6-minute cycle",
-    "bestTimeToSell": "Repost transmog greens weekly",
+    "tldr": "A fast-paced old-world chest and transmog farm in Ghostlands around Sungraze Peak and the Amani Catacombs. This route focuses on locked chests, cloth, potions, and BoE green items that sell for transmog value. The 600,000 gold headline is a rare-drop historical claim that depends on rare drops, chest access, and Auction House pricing.",
+    "bestTimeToFarm": "",
+    "bestTimeToSell": "",
     "ahNotes": "Price-check every green before vendoring.",
     "realmCaveats": "The 600k headline is a high-upside historical claim, not a per-run guarantee.",
     "steps": [],
     "analystTakeaway": "The rare items are the reason I would run this. The price on the auction house is only useful once someone actually buys the item.",
-    "faq": [],
+    "faq": [
+      {
+        "question": "Is the Ghostlands chest route a dungeon reset farm?",
+        "answer": "No. The guide follows an outdoor and catacomb route around Sungraze Peak and the Amani Catacombs in Ghostlands. Move through the mobs and chest spots, then loop back as they return."
+      },
+      {
+        "question": "Do I need lockpicking for the Amani Catacombs route?",
+        "answer": "Lockpicking helps you open locked chests. Check the chest types and what your character can open before deciding whether to use that character for the full route."
+      },
+      {
+        "question": "Is the 600,000-gold headline a regular six-minute result?",
+        "answer": "No. It is an old rare-drop headline. Cloth, ordinary loot, chest contents, and rare transmog have different values, and an expensive listing still needs a buyer."
+      }
+    ],
     "relatedGuides": [
-      "wow-gold-farm-3-expensive-items-transmog"
+      "uldum-loaded-gnomish-dice-farm",
+      "wow-gold-farm-goblin-power-shovel-150000",
+      "zulfarrak-transmog-farming-route"
     ],
     "relatedVideos": [
       "SrlI7UbKE1g"
@@ -554,14 +728,14 @@ export const guides: GuidePage[] = [
     "heroImage": "https://i.ytimg.com/vi/bf6pAyLJqfk/hqdefault.jpg",
     "youtubeVideoId": "bf6pAyLJqfk",
     "publishedAt": "2018-12-13",
-    "updatedAt": "2024-08-01",
+    "updatedAt": "2026-10-21",
     "hub": "rare-farms",
     "category": "Rare Item & Transmog Farms",
     "subcategory": "Transmog",
     "expansion": "Classic / Old World",
     "methodType": "Dungeon Farm",
-    "goldPerHourLow": 1000,
-    "goldPerHourHigh": 6000,
+    "goldPerHourLow": 0,
+    "goldPerHourHigh": 0,
     "setupCost": "Low",
     "saleSpeed": "Slow",
     "riskLevel": "High",
@@ -573,16 +747,31 @@ export const guides: GuidePage[] = [
       "Transmog sellers",
       "Solo dungeon farmers"
     ],
-    "tldr": "",
-    "bestTimeToFarm": "Reset-friendly; farm across lockout resets",
-    "bestTimeToSell": "List Robes of Insight long; it is a signature appearance",
+    "tldr": "Clear Zul'Farrak trash mobs in Tanaris for rare transmog drops like Robes of Insight, BoE greens, and Mageweave Cloth. The 80k gold value depends on rare drops and Auction House sales, not guaranteed raw gold.",
+    "bestTimeToFarm": "",
+    "bestTimeToSell": "",
     "ahNotes": "Mageweave Cloth gives steady baseline income between rare drops.",
     "realmCaveats": "Value depends heavily on rare drops and realm transmog demand.",
     "steps": [],
     "analystTakeaway": "I would check the robe price and the other greens, then decide whether the repeated runs are worth my time.",
-    "faq": [],
+    "faq": [
+      {
+        "question": "Where is the Robes of Insight route in this guide?",
+        "answer": "The original video uses Zul'Farrak in Tanaris. Clear and loot the trash route, check rare gear, and keep Mageweave Cloth and other items you decide to sell."
+      },
+      {
+        "question": "Are Robes of Insight guaranteed from a run?",
+        "answer": "No. The robe is a rare-drop target. A normal run may give you cloth and other loot without the robe, so do not plan around the old 80,000-gold headline."
+      },
+      {
+        "question": "Where can I see the broader Zul'Farrak route?",
+        "answer": "The separate Zul'Farrak Transmog Farming Route guide covers the trash, prisoner, and grave loop. Use that walkthrough when you want the full dungeon route rather than focusing on one rare item."
+      }
+    ],
     "relatedGuides": [
-      "wow-gold-farm-southern-barrens-infinite-respawn-200k"
+      "zulfarrak-transmog-farming-route",
+      "burning-steppes-mageweave-runecloth-farm",
+      "wow-gold-farm-3-expensive-items-transmog"
     ],
     "relatedVideos": [
       "bf6pAyLJqfk"
@@ -601,14 +790,14 @@ export const guides: GuidePage[] = [
     "heroImage": "https://i.ytimg.com/vi/Qzk3Op45AHo/hqdefault.jpg",
     "youtubeVideoId": "Qzk3Op45AHo",
     "publishedAt": "2024-01-15",
-    "updatedAt": "2024-08-01",
+    "updatedAt": "2026-10-21",
     "hub": "farming",
     "category": "Farming Guides",
     "subcategory": "Old Raid Runs",
     "expansion": "Warlords of Draenor",
     "methodType": "Dungeon Farm",
-    "goldPerHourLow": 3000,
-    "goldPerHourHigh": 6000,
+    "goldPerHourLow": 0,
+    "goldPerHourHigh": 0,
     "setupCost": "Low",
     "saleSpeed": "Fast",
     "riskLevel": "Low",
@@ -620,16 +809,31 @@ export const guides: GuidePage[] = [
       "Solo players",
       "Players who want reliable raw gold"
     ],
-    "tldr": "",
-    "bestTimeToFarm": "Any time; reliable per-run raw gold",
-    "bestTimeToSell": "Sumptuous Fur sells best midweek",
+    "tldr": "This World of Warcraft gold farm uses the Iron Docks dungeon in Gorgrond as a repeatable old-content farming route. Clear dense Iron Horde trash, bosses, and beast packs for raw gold, vendor trash, Sumptuous Fur, and potential auction-house items. The original video uses a 200,000 gold hook, but current results depend on market prices, run speed, and sales timing.",
+    "bestTimeToFarm": "",
+    "bestTimeToSell": "",
     "ahNotes": "Most value is raw gold, so this is low-variance compared to transmog farms.",
     "realmCaveats": "Material prices vary, but raw gold is realm-agnostic.",
     "steps": [],
     "analystTakeaway": "Do a few runs and check what you actually brought back. Old dungeon loot and material prices change.",
-    "faq": [],
+    "faq": [
+      {
+        "question": "Where is Iron Docks?",
+        "answer": "Iron Docks is in Gorgrond on Draenor. The video follows a clear through the yards, platforms, bridges, and dock areas."
+      },
+      {
+        "question": "What loot should I check after an Iron Docks run?",
+        "answer": "Check Sumptuous Fur, other materials, and BoE equipment before vendoring the rest. Keep raw coins and vendor receipts separate from items still waiting for auction-house buyers."
+      },
+      {
+        "question": "Is the 200,000-gold title a current raw-gold rate?",
+        "answer": "No. It is the original video's headline, not a verified current rate or payout from one clear. Check the difficulty, instance limits, and the loot from your own runs."
+      }
+    ],
     "relatedGuides": [
-      "wow-gold-farm-1000000-tiragarde-sound-mining-herbalism-route"
+      "wow-gold-farm-forgotten-farm-blackwing-descent",
+      "vortex-pinnacle-volatile-air-farm",
+      "zulfarrak-transmog-farming-route"
     ],
     "relatedVideos": [
       "Qzk3Op45AHo"
@@ -648,14 +852,14 @@ export const guides: GuidePage[] = [
     "heroImage": "https://i.ytimg.com/vi/peiVNqeUTfI/hqdefault.jpg",
     "youtubeVideoId": "peiVNqeUTfI",
     "publishedAt": "2024-01-15",
-    "updatedAt": "2024-08-01",
+    "updatedAt": "2026-10-21",
     "hub": "farming",
     "category": "Farming Guides",
     "subcategory": "Old Raid Runs",
     "expansion": "Cataclysm",
     "methodType": "Dungeon Farm",
-    "goldPerHourLow": 2000,
-    "goldPerHourHigh": 5000,
+    "goldPerHourLow": 0,
+    "goldPerHourHigh": 0,
     "setupCost": "Low",
     "saleSpeed": "Medium",
     "riskLevel": "Medium",
@@ -667,16 +871,31 @@ export const guides: GuidePage[] = [
       "Solo raid farmers",
       "Cloth sellers"
     ],
-    "tldr": "",
-    "bestTimeToFarm": "Weekly, respecting the raid lockout",
-    "bestTimeToSell": "Embersilk Cloth spikes when levelers need it",
+    "tldr": "A forgotten Cataclysm-era raid clear in Blackwing Descent that produces raw gold, vendor loot, Embersilk Cloth, and occasional BoE transmog items. Best for players who enjoy soloing old raids with a mix of raw value and auction-house upside. Not a guaranteed high gold-per-hour farm—value depends on realm pricing, sale timing, and RNG loot drops.",
+    "bestTimeToFarm": "",
+    "bestTimeToSell": "",
     "ahNotes": "Raw gold plus cloth gives a stable floor with transmog upside on top.",
     "realmCaveats": "Lockout limits repeat runs; plan around the weekly reset.",
     "steps": [],
     "analystTakeaway": "I would count the vendor gold separately from the items I still have to sell. Unsold transmog is not gold in the bag.",
-    "faq": [],
+    "faq": [
+      {
+        "question": "Where is the Blackwing Descent farm?",
+        "answer": "Blackwing Descent is the Cataclysm raid in Blackrock Mountain by Burning Steppes. The guide follows the raid clear shown in the source video."
+      },
+      {
+        "question": "Can I repeat Blackwing Descent like Iron Docks?",
+        "answer": "Do not assume that the reset rules are the same. Blackwing Descent is a raid; check your difficulty and lockout before planning repeat clears."
+      },
+      {
+        "question": "How should I count the raid loot?",
+        "answer": "Count raw coins and vendored items as gold already received. Check Embersilk Cloth and BoE gear separately for auction value, and keep soulbound appearances only if you want them."
+      }
+    ],
     "relatedGuides": [
-      "wow-gold-farm-best-way-200k-iron-docks"
+      "firelands-volatile-farm",
+      "wow-gold-farm-best-way-200k-iron-docks",
+      "burning-steppes-mageweave-runecloth-farm"
     ],
     "relatedVideos": [
       "peiVNqeUTfI"
@@ -695,14 +914,14 @@ export const guides: GuidePage[] = [
     "heroImage": "https://i.ytimg.com/vi/oeAparF3JMY/hqdefault.jpg",
     "youtubeVideoId": "oeAparF3JMY",
     "publishedAt": "2024-01-15",
-    "updatedAt": "2024-08-01",
+    "updatedAt": "2026-10-21",
     "hub": "rare-farms",
     "category": "Rare Item & Transmog Farms",
     "subcategory": "Transmog",
     "expansion": "Classic / Old World",
     "methodType": "Transmog Farm",
-    "goldPerHourLow": 500,
-    "goldPerHourHigh": 12000,
+    "goldPerHourLow": 0,
+    "goldPerHourHigh": 0,
     "setupCost": "Low",
     "saleSpeed": "Slow",
     "riskLevel": "High",
@@ -715,17 +934,31 @@ export const guides: GuidePage[] = [
       "Rare-drop hunters",
       "Transmog sellers"
     ],
-    "tldr": "",
-    "bestTimeToFarm": "Any time; keep movement near-constant",
-    "bestTimeToSell": "Repost repeatedly; the buyer pool is small but pays big",
+    "tldr": "Check the Venture Co. Miners in Northern Stranglethorn for Goblin Power Shovel. Keep the rare weapon unbound and check its current item record and auction listings before farming.",
+    "bestTimeToFarm": "",
+    "bestTimeToSell": "",
     "ahNotes": "Do not undercut aggressively — it slows future sales of a scarce item.",
     "realmCaveats": "The 150k value is upside potential, not guaranteed income.",
     "steps": [],
     "analystTakeaway": "I would check the current listings before farming this for hours. Finding a buyer can take longer than getting the drop.",
-    "faq": [],
+    "faq": [
+      {
+        "question": "Which mob should I check for Goblin Power Shovel?",
+        "answer": "Focus on Venture Co. Miners in Northern Stranglethorn and check the item database for your selected game version. Do not treat nearby Geologists as a confirmed source just because they are in the same area."
+      },
+      {
+        "question": "Is Goblin Power Shovel still unobtainable?",
+        "answer": "The old video title is not a current availability check. The item page includes later player reports of drops from miners. Check the version and drop information before starting a long farm."
+      },
+      {
+        "question": "Does the 150,000-gold title tell me what my shovel will sell for?",
+        "answer": "No. Check current listings for the exact item on your market. It is a rare bind-on-equip weapon, so keep it unbound and allow time for a buyer."
+      }
+    ],
     "relatedGuides": [
-      "wow-gold-farm-southern-barrens-infinite-respawn-200k",
-      "wow-gold-farm-3-expensive-items-transmog"
+      "destiny-sword-farm",
+      "the-glazer-farm",
+      "fiery-war-axe-wow-forever"
     ],
     "relatedVideos": [
       "oeAparF3JMY"
@@ -744,14 +977,14 @@ export const guides: GuidePage[] = [
     "heroImage": "https://i.ytimg.com/vi/Pa5-bhFehXg/hqdefault.jpg",
     "youtubeVideoId": "Pa5-bhFehXg",
     "publishedAt": "2019-01-29",
-    "updatedAt": "2024-08-01",
+    "updatedAt": "2026-10-21",
     "hub": "rare-farms",
     "category": "Rare Item & Transmog Farms",
     "subcategory": "Transmog",
     "expansion": "Old World / Kalimdor",
     "methodType": "Transmog Farm",
-    "goldPerHourLow": 1500,
-    "goldPerHourHigh": 8000,
+    "goldPerHourLow": 0,
+    "goldPerHourHigh": 0,
     "setupCost": "Low",
     "saleSpeed": "Slow",
     "riskLevel": "Medium",
@@ -764,16 +997,31 @@ export const guides: GuidePage[] = [
       "Transmog farmers",
       "Recipe hunters"
     ],
-    "tldr": "",
-    "bestTimeToFarm": "Any time; tight loop with fast respawns",
-    "bestTimeToSell": "Pattern: Rich Purple Silk Shirt lists long for premium buyers",
+    "tldr": "This Southern Barrens gold farm is an infinite-respawn old-world transmog farm at Bael Modan Excavation. Farm the excavation-site humanoids around the dig pit, tents, ramps, and ruins to generate cloth, green transmog, and rare recipe drops. The upside comes from the Pattern: Rich Purple Silk Shirt and transmog pricing, not guaranteed raw gold.",
+    "bestTimeToFarm": "",
+    "bestTimeToSell": "",
     "ahNotes": "Silk Cloth is your steady floor between rare recipe and transmog hits.",
     "realmCaveats": "Recipe demand and transmog pricing vary by realm.",
     "steps": [],
     "analystTakeaway": "Keep the recipes and check your greens. The rare drops are the reason to farm this spot.",
-    "faq": [],
+    "faq": [
+      {
+        "question": "Where is the Southern Barrens route?",
+        "answer": "The guide uses Bael Modan Excavation in Southern Barrens, working through the humanoids around the dig pit, tents, ramps, and ruins."
+      },
+      {
+        "question": "What makes the rare-drop part of this farm valuable?",
+        "answer": "The original guide discusses Pattern: Rich Purple Silk Shirt and transmog alongside cloth and other loot. A rare item's asking price is separate from a completed sale."
+      },
+      {
+        "question": "Should I assume the mobs still respawn instantly?",
+        "answer": "Check the spawn behavior in your version first. The original video's instant-respawn label is not proof that the same behavior is active now or on every phase."
+      }
+    ],
     "relatedGuides": [
-      "wow-gold-farm-80000-zulfarrak-robes-of-insight"
+      "wow-gold-farm-top-5-instant-respawn-gold-farms",
+      "burning-steppes-mageweave-runecloth-farm",
+      "wow-gold-farm-3-expensive-items-transmog"
     ],
     "relatedVideos": [
       "Pa5-bhFehXg"
@@ -792,14 +1040,14 @@ export const guides: GuidePage[] = [
     "heroImage": "https://i.ytimg.com/vi/btnbKgxNuK8/hqdefault.jpg",
     "youtubeVideoId": "btnbKgxNuK8",
     "publishedAt": "2024-07-07",
-    "updatedAt": "2024-08-01",
+    "updatedAt": "2026-10-21",
     "hub": "farming",
     "category": "Farming Guides",
     "subcategory": "Mob Farms",
-    "expansion": "The Burning Crusade / Classic+",
+    "expansion": "Old World / The Burning Crusade",
     "methodType": "Mob Farm",
-    "goldPerHourLow": 1500,
-    "goldPerHourHigh": 3500,
+    "goldPerHourLow": 0,
+    "goldPerHourHigh": 0,
     "setupCost": "Low",
     "saleSpeed": "Medium",
     "riskLevel": "Medium",
@@ -811,16 +1059,31 @@ export const guides: GuidePage[] = [
       "Farmers who want variety",
       "Transmog sellers"
     ],
-    "tldr": "",
-    "bestTimeToFarm": "Rotate routes to avoid competition",
-    "bestTimeToSell": "Spread transmog listings across the week",
+    "tldr": "Five fast-respawn farming routes across Northern Stranglethorn, Feralas, Shadowmoon Valley, Nagrand, and Blade's Edge Mountains that generate rare transmog drops, cloth, motes, and signets. Success depends on volume kills, smart auction house listing, and realm pricing—not guaranteed instant payouts.",
+    "bestTimeToFarm": "",
+    "bestTimeToSell": "",
     "ahNotes": "Volume kills plus smart listing beat chasing any single rare drop.",
     "realmCaveats": "Gold/hour is server-dependent and market-variable.",
     "steps": [],
     "analystTakeaway": "I would switch spots if someone is already farming the same mobs. Killing more mobs matters more than sticking to one spot.",
-    "faq": [],
+    "faq": [
+      {
+        "question": "Which five locations are in the instant-respawn video?",
+        "answer": "The walkthrough covers Mizjah Ruins in Northern Stranglethorn, Gordunni Outpost in Feralas, the Path of Conquest in Outland's Shadowmoon Valley, Elemental Plateau in Nagrand, and Bash'ir Landing in Blade's Edge Mountains."
+      },
+      {
+        "question": "Which Shadowmoon Valley does the guide mean?",
+        "answer": "It means Shadowmoon Valley in Outland, not the Draenor zone with the same name. The route follows the Path of Conquest and Eclipsion mobs."
+      },
+      {
+        "question": "What should I do if a spot is crowded or the respawns have changed?",
+        "answer": "Test the spot briefly and move to another route if you spend most of the time waiting. Check the current drops and prices rather than assuming every old instant-respawn farm still behaves the same way."
+      }
+    ],
     "relatedGuides": [
-      "wow-gold-farm-1000000-tiragarde-sound-mining-herbalism-route"
+      "wow-gold-farm-southern-barrens-infinite-respawn-200k",
+      "burning-steppes-mageweave-runecloth-farm",
+      "120000-gold-per-hour-skettis-blackwind-lake-primal-water-farm"
     ],
     "relatedVideos": [
       "btnbKgxNuK8"
@@ -831,46 +1094,58 @@ export const guides: GuidePage[] = [
     "mdxSlug": "wow-gold-farm-top-5-instant-respawn-gold-farms"
   },
   {
-    "title": "Timeless Isle Condensed Jademist Farm",
+    "title": "Jademist Dancer Pet Farm on Timeless Isle",
     "slug": "10000-gold-in-10-minutes-timeless-isle-condensed-jademist-farm",
-    "excerpt": "A short farm at the Misty Strand for Condensed Jademist and Timeless Coins. Check the item price on your server first.",
-    "seoTitle": "10,000 Gold in 10 Minutes Timeless Isle Farm - Condensed Jademist Guide",
-    "metaDescription": "Farm The Misty Strand on Timeless Isle for Condensed Jademist, Timeless Coins, and Lesser Charms. Full King Kunta WoW gold guide with route notes and YouTube backlink.",
+    "excerpt": "Find Jademist Dancers at The Misty Strand on Timeless Isle. Check the battle pet market and keep bound Condensed Jademist out of your auction total.",
+    "seoTitle": "Jademist Dancer Pet Farm in WoW: Timeless Isle Guide",
+    "metaDescription": "Farm Jademist Dancers on Timeless Isle for the battle pet. Find The Misty Strand, distinguish the pet from bound Condensed Jademist, and check sale value.",
     "heroImage": "https://i.ytimg.com/vi/NBBtTfUi-Ng/hqdefault.jpg",
     "youtubeVideoId": "NBBtTfUi-Ng",
     "publishedAt": "2024-08-15",
-    "updatedAt": "2024-08-15",
+    "updatedAt": "2026-10-21",
     "hub": "farming",
     "category": "Farming Guides",
-    "subcategory": "Old-World Materials",
+    "subcategory": "Battle Pets",
     "expansion": "Mists of Pandaria",
     "methodType": "Mob Farm",
-    "goldPerHourLow": 5000,
-    "goldPerHourHigh": 10000,
+    "goldPerHourLow": 0,
+    "goldPerHourHigh": 0,
     "setupCost": "None",
-    "saleSpeed": "Medium",
-    "riskLevel": "Low",
+    "saleSpeed": "Slow",
+    "riskLevel": "High",
     "requirements": [
-      "Character capable of killing Timeless Isle mobs",
-      "Access to Pandaria and Timeless Isle",
-      "Auto-loot enabled with enough bag space",
-      "Auction-house check for Condensed Jademist pricing"
+      "Access to Timeless Isle in Pandaria",
+      "A character that can clear the Jademist Dancers",
+      "Empty bags and a current check of the pet market"
     ],
     "whoFor": [
-      "Players seeking a quick old-content farm",
-      "Those comfortable with market-dependent value",
-      "Characters looking for Timeless Coins"
+      "Battle pet farmers",
+      "Players comfortable waiting for a rare drop and a buyer"
     ],
-    "tldr": "Quick Timeless Isle farm at The Misty Strand. Kill misty elemental mobs for Condensed Jademist, Timeless Coins, and Lesser Charms. Value depends on Condensed Jademist pricing.",
-    "bestTimeToFarm": "Any time; this is a quick session farm",
-    "bestTimeToSell": "During peak crafting hours when Condensed Jademist demand is highest",
-    "ahNotes": "Do not undercut aggressively if Condensed Jademist has low supply. List with patience.",
-    "realmCaveats": "Condensed Jademist demand varies heavily by realm population and crafting demand.",
+    "tldr": "Farm Jademist Dancers at The Misty Strand on Timeless Isle and check the Jademist Dancer battle pet market. Condensed Jademist is a bound consumable, so do not count it as an auction-house sale.",
+    "bestTimeToFarm": "",
+    "bestTimeToSell": "",
+    "ahNotes": "Check the Jademist Dancer battle pet, its cageability in your version, and competing listings. Condensed Jademist is bind on pickup and is not auction stock.",
+    "realmCaveats": "This is an older recording. The rare pet needs a drop and a buyer; Condensed Jademist and character currencies are not auction sales.",
     "steps": [],
-    "analystTakeaway": "Try a short run before settling in. The price of Condensed Jademist is what makes or breaks this one.",
-    "faq": [],
+    "analystTakeaway": "Check the pet market first, then test the route. Keep bound consumables and character rewards out of the gold total.",
+    "faq": [
+      {
+        "question": "Can I sell Condensed Jademist on the auction house?",
+        "answer": "No. Condensed Jademist is a bind-on-pickup consumable. Do not count it as auction-house stock or confuse it with the Jademist Dancer battle pet."
+      },
+      {
+        "question": "What is the sellable Jademist target on Timeless Isle?",
+        "answer": "The Jademist Dancer battle pet is the target to price-check. Its source mobs are Jademist Dancers on Timeless Isle, and the pet is cageable. Check the pet's version and listings separately from the bound consumable."
+      },
+      {
+        "question": "Are Timeless Coins and Lesser Charms part of an auction-sales total?",
+        "answer": "Keep those character rewards separate from saleable loot. They are not completed auction sales, and the old ten-minute video headline is not a verified current gold rate."
+      }
+    ],
     "relatedGuides": [
-      "wow-gold-farm-1000000-tiragarde-sound-mining-herbalism-route",
+      "uldum-loaded-gnomish-dice-farm",
+      "wow-gold-farm-3-expensive-items-transmog",
       "wow-gold-farm-top-5-instant-respawn-gold-farms"
     ],
     "relatedVideos": [
@@ -885,24 +1160,24 @@ export const guides: GuidePage[] = [
     "title": "Skettis Primal Water Farm",
     "slug": "120000-gold-per-hour-skettis-blackwind-lake-primal-water-farm",
     "excerpt": "Kill Skettis Surgers at Blackwind Lake for Motes of Water. Bring a way to stay underwater and keep the kills moving.",
-    "seoTitle": "120,000 Gold Per Hour Skettis Primal Water Farm - WoW Gold Guide",
-    "metaDescription": "Farm Skettis Surgers at Blackwind Lake in Terokkar Forest for Mote of Water and Primal Water value. Full King Kunta WoW gold farm guide with route notes and YouTube backlink.",
+    "seoTitle": "Skettis Primal Water Farm in WoW: Blackwind Lake Route",
+    "metaDescription": "Farm Motes of Water from underwater Skettis Surgers at Blackwind Lake in Terokkar Forest. Follow the route and compare Mote and Primal Water prices.",
     "heroImage": "https://i.ytimg.com/vi/zSERvILhjbQ/hqdefault.jpg",
     "youtubeVideoId": "zSERvILhjbQ",
     "publishedAt": "2024-08-15",
-    "updatedAt": "2024-08-15",
+    "updatedAt": "2026-10-21",
     "hub": "farming",
     "category": "Farming Guides",
     "subcategory": "Elemental Materials",
     "expansion": "The Burning Crusade",
     "methodType": "Mob Farm",
-    "goldPerHourLow": 60000,
-    "goldPerHourHigh": 120000,
+    "goldPerHourLow": 0,
+    "goldPerHourHigh": 0,
     "setupCost": "None",
     "saleSpeed": "Medium",
     "riskLevel": "Low",
     "requirements": [
-      "Character strong enough to kill level 70 Skettis Surgers",
+      "A character that can clear Skettis Surgers comfortably",
       "Water breathing, swim speed, or utility for underwater farming",
       "Fast movement and easy mob tagging",
       "Empty bags and auto-loot enabled",
@@ -914,16 +1189,30 @@ export const guides: GuidePage[] = [
       "Characters with water-survival utilities"
     ],
     "tldr": "Fast Outland material farm at Blackwind Lake in Skettis. Kill Skettis Surgers underwater for Mote of Water and Elemental Fragments. Value depends on elemental material pricing.",
-    "bestTimeToFarm": "Any time; instant respawns mean consistent availability",
-    "bestTimeToSell": "When crafters and transmog players are active (peak hours vary by realm)",
+    "bestTimeToFarm": "",
+    "bestTimeToSell": "",
     "ahNotes": "Avoid flooding the market. Post materials in controlled stacks and watch for demand waves.",
-    "realmCaveats": "Elemental material prices spike with content patches and crafting demand. Market-sensitive.",
+    "realmCaveats": "This is an older recording. Test current drops and underwater spawns, then compare material prices and completed sales in your market.",
     "steps": [],
     "analystTakeaway": "Check Primal Water prices, then run it for a bit. Compare what you loot with the time you spent farming.",
-    "faq": [],
+    "faq": [
+      {
+        "question": "Where do I farm Motes of Water in Skettis?",
+        "answer": "The route targets underwater Skettis Surgers at Blackwind Lake in Terokkar Forest, Outland. Work between the lake's spawn pockets and loot as you go."
+      },
+      {
+        "question": "What setup helps with the underwater part?",
+        "answer": "Bring water breathing, swimming utility, or another comfortable way to handle the underwater route. Watch your air, make room in your bags, and use a character that can clear the mobs easily."
+      },
+      {
+        "question": "Should I sell Motes of Water or combine them into Primal Water?",
+        "answer": "Compare the current prices and demand for both before combining or listing. The old 120,000-gold title is not a current verified rate, so judge the route using your own drops and completed sales."
+      }
+    ],
     "relatedGuides": [
-      "wow-gold-farm-best-way-200k-iron-docks",
-      "wow-gold-farm-top-5-instant-respawn-gold-farms"
+      "firelands-volatile-farm",
+      "vortex-pinnacle-volatile-air-farm",
+      "wow-gold-farm-1000000-tiragarde-sound-mining-herbalism-route"
     ],
     "relatedVideos": [
       "zSERvILhjbQ"
@@ -942,7 +1231,7 @@ export const guides: GuidePage[] = [
     "heroImage": "https://i.ytimg.com/vi/KvrQ1LJACWI/hqdefault.jpg",
     "youtubeVideoId": "KvrQ1LJACWI",
     "publishedAt": "2026-07-11",
-    "updatedAt": "2026-07-11",
+    "updatedAt": "2026-10-21",
     "hub": "auction-house",
     "category": "Auction House Flipping",
     "subcategory": "Market Timing",
@@ -971,8 +1260,25 @@ export const guides: GuidePage[] = [
     "realmCaveats": "Market prices vary by realm, patch, region, profession demand, and competition. Verify current prices before buying — the video snapshot data is historical, not live.",
     "steps": [],
     "analystTakeaway": "I would compare the current price with the usual range before buying. If it has already jumped, I am not buying just because the Faire ended.",
-    "faq": [],
-    "relatedGuides": [],
+    "faq": [
+      {
+        "question": "When do I look at buying Darkmoon Firewater?",
+        "answer": "I compare prices during and shortly after Faire week, when fresh supply may create an opportunity. I still check price history and decide what I am willing to pay before buying."
+      },
+      {
+        "question": "Are the 241g, 258g, and 352g figures live prices?",
+        "answer": "No. They are values discussed with the original video. Check the current market and competing supply before using any of those figures to make a purchase."
+      },
+      {
+        "question": "Does Firewater always rise before the next Faire?",
+        "answer": "No. The calendar gives me a timing framework, not a guaranteed price pattern. Account for purchase costs, selling costs, competing supply, and the chance that the price never reaches my target."
+      }
+    ],
+    "relatedGuides": [
+      "wow-gold-farm-1000000-tiragarde-sound-mining-herbalism-route",
+      "burning-steppes-mageweave-runecloth-farm",
+      "firelands-volatile-farm"
+    ],
     "relatedVideos": [
       "KvrQ1LJACWI"
     ],
@@ -982,4 +1288,3 @@ export const guides: GuidePage[] = [
     "mdxSlug": "data-analyst-darkmoon-firewater-gold-flip-wow-gold-making"
   }
 ];
-

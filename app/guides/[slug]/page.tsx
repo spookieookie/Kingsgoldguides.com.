@@ -69,7 +69,8 @@ export default async function GuidePage({ params }: PageProps) {
   const mdx = guide.mdxSlug ? await getGuideBySlug(guide.mdxSlug) : null;
 
   const related = getRelatedGuides(slug, 3);
-  const relatedVideos = getRelatedVideos(guide.relatedVideos, 2);
+  const relatedVideos = getRelatedVideos(guide.relatedVideos, 3)
+    .filter((video) => video.youtubeVideoId !== guide.youtubeVideoId).slice(0, 2);
   const group = getGuideGroup(guide);
 
   const crumbs = [
@@ -136,14 +137,25 @@ export default async function GuidePage({ params }: PageProps) {
             <YouTubeEmbed videoId={guide.youtubeVideoId} title={guide.title} />
           </div>
         )}
-
-
         <div className="mt-8">
+          {mdx && mdx.headings.length > 0 && (
+            <nav aria-label="On this page" className="mb-8 rounded-xl border border-border bg-card p-5">
+              <details>
+                <summary className="cursor-pointer font-semibold text-primary">Jump to a section</summary>
+                <ol className="mt-4 grid gap-x-6 gap-y-2 text-sm sm:grid-cols-2">
+                  {mdx.headings.map((heading) => <li key={heading.id} className={heading.depth === 3 ? 'pl-3' : undefined}>
+                    <a href={`#${heading.id}`} className="text-muted-foreground underline decoration-border underline-offset-4 hover:text-primary">{heading.text}</a>
+                  </li>)}
+                  {guide.faq.length > 0 && <li><a href="#farm-questions" className="text-muted-foreground underline decoration-border underline-offset-4 hover:text-primary">Farm questions</a></li>}
+                </ol>
+              </details>
+            </nav>
+          )}
           <GuideBody guide={guide} mdxContent={mdx?.content} />
         </div>
 
         {guide.faq.length > 0 && (
-          <section className="mt-12">
+          <section id="farm-questions" className="mt-12 scroll-mt-28">
             <Eyebrow className="mb-4">FAQ</Eyebrow>
             <h2 className="mb-6 text-2xl font-bold text-foreground">Frequently asked questions</h2>
             <FAQAccordion items={guide.faq} />

@@ -13,11 +13,17 @@ Use this setup directly. Do not rediscover projects, repositories, accounts, or 
 
 Read `CONTENT_GUIDE.md` for the established voice and format. Use the existing Firelands and Burning Steppes guides as the writing references the owner selected. A caption file and YouTube link mean: create the companion guide and finish publishing it through the existing workflow. Preserve supplied facts; ask one concise question only if a required fact is still missing after one focused lookup.
 
+## Default guide and video format
+
+The owner selected the current farm-guide and companion-video format as the default for all future creation and setup. Apply it without asking the owner to select a format again. Use the ordered format and file checklist in `CONTENT_GUIDE.md`, starting new farm bodies from `templates/video-guide.mdx`.
+
+Every farm video gets a written guide, matching video record, and farm-facts record. Use the shared page templates for the summary, player, section navigation, reader questions, related content, authorship, metadata, and structured data. Keep factual source review and the original King K voice part of the default. Optional maps and chapters require actual source material; do not fill gaps with generated images or invented details. Stream commentary continues to use the existing post template.
+
 ## Routine video publishing
 
 1. Read the supplied captions and extract the actual farm, materials, instructions, and supported results.
 2. Match the current guide format and first-person voice. Use the original YouTube thumbnail. Do not invent profit claims, locations, chapters, or personal experiences.
-3. Add one MDX guide in `content/guides/` and its matching entries in `lib/content/guides.ts` and `lib/content/videos.ts`. Reuse the existing broad group and companion links.
+3. Add one MDX guide in `content/guides/` and its matching entries in `lib/content/guides.ts`, `lib/content/videos.ts`, and `lib/content/farm-facts.ts`. Include the concise answer, farm-specific FAQ records, source-supported facts, and relevant related routes. Set the video's `relatedGuideSlug` to the written guide and use the same YouTube ID in all three source records. Reuse the existing broad group and companion links.
 4. Preserve the original upload metadata separately from the site's publication metadata. The shared schema formatter handles Google formatting; do not reopen already supplied facts as a separate investigation. Homepage video order stays newest on YouTube first.
 5. Run `npm test`, publish through `main` and the existing Vercel Git integration, verify that exact commit is READY, and check the live guide/video links and sitemap.
 6. Return the published link with a short status. Keep narration brief.

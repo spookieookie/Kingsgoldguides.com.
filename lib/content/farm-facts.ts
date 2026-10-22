@@ -7,6 +7,12 @@ export interface FarmFacts {
 }
 
 export const farmFacts: Record<string, FarmFacts> = {
+  'heart-of-fear-spirit-of-harmony-farm': {
+    location: 'Heart of Fear, Dread Wastes, Pandaria; trash before the first boss',
+    targets: ['Mote of Harmony', 'Spirit of Harmony'],
+    valueType: 'Materials to sell where tradeable; ten Motes make one Spirit',
+    beforeYouGo: '2017 route: leave the boss alone and check the recorded difficulty reset. MoP Classic Spirits are bind on pickup.',
+  },
   'legion-obliterum-shuffle': {
     location: 'Auction house and the Legion Obliterum Forge in Dalaran',
     targets: ['Obliterum Ash', 'Obliterum'],

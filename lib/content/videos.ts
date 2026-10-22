@@ -2,6 +2,31 @@ import type { VideoPage } from './types';
 
 export const videos: VideoPage[] = [
   {
+    title: 'Heart of Fear Spirit of Harmony Farm Video',
+    slug: 'heart-of-fear-spirit-of-harmony-farm',
+    youtubeVideoId: 'Pz98hilWHK0',
+    videoUploadedAt: '2017-09-19',
+    publishedAt: '2026-10-22',
+    duration: '2:57',
+    hub: 'farming',
+    topic: 'Spirit of Harmony Farm',
+    excerpt: 'Watch the original Heart of Fear trash farm for Spirit of Harmony: Dread Wastes entrance, selected pre-boss packs, and the difficulty-change reset.',
+    summary: "I'm farming the trash before the first boss in Heart of Fear in Dread Wastes, Pandaria. I start by calling out Heroic raid difficulty, gather the selected middle, left, and right packs, and leave the boss alone. The recording then shows a raid-difficulty change bringing the trash back. I credit I Want to Buy Gold for the spot. This is the September 19, 2017 walkthrough, originally titled World Of Warcraft How to make 150k gold in an hour. The reset and hourly claim have not been verified for the current game; the guide explains Motes versus Spirits and the MoP Classic binding difference.",
+    promise: 'See the original pre-boss trash pull and difficulty reset, with a written companion explaining the material conversion and limits of the old headline.',
+    keyTakeaways: [
+      'Heart of Fear is in Dread Wastes, Pandaria.',
+      'The recording calls out Heroic before entering and farms selected trash before the first boss.',
+      'Leave the boss and the farther-back mobs shown in the demonstration alone.',
+      'The short repeat relies on a difficulty-change respawn shown in the 2017 footage.',
+      'Ten Motes of Harmony make one Spirit; the old 150k title is not verified current earnings.',
+    ],
+    timestamps: [],
+    mentioned: ['Heart of Fear', 'Dread Wastes', 'Pandaria', 'Mote of Harmony', 'Spirit of Harmony', 'Heroic raid difficulty'],
+    relatedGuideSlug: 'heart-of-fear-spirit-of-harmony-farm',
+    relatedVideos: ['firelands-volatile-farm', 'vortex-pinnacle-volatile-air-farm'],
+    featured: false,
+  },
+  {
     title: 'Obliterum Shuffle Video: Legion Auction House Method',
     slug: 'legion-obliterum-shuffle',
     youtubeVideoId: '7G4IuxP8SHs',

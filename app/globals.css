@@ -1,4 +1,6 @@
 @import 'tailwindcss';
+
+article h2[id], article h3[id] { scroll-margin-top: 7rem; }
 @import 'tw-animate-css';
 @import 'shadcn/tailwind.css';
 

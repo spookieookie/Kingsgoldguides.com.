@@ -92,10 +92,10 @@ export const farmFacts: Record<string, FarmFacts> = {
     beforeYouGo: 'Check raid lockouts before planning repeated clears.',
   },
   'wow-gold-farm-goblin-power-shovel-150000': {
-    location: "Ruins of Zul'Kunda, Northern Stranglethorn",
+    location: 'Venture Co. mining area, Northern Stranglethorn',
     targets: ['Goblin Power Shovel'],
     valueType: 'Rare transmog to sell on the auction house',
-    beforeYouGo: 'Find the Venture Co. Miner and Geologist route and check weapon prices.',
+    beforeYouGo: 'Focus on Venture Co. Miners and check the item source for your game version.',
   },
   'wow-gold-farm-southern-barrens-infinite-respawn-200k': {
     location: 'Bael Modan Excavation, Southern Barrens',
@@ -111,9 +111,9 @@ export const farmFacts: Record<string, FarmFacts> = {
   },
   '10000-gold-in-10-minutes-timeless-isle-condensed-jademist-farm': {
     location: 'The Misty Strand, Timeless Isle',
-    targets: ['Condensed Jademist', 'Timeless Coins', 'Lesser Charms'],
-    valueType: 'Mixed loot; check what is tradable in your version',
-    beforeYouGo: 'Check item tradability and keep currency rewards separate from sale value.',
+    targets: ['Jademist Dancer battle pet'],
+    valueType: 'Rare battle pet to sell; bound consumables are separate',
+    beforeYouGo: 'Check the pet market. Condensed Jademist is bound and cannot be auctioned.',
   },
   '120000-gold-per-hour-skettis-blackwind-lake-primal-water-farm': {
     location: 'Blackwind Lake, Skettis, Terokkar Forest',

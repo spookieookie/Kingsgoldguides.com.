@@ -18,6 +18,8 @@ Build out King K's existing video archive first. Each source video should have o
 - Use the original YouTube thumbnail and exact video ID. Do not generate replacement artwork.
 - Add source-supported location, target items, value type, and setup notes to `lib/content/farm-facts.ts`. These facts power the guide summary and comparison table. Keep a concise `tldr` or MDX `quickAnswer` so readers can assess the farm before watching.
 - Keep the guide's source video, author link, and version/market context visible. Never label a route tested on a current patch unless an actual test supports it.
+- Answer the specific location, loot, setup, or reset questions a reader needs for that farm in the guide's `faq` records. The native disclosures render every answer in the initial HTML. Keep the wording consistent with the source; never add generic questions just to reach a count.
+- Markdown H2 and H3 headings receive stable section anchors and populate the page navigation automatically. Use descriptive headings and relevant contextual links to other existing routes.
 - Do not invent coordinates, mob names, chapters, drops, durations, current patch testing, or profit rates to fill gaps in the source.
 
 ## Dates and numbers
@@ -27,6 +29,7 @@ Build out King K's existing video archive first. Each source video should have o
 - Attribute old loot totals and prices to the original recording. An old "un-nerfed" title is not evidence of current behavior.
 - Separate cloth/material sales from slow transmog listings. Auction house value is not a completed sale.
 - Keep unsupported gold-per-hour fields at zero; do not add made-up estimates. Keep caveats brief and specific to the source.
+- Distinguish bound consumables, character currencies, cageable pets, and auctionable equipment. Check an item's binding and exact identity before describing it as saleable loot. A prior generated guide is not primary evidence for an item or rate.
 
 ## Before publishing
 

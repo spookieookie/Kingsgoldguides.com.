@@ -85,6 +85,44 @@ test('guide collection describes exactly the published guide links', () => {
   });
 });
 
+test('section navigation uses the same unique IDs as rendered markdown headings', () => {
+  const { guideHeadingPlugin } = load('lib/guide-headings.ts', ['guideHeadingPlugin']);
+  const headings = [];
+  const heading = (text) => ({ type: 'heading', depth: 2, children: [{ type: 'text', value: text }] });
+  const tree = { type: 'root', children: [heading("Zul'Farrak & loot"), heading('Loot'), heading('Loot'), heading('Loot-2'),
+    { type: 'heading', depth: 3, children: [{ type: 'strong', children: [{ type: 'text', value: 'Café' }] }, { type: 'inlineCode', value: ' route' }] },
+    { type: 'code', value: '## Not a heading' }] };
+  guideHeadingPlugin(headings)()(tree);
+  assert.deepEqual(headings.map(item => item.id), ['zulfarrak-loot', 'loot', 'loot-2', 'loot-2-2', 'cafe-route']);
+  assert.equal(headings[4].text, 'Café route');
+  headings.forEach((item, i) => assert.equal(tree.children[i].data.hProperties.id, item.id));
+  assert.equal(tree.children[5].data, undefined);
+});
+
+test('guide answers and related routes are complete, unique, and published', () => {
+  const { guides } = load('lib/content/guides.ts', ['guides']);
+  const known = new Set(guides.map(guide => guide.slug));
+  for (const guide of guides) {
+    assert.ok(guide.faq.length > 0, `${guide.slug}: missing reader questions`);
+    assert.equal(new Set(guide.faq.map(item => item.question)).size, guide.faq.length);
+    for (const item of guide.faq) assert.ok(item.question.trim() && item.answer.trim());
+    assert.equal(new Set(guide.relatedGuides).size, guide.relatedGuides.length);
+    for (const slug of guide.relatedGuides) assert.ok(known.has(slug) && slug !== guide.slug, `${guide.slug}: invalid related route ${slug}`);
+  }
+});
+
+test('archive records do not present unverified estimates as current hourly rates', () => {
+  const { guides } = load('lib/content/guides.ts', ['guides']);
+  for (const guide of guides) {
+    // Add a documented measurement model before publishing future measured rates.
+    assert.equal(guide.goldPerHourLow, 0, `${guide.slug}: hourly claim needs source evidence`);
+    assert.equal(guide.goldPerHourHigh, 0, `${guide.slug}: hourly claim needs source evidence`);
+  }
+  const timeless = guides.find(guide => guide.youtubeVideoId === 'NBBtTfUi-Ng');
+  assert.match(timeless.title, /Jademist Dancer/);
+  assert.match(timeless.faq.find(item => /sell Condensed/.test(item.question)).answer, /No\./);
+});
+
 test('search crawlers can read public pages while administrative routes stay excluded', () => {
   const { robots } = load('app/robots.ts', ['robots'], { siteConfig });
   const rules = robots().rules;

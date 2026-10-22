@@ -1,6 +1,3 @@
-'use client';
-
-import { useState } from 'react';
 import { ChevronDown } from 'lucide-react';
 
 interface FAQItem {
@@ -13,39 +10,31 @@ interface FAQAccordionProps {
 }
 
 export function FAQAccordion({ items = [] }: FAQAccordionProps) {
-  const [openIndex, setOpenIndex] = useState<number | null>(0);
-
   if (items.length === 0) return null;
 
   return (
-    <div className="mb-8">
-      <h3 className="text-2xl font-bold text-foreground mb-4">Frequently Asked Questions</h3>
-      <div className="space-y-2">
+    <div className="mb-8 space-y-2">
         {items.map((item, idx) => (
-          <div
-            key={idx}
-            className="border border-border rounded-lg overflow-hidden"
+          <details
+            key={item.question}
+            open={idx === 0}
+            className="group border border-border rounded-lg overflow-hidden"
           >
-            <button
-              onClick={() => setOpenIndex(openIndex === idx ? null : idx)}
-              className="w-full p-4 flex justify-between items-center bg-secondary hover:bg-secondary/80 transition-colors text-left"
+            <summary
+              className="w-full cursor-pointer list-none p-4 flex justify-between items-center gap-4 bg-secondary hover:bg-secondary/80 transition-colors text-left [&::-webkit-details-marker]:hidden"
             >
               <span className="font-semibold text-foreground">{item.question}</span>
               <ChevronDown
                 size={20}
-                className={`text-primary transition-transform ${
-                  openIndex === idx ? 'rotate-180' : ''
-                }`}
+                aria-hidden="true"
+                className="shrink-0 text-primary transition-transform group-open:rotate-180"
               />
-            </button>
-            {openIndex === idx && (
+            </summary>
               <div className="p-4 bg-background border-t border-border">
                 <p className="text-foreground leading-relaxed">{item.answer}</p>
               </div>
-            )}
-          </div>
+          </details>
         ))}
-      </div>
     </div>
   );
 }

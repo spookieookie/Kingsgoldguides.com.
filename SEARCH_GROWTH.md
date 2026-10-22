@@ -23,6 +23,16 @@ Earn search visibility and cited links for specific World of Warcraft gold farms
 
 ## Next content work, in order
 
+### Content and retrieval improvements, second pass
+
+- Added 60 farm-specific answers across the 20 existing guides. Native HTML disclosures keep all answers in the initial response; this does not imply eligibility for Google's restricted FAQ rich results.
+- Added heading anchors and section navigation generated from the same Markdown syntax tree, plus contextual links in 13 previously sparse guides and a curated related-route graph.
+- Corrected the Timeless Isle write-up's item mix-up: Condensed Jademist is a bound consumable, while Jademist Dancer is a distinct battle pet. Corrected the matching title, description, summary, video companion text, and comparison entry without changing indexed addresses.
+- Narrowed Goblin Power Shovel's target description to miners supported by the item record and first-hand reports; removed the unsupported Geologist attribution.
+- Removed unsupported hourly rates from 11 older source records and two MDX records. No current rate is published without a documented measurement.
+- Added original video map captures to The Glazer and Timeless Isle guides. These are source-recording images, not new in-game tests or generated artwork.
+- Evidence: https://www.wowhead.com/item=104288/condensed-jademist ; https://www.wowhead.com/mop-classic/npc=73355/jademist-dancer ; https://www.wowhead.com/item=1991/goblin-power-shovel . Source map views: https://www.youtube.com/watch?v=Bqf2dytbJN0&t=157s and https://www.youtube.com/watch?v=NBBtTfUi-Ng&t=63s .
+
 1. Retest the Volatile Air routes, Burning Steppes cloth loop, and a rare-item route during actual gameplay. Prioritize evidence rather than unsupported hourly forecasts.
 2. Add original route screenshots or maps from those runs, with source-supported landmarks. Record coordinates only when checked in-game.
 3. Record the game edition, patch, region, character setup, date, duration, route, kills/runs, and item quantities for each test. Separate vendor gold, auction asking prices, realized sales, and costs. Use multiple sessions before calling a result typical.

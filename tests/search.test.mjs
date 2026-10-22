@@ -74,6 +74,31 @@ test('articles, source videos, author profiles, and the website share stable ide
   assert.equal(article.contentLocation.name, 'Uldum');
 });
 
+test('farm guides and companion videos resolve to the same original source', () => {
+  const { guides } = load('lib/content/guides.ts', ['guides']);
+  const { videos } = load('lib/content/videos.ts', ['videos']);
+  assert.equal(new Set(guides.map(item => item.slug)).size, guides.length, 'Duplicate guide slug');
+  assert.equal(new Set(videos.map(item => item.slug)).size, videos.length, 'Duplicate video slug');
+  assert.equal(new Set(videos.map(item => item.youtubeVideoId)).size, videos.length, 'Duplicate source video');
+  for (const guide of guides) {
+    const companion = videos.find(video => video.relatedGuideSlug === guide.slug);
+    assert.ok(companion, `${guide.slug}: missing companion video link`);
+    assert.equal(companion.youtubeVideoId, guide.youtubeVideoId, `${guide.slug}: companion source mismatch`);
+    assert.equal(guide.canonicalUrl, `/guides/${guide.slug}`, `${guide.slug}: canonical route mismatch`);
+    if (guide.heroImage.startsWith('https://i.ytimg.com/')) {
+      assert.equal(guide.heroImage, `https://i.ytimg.com/vi/${guide.youtubeVideoId}/hqdefault.jpg`, `${guide.slug}: source thumbnail mismatch`);
+    }
+    const source = readFileSync(new URL(`../content/guides/${guide.mdxSlug}.mdx`, import.meta.url), 'utf8');
+    const sourceId = source.match(/^(?:youtubeVideoId|videoId):\s*["']?([A-Za-z0-9_-]{11})["']?\s*$/m)?.[1];
+    assert.equal(sourceId, guide.youtubeVideoId, `${guide.slug}: MDX source mismatch`);
+  }
+  for (const video of videos.filter(item => item.relatedGuideSlug)) {
+    const guide = guides.find(item => item.slug === video.relatedGuideSlug);
+    assert.ok(guide, `${video.slug}: missing written companion`);
+    assert.equal(video.youtubeVideoId, guide.youtubeVideoId, `${video.slug}: written companion source mismatch`);
+  }
+});
+
 test('guide collection describes exactly the published guide links', () => {
   const { guides } = load('lib/content/guides.ts', ['guides']);
   const collection = schema.guideCollectionSchema(guides);

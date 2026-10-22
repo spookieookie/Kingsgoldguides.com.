@@ -55,7 +55,7 @@ export const guides: GuidePage[] = [
         answer: 'It skips much of the practice you get while leveling normally. I explain that tradeoff in the video: the aim is to level another alt, so plan time to learn its abilities afterward.',
       },
     ],
-    relatedGuides: ['zulfarrak-transmog-farming-route', 'vortex-pinnacle-volatile-air-farm'],
+    relatedGuides: ['zulfarrak-transmog-farming-route', 'vortex-pinnacle-volatile-air-farm', 'firelands-volatile-farm'],
     relatedVideos: ['zulfarrak-transmog-farming-route', 'vortex-pinnacle-volatile-air-farm'],
     featured: false,
     canonicalUrl: '/guides/stockades-alt-leveling-self-boost',

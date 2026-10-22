@@ -2,6 +2,37 @@ import type { VideoPage } from './types';
 
 export const videos: VideoPage[] = [
   {
+    title: 'Obliterum Shuffle Video: Legion Auction House Method',
+    slug: 'legion-obliterum-shuffle',
+    youtubeVideoId: '7G4IuxP8SHs',
+    videoUploadedAt: '2017-09-05',
+    publishedAt: '2026-10-22',
+    duration: '5:31',
+    hub: 'auction-house',
+    topic: 'Legion Obliterum Shuffle',
+    excerpt: 'Watch the original Legion Obliterum shuffle: auction-house inputs, the comparison sheet, Dalaran forge, ash conversion, and selling. Read the guide for the unit-price correction.',
+    summary: "I'm showing an Obliterum shuffle from the original Legion market. I compare auction-house purchases with their expected ash value, then destroy the inputs at the Dalaran forge and combine the ash into Obliterum to sell. The recording uses a stack-of-ten listing around 17,000 gold; the written guide corrects the unit-price comparison. The original 250,000-gold hourly title is not verified profit. Obliterum and its ash are now spent materials on Retail, so this is an archive walkthrough.",
+    promise: 'See how the original Obliterum shuffle worked and use the written companion to check the cost calculation.',
+    keyTakeaways: [
+      'The recording buys eligible items rather than crafting the inputs.',
+      'Normalize stack prices to a price per Obliterum before comparing costs.',
+      'Actual ash output varies; the video shows individual returns of 118 and 123 ash.',
+      'Count completed sales after input costs and selling fees.',
+      'Treat this as a Legion archive, not a current Retail farm.',
+    ],
+    timestamps: [
+      { time: '0:00', label: 'Introduction to the shuffle' },
+      { time: '0:39', label: 'Auction-house prices and the comparison sheet' },
+      { time: '2:08', label: 'Comparing ring-enchant input costs' },
+      { time: '3:21', label: 'Obliterating purchased items in Dalaran' },
+      { time: '4:27', label: 'Combining ash and returning to the auction house' },
+    ],
+    mentioned: ['Obliterum', 'Obliterum Ash', 'Obliterum Forge', 'Dalaran', 'Auction House'],
+    relatedGuideSlug: 'legion-obliterum-shuffle',
+    relatedVideos: ['data-analyst-darkmoon-firewater-gold-flip-wow-gold-making'],
+    featured: false,
+  },
+  {
     title: 'Stockades Alt Leveling: My Dungeon Self-Boost Video',
     slug: 'wow-leveling-tutorial',
     youtubeVideoId: 'k9pVMn1ItxA',

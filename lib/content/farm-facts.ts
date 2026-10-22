@@ -7,6 +7,12 @@ export interface FarmFacts {
 }
 
 export const farmFacts: Record<string, FarmFacts> = {
+  'legion-obliterum-shuffle': {
+    location: 'Auction house and the Legion Obliterum Forge in Dalaran',
+    targets: ['Obliterum Ash', 'Obliterum'],
+    valueType: 'Historical resale margin after input purchases and selling costs',
+    beforeYouGo: 'Legion archive, not a current Retail farm. Convert stack prices to unit prices before comparing input costs.',
+  },
   'stockades-alt-leveling-self-boost': {
     location: 'The Stockades; move to a suitable dungeon as the alt levels',
     targets: ['Dungeon experience for the alt'],

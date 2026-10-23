@@ -7,6 +7,16 @@ export interface FarmFacts {
 }
 
 export const farmFacts: Record<string, FarmFacts> = {
+"hillsbrad-black-tabby-buccaneers-vest-farm": {
+  "location": "Mudsnout gnoll field shown in Hillsbrad Foothills, Eastern Kingdoms",
+  "targets": [
+    "Cat Carrier (Black Tabby)",
+    "Buccaneer’s Vest",
+    "Other green equipment"
+  ],
+  "valueType": "Rare pet and equipment sales; historical item value is not realized gold",
+  "beforeYouGo": "Check current respawns and Monk abilities, bring mobility and loot regularly. The source is a 2017 recording."
+},
 "winterspring-jade-transmog-farm": {
   "location": "Frostshard Rumbler mountain area, Winterspring, Kalimdor",
   "targets": [

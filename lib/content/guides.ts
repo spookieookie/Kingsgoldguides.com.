@@ -2,6 +2,76 @@ import type { GuidePage } from './types';
 
 // Only published walkthroughs based on King K's own videos belong here.
 export const guides: GuidePage[] = [
+{
+  "title": "Karazhan Enchanting Recipe Farm: Mongoose, Sunfire & Soulfrost",
+  "slug": "karazhan-enchanting-recipe-farm",
+  "excerpt": "I'm running the original Karazhan raid for enchanting formulas, then crafting enchants to sell. Here's the setup, what to keep, and how I check the margin.",
+  "seoTitle": "Karazhan Enchanting Farm: Mongoose, Sunfire & Soulfrost",
+  "metaDescription": "Farm Karazhan enchanting recipes for Mongoose, Sunfire and Soulfrost. Follow King K's method, disenchant spare greens, and check crafting costs before selling.",
+  "heroImage": "https://i.ytimg.com/vi/XPosvhuaOtE/hqdefault.jpg",
+  "youtubeVideoId": "XPosvhuaOtE",
+  "videoUploadedAt": "2017-08-12",
+  "publishedAt": "2026-10-23",
+  "updatedAt": "2026-10-23",
+  "hub": "farming",
+  "category": "Farming Guides",
+  "subcategory": "Old Raid Runs",
+  "expansion": "The Burning Crusade",
+  "methodType": "Dungeon Farm",
+  "goldPerHourLow": 0,
+  "goldPerHourHigh": 0,
+  "setupCost": "Enchanting training and crafting materials",
+  "saleSpeed": "Slow",
+  "riskLevel": "Medium",
+  "requirements": [
+    "Enchanting appropriate to your game version",
+    "A character that can clear the original Karazhan raid",
+    "Bag space for loot",
+    "Check recipe requirements and crafting margins"
+  ],
+  "whoFor": [
+    "Enchanters collecting old recipes",
+    "Crafted enchant sellers"
+  ],
+  "tldr": "Run the original Karazhan raid in Deadwind Pass for Mongoose, Sunfire and Soulfrost enchanting formulas. Learn the formulas, craft saleable enchants where your version supports them, and disenchant spare greens for materials.",
+  "bestTimeToFarm": "",
+  "bestTimeToSell": "",
+  "ahNotes": "The 15k-in-15-minutes headline is a historical 2017 claim. Compare current enchant sale prices with inputs and fees; recipe unlocks are not completed sales.",
+  "realmCaveats": "Recorded during Legion. The 600-skill setup and prices are historical; check current Enchanting requirements, raid access and selling rules.",
+  "steps": [],
+  "analystTakeaway": "Learn the recipe, price the finished enchant against its materials, and test a small batch before scaling up.",
+  "faq": [
+    {
+      "question": "Where is this Karazhan enchanting farm?",
+      "answer": "The video uses the original Burning Crusade Karazhan raid in Deadwind Pass, Eastern Kingdoms. It is not the Return to Karazhan dungeon."
+    },
+    {
+      "question": "What do I sell from this method?",
+      "answer": "Learn the enchanting formulas, then sell crafted enchants where your game version supports auctionable enchants. Spare greens can be disenchanted for saleable materials. The formula drop itself is not the finished enchant."
+    },
+    {
+      "question": "Do I need 600 Enchanting today?",
+      "answer": "That skill threshold belongs to the August 2017 recording. Check the current recipe and expansion-specific Enchanting requirements instead of following the old leveling setup."
+    },
+    {
+      "question": "Does this guarantee 15,000 gold in 15 minutes?",
+      "answer": "No. That is the original video's historical headline. Recipe drops, material costs, demand and completed sales determine the result; it is not a verified current hourly rate."
+    }
+  ],
+  "relatedGuides": [
+    "legion-obliterum-shuffle",
+    "firelands-volatile-farm",
+    "wow-gold-farm-forgotten-farm-blackwing-descent"
+  ],
+  "relatedVideos": [
+    "legion-obliterum-shuffle",
+    "firelands-volatile-farm"
+  ],
+  "featured": false,
+  "canonicalUrl": "/guides/karazhan-enchanting-recipe-farm",
+  "schemaType": "Article",
+  "mdxSlug": "karazhan-enchanting-recipe-farm"
+},
   {
     title: 'Spirit of Harmony Farm in Heart of Fear',
     slug: 'heart-of-fear-spirit-of-harmony-farm',

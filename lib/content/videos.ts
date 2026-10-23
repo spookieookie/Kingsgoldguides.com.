@@ -2,6 +2,43 @@ import type { VideoPage } from './types';
 
 export const videos: VideoPage[] = [
 {
+  "title": "Wetlands Wool Cloth Farm Video: Original Monk Setup",
+  "slug": "wetlands-wool-cloth-monk-farm",
+  "youtubeVideoId": "JjPUGkMhxfk",
+  "videoUploadedAt": "2017-08-22",
+  "publishedAt": "2026-10-23",
+  "duration": "3:14",
+  "hub": "farming",
+  "topic": "Wool Cloth Farm",
+  "excerpt": "Watch my original Wetlands Monk cloth farm, using Black Ox Statue and Chi Orbit with regular looting.",
+  "summary": "I'm farming Wool Cloth and green equipment in Wetlands, Eastern Kingdoms. The recording shows the map, a level-100 Monk class-trial setup, Summon Black Ox Statue and Chi Orbit. I explain stopping to loot before corpses disappear, then discuss selling cloth and checking greens or disenchanting them. Originally titled World Of Warcraft - HOW TO MAKE GOLD FAST, this video was uploaded August 22, 2017. The companion guide treats its AFK label, class-trial instructions, timers and prices as historical rather than a current tested setup.",
+  "promise": "See the original Wetlands cloth spot and Monk setup, with the regular looting requirement explained.",
+  "keyTakeaways": [
+    "The farming area is in Wetlands, Eastern Kingdoms; follow the opening map.",
+    "Wool Cloth is the main named material, with green equipment and occasional patterns.",
+    "The original setup uses Black Ox Statue and Chi Orbit.",
+    "The demonstration still needs regular player looting despite the AFK label.",
+    "The level-100 trial, abilities, timers and one-gold cloth price come from 2017."
+  ],
+  "timestamps": [],
+  "mentioned": [
+    "Wetlands",
+    "Eastern Kingdoms",
+    "Wool Cloth",
+    "Ebon Slavehunter",
+    "Monk",
+    "Summon Black Ox Statue",
+    "Chi Orbit",
+    "Class Trial"
+  ],
+  "relatedGuideSlug": "wetlands-wool-cloth-monk-farm",
+  "relatedVideos": [
+    "burning-steppes-mageweave-runecloth-farm",
+    "throne-of-kiljaeden-primal-fire-farm"
+  ],
+  "featured": false
+},
+{
   "title": "Throne of Kil’jaeden Primal Fire Farm Video",
   "slug": "throne-of-kiljaeden-primal-fire-farm",
   "youtubeVideoId": "DXKQs-tECo8",

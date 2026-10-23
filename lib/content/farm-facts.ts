@@ -7,6 +7,16 @@ export interface FarmFacts {
 }
 
 export const farmFacts: Record<string, FarmFacts> = {
+"wetlands-wool-cloth-monk-farm": {
+  "location": "Outdoor fighting area in Wetlands, Eastern Kingdoms; opening video map",
+  "targets": [
+    "Wool Cloth",
+    "Green equipment",
+    "Occasional patterns"
+  ],
+  "valueType": "Cloth and eligible equipment sales; spare greens may be disenchanted",
+  "beforeYouGo": "2017 Monk setup: Black Ox Statue and Chi Orbit, with regular looting. Check current abilities, loot credit and prices first."
+},
 "throne-of-kiljaeden-primal-fire-farm": {
   "location": "Throne of Kil’jaeden, Hellfire Peninsula, Outland",
   "targets": [

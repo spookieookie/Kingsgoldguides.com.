@@ -3,6 +3,76 @@ import type { GuidePage } from './types';
 // Only published walkthroughs based on King K's own videos belong here.
 export const guides: GuidePage[] = [
 {
+  "title": "Wetlands Wool Cloth Farm: Original Monk Statue Method",
+  "slug": "wetlands-wool-cloth-monk-farm",
+  "excerpt": "I'm farming Wool Cloth and spare greens in Wetlands with a Monk. Here's the original Black Ox Statue and Chi Orbit setup, plus when I stop to loot.",
+  "seoTitle": "Wetlands Wool Cloth Farm: Monk Statue Method",
+  "metaDescription": "Follow King K’s Wetlands Wool Cloth farm: the original Monk Black Ox Statue and Chi Orbit setup, regular looting, cloth sales and spare green items.",
+  "heroImage": "https://i.ytimg.com/vi/JjPUGkMhxfk/hqdefault.jpg",
+  "youtubeVideoId": "JjPUGkMhxfk",
+  "videoUploadedAt": "2017-08-22",
+  "publishedAt": "2026-10-23",
+  "updatedAt": "2026-10-23",
+  "hub": "farming",
+  "category": "Farming Guides",
+  "subcategory": "Material Farms",
+  "expansion": "Classic zones (Legion recording)",
+  "methodType": "Mob Farm",
+  "goldPerHourLow": 0,
+  "goldPerHourHigh": 0,
+  "setupCost": "A suitable character; check current Monk abilities before using the old setup",
+  "saleSpeed": "Medium",
+  "riskLevel": "High",
+  "requirements": [
+    "Access to Wetlands in Eastern Kingdoms",
+    "Bag space for Wool Cloth and equipment",
+    "The recording uses a Monk with Summon Black Ox Statue and Chi Orbit",
+    "Verify current abilities, loot credit and respawns before repeating"
+  ],
+  "whoFor": [
+    "Cloth farmers comparing outdoor spots",
+    "Players reviewing the original Legion Monk setup"
+  ],
+  "tldr": "Farm the Wetlands fighting area shown in the video for Wool Cloth and spare green equipment. The original Monk uses Black Ox Statue to attract mobs and Chi Orbit to damage them, then loots regularly. This is a 2017 setup, not a verified current unattended farm.",
+  "bestTimeToFarm": "",
+  "bestTimeToSell": "",
+  "ahNotes": "Wool Cloth was quoted at about one gold each in the 2017 recording. That is historical asking value, not a current price or verified sale rate. Price greens separately before selling or disenchanting.",
+  "realmCaveats": "Recorded during Legion on August 22, 2017. The level-100 class trial, talent combination and stated loot timers are historical. Current availability and behavior have not been retested; regular player looting is required in the demonstration.",
+  "steps": [],
+  "analystTakeaway": "Verify that your current character can reproduce the pull and earn loot, then measure the cloth from a short session before committing.",
+  "faq": [
+    {
+      "question": "Where is this Wetlands Wool Cloth farm?",
+      "answer": "The video farms an outdoor fighting area in Wetlands, Eastern Kingdoms. The opening map shows the spot, and an Ebon Slavehunter is visible in the footage."
+    },
+    {
+      "question": "Which Monk abilities does the original video use?",
+      "answer": "The 2017 recording uses Summon Black Ox Statue to attract enemies and Chi Orbit for nearby damage. Check current ability availability and behavior; this is not a verified current build."
+    },
+    {
+      "question": "Can I leave this farm unattended?",
+      "answer": "The video calls it AFK, but the demonstration still requires regular player looting. I recommend looting around 1 minute 45 seconds in the recording because of the stated two-minute corpse timer. Those timings are historical, not a current guarantee."
+    },
+    {
+      "question": "Do I need a level-100 class-trial Monk?",
+      "answer": "That is the setup used in the Legion recording, not a current requirement. Do not assume today's class trials have the same abilities or farming access."
+    }
+  ],
+  "relatedGuides": [
+    "burning-steppes-mageweave-runecloth-farm",
+    "throne-of-kiljaeden-primal-fire-farm",
+    "wow-gold-farm-southern-barrens-infinite-respawn-200k"
+  ],
+  "relatedVideos": [
+    "burning-steppes-mageweave-runecloth-farm",
+    "throne-of-kiljaeden-primal-fire-farm"
+  ],
+  "featured": false,
+  "canonicalUrl": "/guides/wetlands-wool-cloth-monk-farm",
+  "schemaType": "Article",
+  "mdxSlug": "wetlands-wool-cloth-monk-farm"
+},
+{
   "title": "Primal Fire Farm at the Throne of Kil’jaeden",
   "slug": "throne-of-kiljaeden-primal-fire-farm",
   "excerpt": "I'm farming Incandescent Fel Sparks in Hellfire Peninsula for Motes of Fire. Here's the simple back-and-forth route and how I compare motes with Primal Fire before selling.",

@@ -2,6 +2,41 @@ import type { VideoPage } from './types';
 
 export const videos: VideoPage[] = [
 {
+  "title": "Hillsbrad Black Tabby & Buccaneer’s Vest Farm Video",
+  "slug": "hillsbrad-black-tabby-buccaneers-vest-farm",
+  "youtubeVideoId": "2Ck85obr8hQ",
+  "videoUploadedAt": "2017-11-02",
+  "publishedAt": "2026-10-23",
+  "duration": "3:27",
+  "hub": "farming",
+  "topic": "Black Tabby Cat Farm",
+  "excerpt": "I'm farming the Hillsbrad gnolls for Black Tabby Cat and Buccaneer’s Vest. Here's the original Monk setup, regular looting and what my lucky hour actually returned.",
+  "summary": "I'm killing gnolls in Hillsbrad Foothills for Black Tabby Cat and Buccaneer’s Vest, with other green equipment along the way. I recommend a Monk’s Black Ox Statue, passive nearby damage and looting about every minute and a half in the original setup. I report a lucky hour valued around 100k, including a Black Tabby drop, while saying I am stocking the items to sell later. Uploaded November 2, 2017 as World Of Warcraft AFK FARM 100,000 GOLD PER HOUR. The written guide separates historical item value from completed sales and current performance.",
+  "promise": "See the original gnoll-field setup, target loot and the limits of the old 100k claim.",
+  "keyTakeaways": [
+    "The field is in Hillsbrad Foothills, Eastern Kingdoms.",
+    "Black Tabby Cat and Buccaneer’s Vest are the named targets.",
+    "The footage shows Mudsnout gnolls, including a Mudsnout Shaman.",
+    "The original Monk setup still needs regular looting.",
+    "The lucky-hour result is historical item value, not guaranteed sales."
+  ],
+  "timestamps": [],
+  "mentioned": [
+    "Hillsbrad Foothills",
+    "Mudsnout Shaman",
+    "Cat Carrier (Black Tabby)",
+    "Black Tabby Cat",
+    "Buccaneer’s Vest",
+    "Black Ox Statue"
+  ],
+  "relatedGuideSlug": "hillsbrad-black-tabby-buccaneers-vest-farm",
+  "relatedVideos": [
+    "wetlands-wool-cloth-monk-farm",
+    "winterspring-jade-transmog-farm"
+  ],
+  "featured": false
+},
+{
   "title": "Winterspring Jade Transmog Farm Video",
   "slug": "winterspring-jade-transmog-farm",
   "youtubeVideoId": "3BjZl1cgxQM",

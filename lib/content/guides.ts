@@ -3,6 +3,76 @@ import type { GuidePage } from './types';
 // Only published walkthroughs based on King K's own videos belong here.
 export const guides: GuidePage[] = [
 {
+  "title": "Hillsbrad Black Tabby Cat & Buccaneer’s Vest Farm",
+  "slug": "hillsbrad-black-tabby-buccaneers-vest-farm",
+  "excerpt": "I'm farming the Hillsbrad gnolls for Black Tabby Cat and Buccaneer’s Vest. Here's the original Monk setup, regular looting and what my lucky hour actually returned.",
+  "seoTitle": "Black Tabby Cat & Buccaneer’s Vest Farm in Hillsbrad",
+  "metaDescription": "King K’s Hillsbrad Black Tabby Cat and Buccaneer’s Vest farm: Mudsnout gnolls, the original Monk statue setup, regular looting and historical loot values.",
+  "heroImage": "https://i.ytimg.com/vi/2Ck85obr8hQ/hqdefault.jpg",
+  "youtubeVideoId": "2Ck85obr8hQ",
+  "videoUploadedAt": "2017-11-02",
+  "publishedAt": "2026-10-23",
+  "updatedAt": "2026-10-23",
+  "hub": "farming",
+  "category": "Farming Guides",
+  "subcategory": "Rare Drop Farms",
+  "expansion": "Classic zones (Legion recording)",
+  "methodType": "Mob Farm",
+  "goldPerHourLow": 0,
+  "goldPerHourHigh": 0,
+  "setupCost": "A suitable character, mobility and bag space",
+  "saleSpeed": "Slow",
+  "riskLevel": "High",
+  "requirements": [
+    "Access to Hillsbrad Foothills, Eastern Kingdoms",
+    "Find the Mudsnout gnoll field shown in the video",
+    "Check current Monk abilities and respawns before using the original setup",
+    "Loot regularly and check current item prices"
+  ],
+  "whoFor": [
+    "Rare-pet farmers",
+    "Transmog farmers comparing outdoor spots"
+  ],
+  "tldr": "Kill the gnolls at the Hillsbrad Foothills field shown in the video for a chance at Cat Carrier (Black Tabby), Buccaneer’s Vest and other greens. The original method recommends a Monk’s Black Ox Statue and regular looting. The 100k result was historical item value from a lucky hour, not guaranteed gold earned.",
+  "bestTimeToFarm": "",
+  "bestTimeToSell": "",
+  "ahNotes": "The 2017 recording quotes around 60k for Black Tabby and 10k for Buccaneer’s Vest. The reported 100k total includes the rare pet and green-item valuations, not completed sales. Check current prices and demand.",
+  "realmCaveats": "Recorded November 2, 2017 during Legion. The force-respawn loop, passive Monk setup and loot timing have not been retested for the current game. This is not a verified unattended farm or Classic Era drop guide.",
+  "steps": [],
+  "analystTakeaway": "Test the loot loop, keep rare drops separate from ordinary returns, and track completed sales before judging the farm.",
+  "faq": [
+    {
+      "question": "Where is this Black Tabby Cat farm?",
+      "answer": "The video uses a gnoll field in Hillsbrad Foothills, Eastern Kingdoms. Mudsnout Shaman is visible in the footage. Follow the source location rather than confusing this with a different Black Tabby route."
+    },
+    {
+      "question": "What items am I farming?",
+      "answer": "The named targets are Cat Carrier (Black Tabby), which teaches Black Tabby Cat, and the bind-on-equip Buccaneer’s Vest. The recording also reports other green equipment."
+    },
+    {
+      "question": "Is the farm really AFK?",
+      "answer": "The old title calls it AFK and recommends a Monk statue/passive-damage setup, but the method still requires regular player looting. The current ability combination and respawn behavior have not been verified here."
+    },
+    {
+      "question": "Does it guarantee 100,000 gold per hour?",
+      "answer": "No. I report about 100k worth of items in one lucky hour, including Black Tabby Cat. That is historical loot value from 2017, not a completed-sales total or a current hourly guarantee."
+    }
+  ],
+  "relatedGuides": [
+    "wetlands-wool-cloth-monk-farm",
+    "winterspring-jade-transmog-farm",
+    "destiny-sword-farm"
+  ],
+  "relatedVideos": [
+    "wetlands-wool-cloth-monk-farm",
+    "winterspring-jade-transmog-farm"
+  ],
+  "featured": false,
+  "canonicalUrl": "/guides/hillsbrad-black-tabby-buccaneers-vest-farm",
+  "schemaType": "Article",
+  "mdxSlug": "hillsbrad-black-tabby-buccaneers-vest-farm"
+},
+{
   "publishedAt": "2026-10-23",
   "updatedAt": "2026-10-23",
   "hub": "farming",

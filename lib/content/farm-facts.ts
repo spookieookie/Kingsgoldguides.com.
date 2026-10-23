@@ -7,6 +7,17 @@ export interface FarmFacts {
 }
 
 export const farmFacts: Record<string, FarmFacts> = {
+"karazhan-enchanting-recipe-farm": {
+  "location": "Original Karazhan raid, Deadwind Pass, Eastern Kingdoms",
+  "targets": [
+    "Mongoose enchanting formula",
+    "Sunfire enchanting formula",
+    "Soulfrost enchanting formula",
+    "Disenchanting materials"
+  ],
+  "valueType": "Recipe unlocks enable crafted enchant sales; spare equipment yields materials",
+  "beforeYouGo": "Bring an enchanter and check current recipe requirements, costs and sale prices. The setup and gold figures are from 2017."
+},
   'heart-of-fear-spirit-of-harmony-farm': {
     location: 'Heart of Fear, Dread Wastes, Pandaria; trash before the first boss',
     targets: ['Mote of Harmony', 'Spirit of Harmony'],

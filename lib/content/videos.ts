@@ -1,6 +1,45 @@
 import type { VideoPage } from './types';
 
 export const videos: VideoPage[] = [
+{
+  "title": "Karazhan Enchanting Farm Video: Recipes & Crafted Enchants",
+  "slug": "karazhan-enchanting-recipe-farm",
+  "youtubeVideoId": "XPosvhuaOtE",
+  "videoUploadedAt": "2017-08-12",
+  "publishedAt": "2026-10-23",
+  "duration": "6:04",
+  "hub": "farming",
+  "topic": "Enchanting Recipe Farm",
+  "excerpt": "Watch my Karazhan enchanting method: recipe hunting, a Legion-era Ley Shatter setup, disenchanting greens, and selling crafted enchants.",
+  "summary": "I start with the Legion-era Enchanting setup and Ley Shatter, then head to the original Karazhan raid in Deadwind Pass for Mongoose, Sunfire and Soulfrost formulas. After the run I show the Mongoose recipe, discuss crafting margins and disenchant spare greens for Arcane Dust. The original title is World Of Warcraft Gold Farm How I Made 15k Gold In 15 Minutes, uploaded August 12, 2017. Those figures are historical. The written guide explains the difference between recipe unlocks, crafted enchants and actual sales.",
+  "promise": "See how the original recipe-hunting and enchanting method works, including what you're meant to sell.",
+  "keyTakeaways": [
+    "Use the original Karazhan raid in Deadwind Pass, Eastern Kingdoms.",
+    "Hunt Mongoose, Sunfire and Soulfrost formulas on an enchanter.",
+    "Learn the formulas and compare crafting inputs with finished enchant prices.",
+    "Disenchant spare greens when the material value makes sense.",
+    "The 600-skill setup and gold figures are from Legion-era footage."
+  ],
+  "timestamps": [],
+  "mentioned": [
+    "Karazhan",
+    "Deadwind Pass",
+    "Enchanting",
+    "Mongoose",
+    "Sunfire",
+    "Soulfrost",
+    "Ley Shatter",
+    "Leylight Shard",
+    "Arkhana",
+    "Arcane Dust"
+  ],
+  "relatedGuideSlug": "karazhan-enchanting-recipe-farm",
+  "relatedVideos": [
+    "legion-obliterum-shuffle",
+    "firelands-volatile-farm"
+  ],
+  "featured": false
+},
   {
     title: 'Heart of Fear Spirit of Harmony Farm Video',
     slug: 'heart-of-fear-spirit-of-harmony-farm',

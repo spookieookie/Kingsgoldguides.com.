@@ -7,6 +7,23 @@ export interface FarmFacts {
 }
 
 export const farmFacts: Record<string, FarmFacts> = {
+"winterspring-jade-transmog-farm": {
+  "location": "Frostshard Rumbler mountain area, Winterspring, Kalimdor",
+  "targets": [
+    "Jade transmog gear",
+    "Other equipment"
+  ],
+  "valueType": "Rare equipment sales; old auction values are not completed sales",
+  "beforeYouGo": "Bring a group and mobility for the original five-area method. Check respawns and loot credit."
+},
+"starter-gear-resale-method": {
+  "location": "Character starting zones, accessible mailboxes and auction house",
+  "targets": [
+    "Eligible tradeable starter equipment"
+  ],
+  "valueType": "Resale margin subject to demand and alternative supply",
+  "beforeYouGo": "Check binding, mailbox access, postage and vendor supply; former starter gear returned to city vendors in patch 10.0.5."
+},
 "wetlands-wool-cloth-monk-farm": {
   "location": "Outdoor fighting area in Wetlands, Eastern Kingdoms; opening video map",
   "targets": [

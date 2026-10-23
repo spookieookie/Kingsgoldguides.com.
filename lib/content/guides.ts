@@ -3,6 +3,142 @@ import type { GuidePage } from './types';
 // Only published walkthroughs based on King K's own videos belong here.
 export const guides: GuidePage[] = [
 {
+  "publishedAt": "2026-10-23",
+  "updatedAt": "2026-10-23",
+  "hub": "farming",
+  "category": "Farming Guides",
+  "subcategory": "Transmog Farms",
+  "expansion": "Classic zones (Legion recording)",
+  "methodType": "Mob Farm",
+  "goldPerHourLow": 0,
+  "goldPerHourHigh": 0,
+  "setupCost": "Bag space and a suitable character",
+  "saleSpeed": "Slow",
+  "riskLevel": "High",
+  "bestTimeToFarm": "",
+  "bestTimeToSell": "",
+  "steps": [],
+  "featured": false,
+  "schemaType": "Article",
+  "title": "Winterspring Jade Transmog Farm: Frostshard Rumblers",
+  "slug": "winterspring-jade-transmog-farm",
+  "youtubeVideoId": "3BjZl1cgxQM",
+  "videoUploadedAt": "2017-10-17",
+  "excerpt": "I'm farming Frostshard Rumblers in Winterspring for Jade transmog and other old gear. Here's the original group setup, looting advice and what the old 100k claim means.",
+  "seoTitle": "Winterspring Jade Transmog Farm: Frostshard Rumblers",
+  "metaDescription": "King K’s Winterspring Jade transmog farm: Frostshard Rumblers, the original five-area group setup, mobility and looting. Historical values explained.",
+  "requirements": [
+    "Reach the Winterspring mountain area shown in the video",
+    "A group for the original five-area setup",
+    "Mobility and bag space",
+    "Check current respawn behavior and loot credit"
+  ],
+  "whoFor": [
+    "Transmog collectors",
+    "Group farmers comparing old outdoor spots"
+  ],
+  "tldr": "Kill Frostshard Rumblers around the Winterspring mountain shown in the video for a chance at Jade transmog and other gear. The original group covers five areas and keeps kills moving. The 2017 force-respawn behavior and 100k valuation have not been verified as current results.",
+  "ahNotes": "The original 100k claim describes the value attributed to rare drops, not documented completed sales. Transmog results vary with drops, demand and relisting.",
+  "realmCaveats": "October 2017 recording. Verify the group respawn loop and loot eligibility in your version. No current hourly return or guaranteed Jade drop is established.",
+  "analystTakeaway": "Test the group loop first; rare transmog value becomes gold only when a buyer pays.",
+  "faq": [
+    {
+      "question": "Where is the Jade transmog farm?",
+      "answer": "The recording uses the Frostshard Rumbler mountain area in Winterspring, Kalimdor. Follow the map and five positions shown in the source video."
+    },
+    {
+      "question": "Do I need a group?",
+      "answer": "The original method recommends a group spread across five areas to keep mobs dying and trigger the respawn behavior shown. That behavior has not been retested for the current game."
+    },
+    {
+      "question": "Does this guarantee 100k gold per hour?",
+      "answer": "No. The 100k figure is a historical valuation from the 2017 recording. Jade drops are random, and listed transmog value is not a completed sale."
+    }
+  ],
+  "relatedGuides": [
+    "wow-gold-farm-3-expensive-items-transmog",
+    "destiny-sword-farm",
+    "wetlands-wool-cloth-monk-farm"
+  ],
+  "relatedVideos": [
+    "wow-gold-farm-3-expensive-items-transmog",
+    "destiny-sword-farm"
+  ],
+  "heroImage": "https://i.ytimg.com/vi/3BjZl1cgxQM/hqdefault.jpg",
+  "canonicalUrl": "/guides/winterspring-jade-transmog-farm",
+  "mdxSlug": "winterspring-jade-transmog-farm"
+},
+{
+  "publishedAt": "2026-10-23",
+  "updatedAt": "2026-10-23",
+  "hub": "auction-house",
+  "category": "Auction House",
+  "subcategory": "Resale Methods",
+  "expansion": "Legion recording",
+  "methodType": "Auction House",
+  "goldPerHourLow": 0,
+  "goldPerHourHigh": 0,
+  "setupCost": "Bag space and a suitable character",
+  "saleSpeed": "Slow",
+  "riskLevel": "High",
+  "bestTimeToFarm": "",
+  "bestTimeToSell": "",
+  "steps": [],
+  "featured": false,
+  "schemaType": "Article",
+  "title": "Starter Gear Resale: My Original Level-One Gold Method",
+  "slug": "starter-gear-resale-method",
+  "youtubeVideoId": "_hKqEoCcrjw",
+  "videoUploadedAt": "2017-12-06",
+  "excerpt": "I'm creating fresh characters and mailing their starter gear to my main to sell. Here's the original method, what I checked, and why vendor supply matters today.",
+  "seoTitle": "WoW Starter Gear Resale: Original Level-One Method",
+  "metaDescription": "King K’s original WoW starter gear resale method: create a character, check tradeable gear, mail it to your main and price it. Includes the later vendor change.",
+  "requirements": [
+    "A main character able to receive eligible mailed gear",
+    "Postage money on the new character",
+    "Check each item's binding and current supply",
+    "Check current character and starting-zone restrictions"
+  ],
+  "whoFor": [
+    "Collectors reviewing starter gear markets",
+    "Auction-house sellers researching small niches"
+  ],
+  "tldr": "The original method creates fresh characters, mails eligible starter equipment to a main and lists it for collectors. Worgen and Draenei were my preferred examples in 2017. Check item binding and vendors first: Blizzard returned former starter equipment to Stormwind and Orgrimmar vendors in patch 10.0.5.",
+  "ahNotes": "The 2017 video reports individual sales at 2k–10k and a 150k headline; these are historical creator reports, not current verified earnings. Cheap vendor alternatives can change demand.",
+  "realmCaveats": "December 2017 archive. Current starter items, mail access and binding may differ. Patch 10.0.5 returned former starter equipment to city vendors; the old scarcity premise cannot be assumed today.",
+  "analystTakeaway": "Check the exact item and alternative sources before stocking it. Start with a small listing rather than mass-producing gear.",
+  "faq": [
+    {
+      "question": "What does the original level-one method sell?",
+      "answer": "Starter equipment from newly created characters, mailed to a main and listed for buyers interested in the low-level look. Only eligible tradeable pieces can be mailed and sold."
+    },
+    {
+      "question": "Which characters did I prefer in the recording?",
+      "answer": "I report the best results with Worgen and Draenei starter gear and avoid Human and Dwarf gear because I found more supply. These are 2017 observations, not current race rankings."
+    },
+    {
+      "question": "Does the old starter-gear market work the same today?",
+      "answer": "Do not assume so. Blizzard's patch 10.0.5 notes returned former starter equipment to vendors in Stormwind and Orgrimmar. Check the exact item, binding, vendor supply and completed sales before stocking it."
+    },
+    {
+      "question": "Do I have to delete the character?",
+      "answer": "No. The video deletes a disposable new character only after mailing its gear. Deletion is not needed to test a listing; keep the character until you have verified delivery."
+    }
+  ],
+  "relatedGuides": [
+    "legion-obliterum-shuffle",
+    "karazhan-enchanting-recipe-farm",
+    "wow-gold-farm-3-expensive-items-transmog"
+  ],
+  "relatedVideos": [
+    "legion-obliterum-shuffle",
+    "karazhan-enchanting-recipe-farm"
+  ],
+  "heroImage": "https://i.ytimg.com/vi/_hKqEoCcrjw/hqdefault.jpg",
+  "canonicalUrl": "/guides/starter-gear-resale-method",
+  "mdxSlug": "starter-gear-resale-method"
+},
+{
   "title": "Wetlands Wool Cloth Farm: Original Monk Statue Method",
   "slug": "wetlands-wool-cloth-monk-farm",
   "excerpt": "I'm farming Wool Cloth and spare greens in Wetlands with a Monk. Here's the original Black Ox Statue and Chi Orbit setup, plus when I stop to loot.",

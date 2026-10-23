@@ -2,6 +2,72 @@ import type { VideoPage } from './types';
 
 export const videos: VideoPage[] = [
 {
+  "title": "Winterspring Jade Transmog Farm Video",
+  "slug": "winterspring-jade-transmog-farm",
+  "youtubeVideoId": "3BjZl1cgxQM",
+  "videoUploadedAt": "2017-10-17",
+  "publishedAt": "2026-10-23",
+  "duration": "4:25",
+  "hub": "farming",
+  "topic": "Jade Transmog Farm",
+  "excerpt": "I'm farming Frostshard Rumblers in Winterspring for Jade transmog and other old gear. Here's the original group setup, looting advice and what the old 100k claim means.",
+  "summary": "I show a Winterspring mountain farm for Jade transmog, recommending a group across five positions to keep Frostshard Rumblers dying and respawning. I discuss mobility, regular looting and random drops. Uploaded October 17, 2017 as World Of Warcraft (Never before used) Gold Farm 100k An Hour. The 100k figure is historical loot value rather than verified current sales.",
+  "promise": "See the original five-area group method and its rare-drop valuation.",
+  "keyTakeaways": [
+    "Farm Frostshard Rumblers in Winterspring.",
+    "The original group covers five areas.",
+    "Mobility helps with looting.",
+    "Jade and other transmog drops are random.",
+    "The 100k headline is historical value, not guaranteed sales."
+  ],
+  "timestamps": [],
+  "mentioned": [
+    "Winterspring",
+    "Frostshard Rumbler",
+    "Jade transmog"
+  ],
+  "relatedGuideSlug": "winterspring-jade-transmog-farm",
+  "relatedVideos": [
+    "wow-gold-farm-3-expensive-items-transmog",
+    "destiny-sword-farm"
+  ],
+  "featured": false
+},
+{
+  "title": "Starter Gear Resale Video: Original Level-One Method",
+  "slug": "starter-gear-resale-method",
+  "youtubeVideoId": "_hKqEoCcrjw",
+  "videoUploadedAt": "2017-12-06",
+  "publishedAt": "2026-10-23",
+  "duration": "10:37",
+  "hub": "auction-house",
+  "topic": "Starter Gear Resale",
+  "excerpt": "I'm creating fresh characters and mailing their starter gear to my main to sell. Here's the original method, what I checked, and why vendor supply matters today.",
+  "summary": "I create fresh characters, unequip eligible starter gear, mail it to my main and list it. I credit Sharken and report my original Worgen and Draenei results. Uploaded December 6, 2017 as World Of Warcraft GOLD FARM 150,000 GOLD AT LEVEL ONE! (TRICK). The guide explains the later vendor-supply change and why old prices are not current guarantees.",
+  "promise": "See the original create-and-mail method and the later vendor-supply context.",
+  "keyTakeaways": [
+    "Check exact starter items and binding.",
+    "Mail eligible gear to a main and allow for postage.",
+    "Worgen and Draenei were historical preferences.",
+    "Former starter gear returned to city vendors in patch 10.0.5.",
+    "Old reported sales don't guarantee a current return."
+  ],
+  "timestamps": [],
+  "mentioned": [
+    "Starter equipment",
+    "Worgen",
+    "Draenei",
+    "Auction house",
+    "Mailbox"
+  ],
+  "relatedGuideSlug": "starter-gear-resale-method",
+  "relatedVideos": [
+    "legion-obliterum-shuffle",
+    "karazhan-enchanting-recipe-farm"
+  ],
+  "featured": false
+},
+{
   "title": "Wetlands Wool Cloth Farm Video: Original Monk Setup",
   "slug": "wetlands-wool-cloth-monk-farm",
   "youtubeVideoId": "JjPUGkMhxfk",

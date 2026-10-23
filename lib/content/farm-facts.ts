@@ -7,6 +7,15 @@ export interface FarmFacts {
 }
 
 export const farmFacts: Record<string, FarmFacts> = {
+"throne-of-kiljaeden-primal-fire-farm": {
+  "location": "Throne of Kil’jaeden, Hellfire Peninsula, Outland",
+  "targets": [
+    "Mote of Fire",
+    "Primal Fire"
+  ],
+  "valueType": "Auctionable crafting materials; ten Motes combine into one Primal Fire",
+  "beforeYouGo": "Check material prices, bring a suitable character and test competition and drops. The route and gold claims come from 2017."
+},
 "karazhan-enchanting-recipe-farm": {
   "location": "Original Karazhan raid, Deadwind Pass, Eastern Kingdoms",
   "targets": [

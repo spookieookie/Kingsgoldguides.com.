@@ -3,6 +3,76 @@ import type { GuidePage } from './types';
 // Only published walkthroughs based on King K's own videos belong here.
 export const guides: GuidePage[] = [
 {
+  "title": "Primal Fire Farm at the Throne of Kil’jaeden",
+  "slug": "throne-of-kiljaeden-primal-fire-farm",
+  "excerpt": "I'm farming Incandescent Fel Sparks in Hellfire Peninsula for Motes of Fire. Here's the simple back-and-forth route and how I compare motes with Primal Fire before selling.",
+  "seoTitle": "Primal Fire Farm: Throne of Kil’jaeden Route",
+  "metaDescription": "Farm Motes of Fire from Incandescent Fel Sparks at the Throne of Kil’jaeden in Hellfire Peninsula. Follow King K’s route and compare mote and Primal Fire prices.",
+  "heroImage": "https://i.ytimg.com/vi/DXKQs-tECo8/hqdefault.jpg",
+  "youtubeVideoId": "DXKQs-tECo8",
+  "videoUploadedAt": "2017-08-15",
+  "publishedAt": "2026-10-23",
+  "updatedAt": "2026-10-23",
+  "hub": "farming",
+  "category": "Farming Guides",
+  "subcategory": "Material Farms",
+  "expansion": "The Burning Crusade",
+  "methodType": "Mob Farm",
+  "goldPerHourLow": 0,
+  "goldPerHourHigh": 0,
+  "setupCost": "A character that can reach and clear the farming area",
+  "saleSpeed": "Medium",
+  "riskLevel": "Medium",
+  "requirements": [
+    "Access to the Throne of Kil’jaeden in Hellfire Peninsula, Outland",
+    "A character that can kill Incandescent Fel Sparks comfortably",
+    "Bag space for Motes of Fire",
+    "Check current material prices and competition"
+  ],
+  "whoFor": [
+    "Elemental material farmers",
+    "Players comparing old Outland farming routes"
+  ],
+  "tldr": "Kill Incandescent Fel Sparks at the Throne of Kil’jaeden in Hellfire Peninsula, Outland, and loot Motes of Fire. Run straight back and forth through the area. Ten Motes combine into one Primal Fire; compare equivalent prices before choosing what to sell.",
+  "bestTimeToFarm": "",
+  "bestTimeToSell": "",
+  "ahNotes": "Compare ten Motes of Fire with one Primal Fire and allow for selling costs. The 15k–30k hourly title and quoted prices belong to the 2017 recording, not current verified sales.",
+  "realmCaveats": "Recorded during Legion in August 2017. Current drop yields, respawns, competition and sale prices have not been retested here. The old Bear Tartare speed advice is historical.",
+  "steps": [],
+  "analystTakeaway": "Keep the route simple, count the motes from a short test, and compare the two sale options before combining.",
+  "faq": [
+    {
+      "question": "Where is this Primal Fire farm?",
+      "answer": "The recording farms Incandescent Fel Sparks at the Throne of Kil’jaeden in Hellfire Peninsula, Outland. This is an outdoor route, not a dungeon or raid."
+    },
+    {
+      "question": "Which mobs drop the Motes of Fire?",
+      "answer": "Incandescent Fel Sparks are the target in the video. Kill and loot them while moving back and forth through the area rather than pulling every nearby mob."
+    },
+    {
+      "question": "How many Motes make one Primal Fire?",
+      "answer": "Ten Motes of Fire combine into one Primal Fire. Compare the price of ten motes with one Primal before combining; the better option depends on the current market."
+    },
+    {
+      "question": "Does the farm still make 15k–30k gold per hour?",
+      "answer": "That range is the original August 2017 video headline. It is not a verified current rate or proof of completed sales. Test the drops and use current prices before committing to a long session."
+    }
+  ],
+  "relatedGuides": [
+    "120000-gold-per-hour-skettis-blackwind-lake-primal-water-farm",
+    "firelands-volatile-farm",
+    "vortex-pinnacle-volatile-air-farm"
+  ],
+  "relatedVideos": [
+    "120000-gold-per-hour-skettis-blackwind-lake-primal-water-farm",
+    "firelands-volatile-farm"
+  ],
+  "featured": false,
+  "canonicalUrl": "/guides/throne-of-kiljaeden-primal-fire-farm",
+  "schemaType": "Article",
+  "mdxSlug": "throne-of-kiljaeden-primal-fire-farm"
+},
+{
   "title": "Karazhan Enchanting Recipe Farm: Mongoose, Sunfire & Soulfrost",
   "slug": "karazhan-enchanting-recipe-farm",
   "excerpt": "I'm running the original Karazhan raid for enchanting formulas, then crafting enchants to sell. Here's the setup, what to keep, and how I check the margin.",

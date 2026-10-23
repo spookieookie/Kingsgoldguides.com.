@@ -2,6 +2,42 @@ import type { VideoPage } from './types';
 
 export const videos: VideoPage[] = [
 {
+  "title": "Throne of Kil’jaeden Primal Fire Farm Video",
+  "slug": "throne-of-kiljaeden-primal-fire-farm",
+  "youtubeVideoId": "DXKQs-tECo8",
+  "videoUploadedAt": "2017-08-15",
+  "publishedAt": "2026-10-23",
+  "duration": "4:11",
+  "hub": "farming",
+  "topic": "Primal Fire Farm",
+  "excerpt": "Watch my back-and-forth Incandescent Fel Spark route in Hellfire Peninsula for Motes of Fire and Primal Fire.",
+  "summary": "I'm at the Throne of Kil’jaeden in Hellfire Peninsula, Outland, killing Incandescent Fel Sparks for Motes of Fire. I show a straight back-and-forth route, explain that ten Motes make one Primal Fire, and compare selling the motes with combining them. I also warn against pulling unrelated mobs. The original video, World Of Warcraft LITTLE TO NO EFFORT 15k-30k An Hour, was uploaded August 15, 2017. Its gold figures and Bear Tartare advice reflect that recording; the written guide separates them from current results.",
+  "promise": "See the original outdoor Primal Fire route and understand which material to price before selling.",
+  "keyTakeaways": [
+    "Head to the Throne of Kil’jaeden in Hellfire Peninsula, Outland.",
+    "Kill and loot Incandescent Fel Sparks for Motes of Fire.",
+    "Run straight back and forth rather than adding a complicated zigzag.",
+    "Ten Motes of Fire combine into one Primal Fire; compare equivalent prices.",
+    "The hourly headline and speed-food advice are historical, not a current test."
+  ],
+  "timestamps": [],
+  "mentioned": [
+    "Throne of Kil’jaeden",
+    "Hellfire Peninsula",
+    "Outland",
+    "Incandescent Fel Spark",
+    "Mote of Fire",
+    "Primal Fire",
+    "Bear Tartare"
+  ],
+  "relatedGuideSlug": "throne-of-kiljaeden-primal-fire-farm",
+  "relatedVideos": [
+    "120000-gold-per-hour-skettis-blackwind-lake-primal-water-farm",
+    "firelands-volatile-farm"
+  ],
+  "featured": false
+},
+{
   "title": "Karazhan Enchanting Farm Video: Recipes & Crafted Enchants",
   "slug": "karazhan-enchanting-recipe-farm",
   "youtubeVideoId": "XPosvhuaOtE",

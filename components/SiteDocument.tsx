@@ -7,7 +7,9 @@ import { JsonLd } from '@/components/JsonLd'
 import { organizationSchema, websiteSchema } from '@/lib/schema'
 import { siteConfig } from '@/lib/site'
 import { GoogleAnalytics } from '@/components/GoogleAnalytics'
-import './globals.css'
+import '@/app/globals.css'
+import { LocalizedHeader, LocalizedFooter } from '@/components/LocalizedChrome'
+import { localeCopy, type Locale } from '@/lib/locales'
 
 const geistSans = Geist({ variable: '--font-geist-sans', subsets: ['latin'] })
 const geistMono = Geist_Mono({
@@ -18,7 +20,7 @@ const geistMono = Geist_Mono({
 const analyticsId = 'G-9D2KRKSGEH'
 const analyticsEnabled = process.env.VERCEL_ENV === 'production'
 
-export const metadata: Metadata = {
+export const siteMetadata: Metadata = {
   metadataBase: new URL(siteConfig.domain),
   title: siteConfig.name,
   description: siteConfig.description,
@@ -58,18 +60,19 @@ export const metadata: Metadata = {
   },
 }
 
-export const viewport: Viewport = {
+export const siteViewport: Viewport = {
   colorScheme: 'dark',
   themeColor: [{ media: '(prefers-color-scheme: dark)', color: '#252118' }],
 }
 
-export default function RootLayout({
-  children,
+export function SiteDocument({
+  children, locale = 'en',
 }: Readonly<{
   children: React.ReactNode
+  locale?: Locale | 'en'
 }>) {
   return (
-    <html lang="en" className={`${geistSans.variable} ${geistMono.variable} dark`}>
+    <html lang={locale} className={`${geistSans.variable} ${geistMono.variable} dark`}>
       <head>
         {analyticsEnabled && (
           <>
@@ -89,10 +92,10 @@ export default function RootLayout({
       <body className="bg-background font-sans text-foreground antialiased">
         <JsonLd data={organizationSchema()} />
         <JsonLd data={websiteSchema()} />
-        <Header />
+        {locale === 'en' ? <Header /> : <LocalizedHeader locale={locale} />}
         {children}
-        <Footer />
-        <GoogleAnalytics measurementId={analyticsId} enabled={analyticsEnabled} />
+        {locale === 'en' ? <Footer /> : <LocalizedFooter locale={locale} />}
+        <GoogleAnalytics measurementId={analyticsId} enabled={analyticsEnabled} copy={locale === 'en' ? undefined : localeCopy[locale]} />
       </body>
     </html>
   )

@@ -100,6 +100,7 @@ export function articleSchema(opts: {
   publishedAt?: string;
   updatedAt?: string;
   youtubeVideoId?: string;
+  language?: string;
   topics?: string[];
   location?: string;
 }): Json {
@@ -114,7 +115,7 @@ export function articleSchema(opts: {
     dateModified: schemaDateTime(opts.updatedAt ?? opts.publishedAt),
     mainEntityOfPage: `${siteConfig.domain}${opts.slug}`,
     isPartOf: { '@id': `${siteConfig.domain}/#website` },
-    inLanguage: 'en',
+    inLanguage: opts.language ?? 'en',
     author: creator,
     publisher: org,
     about: opts.topics?.map((name) => ({ '@type': 'Thing', name })),

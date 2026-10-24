@@ -1,3 +1,4 @@
+import { LanguageLinks } from '@/components/LanguageLinks';
 import Link from 'next/link';
 import { Logo } from '@/components/Logo';
 import { mainNav, siteConfig } from '@/lib/site';
@@ -27,6 +28,7 @@ export function Footer() {
           <CookieSettingsButton />
           <a href={siteConfig.youtube} target="_blank" rel="noopener noreferrer" className="hover:text-primary">YouTube</a>
         </div>
+        <LanguageLinks />
         <p className="mt-5 text-xs leading-relaxed text-muted-foreground">
           © {new Date().getFullYear()} {siteConfig.fullName}. World of Warcraft is a trademark of Blizzard Entertainment, Inc. This site is not affiliated with Blizzard.
         </p>

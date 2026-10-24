@@ -1,3 +1,5 @@
+import { languageAlternates } from '@/lib/locales';
+import { LanguageLinks } from '@/components/LanguageLinks';
 import type { Metadata } from 'next';
 import { notFound, permanentRedirect } from 'next/navigation';
 import Link from 'next/link';
@@ -39,7 +41,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   return {
     title: { absolute: guide.seoTitle },
     description: guide.metaDescription,
-    alternates: { canonical: guide.canonicalUrl },
+    alternates: { canonical: guide.canonicalUrl, languages: languageAlternates(guide.slug) },
     openGraph: {
       url: `${siteConfig.domain}/guides/${guide.slug}`,
       title: guide.seoTitle,
@@ -129,6 +131,8 @@ export default async function GuidePage({ params }: PageProps) {
             <span>Updated {formatDate(guide.updatedAt)}</span>
           </div>
         </header>
+
+        <LanguageLinks slug={guide.slug} />
 
         <FarmSummary guide={guide} quickAnswer={mdx?.frontmatter.quickAnswer} />
 

@@ -1,3 +1,5 @@
+import { locales, translatedSlugs } from '@/lib/locales';
+import { translations } from '@/lib/content/translations';
 import type { MetadataRoute } from 'next';
 import { siteConfig } from '@/lib/site';
 import { getAllGuides, getAllVideos, getAllPosts } from '@/lib/content';
@@ -37,5 +39,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency: 'monthly' as const,
     priority: 0.7,
   }));
-  return [...staticRoutes, ...guideRoutes, ...videoRoutes, ...postRoutes];
+  const localizedRoutes = locales.flatMap(locale => [
+    { url: `${base}/${locale}`, lastModified: new Date('2026-10-23'), changeFrequency: 'weekly' as const, priority: 0.6 },
+    ...translatedSlugs.map(slug => ({ url: `${base}/${locale}/guides/${slug}`, lastModified: new Date(translations[locale][slug].translatedAt), changeFrequency: 'monthly' as const, priority: 0.7 })),
+  ]);
+  return [...staticRoutes, ...guideRoutes, ...videoRoutes, ...postRoutes, ...localizedRoutes];
 }

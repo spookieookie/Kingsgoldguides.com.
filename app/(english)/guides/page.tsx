@@ -1,3 +1,5 @@
+import { languageAlternates } from '@/lib/locales';
+import { LanguageLinks } from '@/components/LanguageLinks';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { getAllGuides } from '@/lib/content';
@@ -12,7 +14,7 @@ import { farmFacts } from '@/lib/content/farm-facts';
 export const metadata: Metadata = {
   title: { absolute: 'WoW Gold Farming Guides & Routes | King K' },
   description: 'Compare World of Warcraft gold farms by location, loot, and setup. Find Volatile Air, Primal Water, cloth, rare weapons, and transmog routes with King K.',
-  alternates: { canonical: `${siteConfig.domain}/guides` },
+  alternates: { canonical: `${siteConfig.domain}/guides`, languages: languageAlternates() },
 };
 
 export default function GuidesIndexPage() {
@@ -37,6 +39,7 @@ export default function GuidesIndexPage() {
             Looking for materials? Start with Volatile Air, Primal Water, or the cloth routes. If you're hunting rare weapons or transmog, check the item listings first and allow time for a buyer. These are the written routes from my videos; an old gold total is not a current hourly rate.
           </p>
           <Link href="#compare-farms" className="mt-5 inline-block font-semibold text-primary underline underline-offset-4 hover:text-primary/80">Compare farm locations and loot</Link>
+          <LanguageLinks />
           <nav aria-label="Jump to a guide group" className="mt-6 flex flex-wrap gap-2">
             {groups.map((group) => (
               <Link key={group.key} href={`#${group.key}`} className="rounded-lg border border-border bg-card px-4 py-2 text-sm text-foreground transition-colors hover:border-primary/50 hover:text-primary">

@@ -1,6 +1,6 @@
 import { siteConfig } from '@/lib/site';
 
-export function Logo({ showText = true }: { showText?: boolean }) {
+export function Logo({ showText = true, tagline = 'WoW Gold Farming Guides' }: { showText?: boolean; tagline?: string }) {
   return (
     <span className="flex items-center gap-2.5">
       {/* Use the original channel artwork at every site branding position. */}
@@ -12,7 +12,7 @@ export function Logo({ showText = true }: { showText?: boolean }) {
             {siteConfig.name}
           </span>
           <span className="mt-1 whitespace-nowrap font-mono text-[9px] uppercase tracking-[0.12em] text-muted-foreground sm:text-[10px]">
-            WoW Gold Farming Guides
+            {tagline}
           </span>
         </span>
       )}
